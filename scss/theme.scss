@@ -1,0 +1,46 @@
+/* -------------------------------------------------------------------------- */
+/*                                 Theme                                      */
+/* -------------------------------------------------------------------------- */
+
+@import "../node_modules/bootstrap/scss/_functions.scss";
+@import "abstracts/functions";
+
+@import "../node_modules/bootstrap/scss/mixins";
+@import "abstracts/mixins";
+
+
+// @import 'theme/_utilities.scss';
+@import "../node_modules/bootstrap/scss/variables";
+@import "abstracts/variables";
+
+/*-----------------------------------------------
+|   Bootstrap Styles
+-----------------------------------------------*/
+@import "bootstrap";
+
+/*-----------------------------------------------
+|   Base Styles
+-----------------------------------------------*/
+@import 'base/fonts';
+@import 'base/base';
+
+/*-----------------------------------------------
+|   Layout Styles
+-----------------------------------------------*/
+@import 'layout/header';
+@import 'layout/footer';
+
+/*-----------------------------------------------
+|   Components Styles
+-----------------------------------------------*/
+@import 'components/spinner';
+@import 'components/slider';
+@import 'components/searchbox';
+@import 'components/datepicker';
+
+/*-----------------------------------------------
+|   Pages Styles
+-----------------------------------------------*/
+@import "pages/home";
+
+

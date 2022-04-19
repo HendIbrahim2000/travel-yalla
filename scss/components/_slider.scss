@@ -1,0 +1,107 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Slider component.
+// -----------------------------------------------------------------------------
+
+.hero-header {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    .item {
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+
+        &.slick-slide {
+
+            img {
+                min-width: 100%;
+                min-height: 100%;
+                max-width: none;
+            }
+
+            .item-text-container{
+                position:absolute;
+                left: 0;
+                top: 0;
+
+                h1 {
+                    font-size: 60px;
+                }
+
+                p {
+                    font-size: 21px;
+                }
+
+                .slider-btn {
+                    width: 228px;
+                    height: 53px;
+                    position: relative;
+                    margin: 0 13px 12px 0;
+                    background-image: linear-gradient(to bottom, #3a803d, #679644);
+
+                    span {
+                        font-size: 48px;
+                        font-weight: bold;
+                        position: absolute;
+                        top: 7px;
+                        left: 45px;
+                    }
+                }
+            }
+        }
+    }
+}
+.slider-nav {
+    bottom: 16vh;
+    padding: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    .item {
+        cursor: pointer;
+        /* opacity: .8; */
+        margin: 0 9px;
+
+        p {
+            display: none;
+            color: #fff;
+            margin: auto;
+            margin-top: 5px;
+        }
+
+        &.slick-current {
+
+            p {
+                display: initial;
+            }
+
+            img {
+                border: 1px solid #ffffff;
+            }
+        } 
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-header .item img {
+        height: 680px;
+        max-width: none; 
+    }
+}
+
+@media (min-width: 992px) {
+    .slider-nav .item img {
+        width: 85px;
+        height: 85px;
+        border-radius: 15px;
+        box-shadow: 0 2px 4px 0 rgb(0 0 0 / 50% );
+        padding: 3px;
+    }
+}
+
+@media (max-width: 786px)   {
+    .slider-nav {
+        width: 100%;
+    }
+}

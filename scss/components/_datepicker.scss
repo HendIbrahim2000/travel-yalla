@@ -1,0 +1,196 @@
+.datepicker {
+
+    &.datepicker-dropdown, &.datepicker-inline {
+        padding: 22px;
+        width: 30%;
+        max-width: 300px;
+        min-width: 200px;
+        -webkit-box-shadow: 0px 3px 21px 0px rgb(0 0 0 / 20%);
+        box-shadow: 0px 3px 21px 0px rgb(0 0 0 / 20%);
+        border-radius: 16px;
+        border: none;
+        z-index: 9999 !important;
+        margin-top: 20px;
+
+        .datepicker-days {
+            padding: 0;
+
+            table.table-condensed {
+                width: 100%;
+
+                thead tr th {
+                    text-align: center;
+                    padding: 0.5rem 0;
+
+                    &.prev {
+                        color: #1F1F1F;
+                        padding-bottom: 1rem;
+                        padding-top: 1rem;
+                        background: #ffffff;
+                    }
+
+                    &.next {
+                        color: #1F1F1F;
+                        padding-bottom: 1rem;
+                        padding-top: 1rem;
+                        background: #ffffff;
+                    }
+
+                    &.dow {
+                        font-family: "Manrope", sans-serif;
+                        color: #1F1F1F;
+                        font-size: 0.875rem;
+                        font-weight: initial;
+                    }
+
+                    &.datepicker-switch {
+                        color: #1F1F1F;
+                        background: #ffffff;
+                        padding-bottom: 1rem;
+                        padding-top: 1rem;
+                        font-size: 1rem;
+                        font-weight: 600;
+                    }
+                }
+
+                tbody {
+                    position: relative;
+                    top: 13px;
+
+                    td {
+                        text-align: center;
+
+                        &.day {
+                            font-size: 12px;
+                            padding: 10px;
+                            color: #1F1F1F;
+
+                            &:hover {
+                                background: #ffffff;
+                            }
+
+                            &.active {
+                                color: #fff;
+                                background: transparent;
+                                position: relative;
+                                z-index: 1;
+
+                                &:before {
+                                    content: "";
+                                    width: 40px;
+                                    height: 40px;
+                                    background: #34B1AA;
+                                    border-radius: 50%;
+                                    display: block;
+                                    margin: auto;
+                                    vertical-align: middle;
+                                    position: absolute;
+                                    top: 0;
+                                    z-index: -1;
+                                    left: 0;
+                                    right: 0;
+                                }
+                            }
+
+                            &.today {
+                                color: #fff;
+                                background: transparent;
+                                position: relative;
+                                z-index: 1;
+
+                                &:before {
+                                    content: "";
+                                    width: 40px;
+                                    height: 40px;
+                                    background: #0970ce;
+                                    border-radius: 50%;
+                                    display: block;
+                                    margin: auto;
+                                    vertical-align: middle;
+                                    position: absolute;
+                                    top: -2px;
+                                    z-index: -1;
+                                    left: 0;
+                                    right: 0;
+                                }
+                            }
+                        }
+
+                        &.old.day {
+                            color: #d9dde3;
+                        }
+
+                        &.range-start, &.range-end {
+                            background: transparent;
+                            position: relative;
+
+                            &::before {
+                                content: "";
+                                width: 28px;
+                                height: 28px;
+                                background: rgba(52, 177, 170, 0.2);
+                                border-radius: 4px;
+                                display: block;
+                                margin: auto;
+                                vertical-align: middle;
+                                position: absolute;
+                                top: 6px;
+                                z-index: -1;
+                                left: 0;
+                                right: 0;
+                            }
+                        }
+
+                        &.range {
+                            position: relative;
+                            background: transparent;
+
+                            &::before {
+                                content: "";
+                                width: 28px;
+                                height: 28px;
+                                background: #eee;
+                                border-radius: 4px;
+                                display: block;
+                                margin: auto;
+                                vertical-align: middle;
+                                position: absolute;
+                                top: 6px;
+                                z-index: -1;
+                                left: 0;
+                                right: 0; 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.datepicker-inline {
+        width: 100%;
+        max-width: 100%;
+        min-width: 250px;
+
+        thead tr th {
+
+            &.prev {
+                color: grey;
+                padding-bottom: 0.5rem;
+                padding-top: 0.5rem;
+              }
+
+              &.next {
+                color: grey;
+                padding-bottom: 0.5rem;
+                padding-top: 0.5rem;
+              }
+
+              &.datepicker-switch {
+                color: #1F3BB3;
+                padding-bottom: 0.5rem;
+                padding-top: 0.5rem;
+              }
+        }
+      }
+}
