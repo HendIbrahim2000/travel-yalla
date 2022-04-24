@@ -11044,6 +11044,19 @@ html {
 body {
   color: #000000;
 }
+body .body-bg {
+  background-image: linear-gradient(181deg, #c4e6f0, #fff);
+}
+
+.tab-content > .tab-pane {
+  display: block;
+  height: 0px;
+  overflow: hidden;
+}
+
+.tab-content > .active {
+  height: auto;
+}
 
 img {
   max-width: 100%;
@@ -11055,6 +11068,22 @@ img {
 
 .fw-semi-bold {
   font-weight: 700 !important;
+}
+
+.section-title {
+  margin-bottom: 50px;
+}
+.section-title h2, .section-title .h2 {
+  font-size: 84px;
+  font-weight: bold;
+}
+.section-title .sectin-text {
+  font-size: 18px;
+  color: #5c5c5c;
+}
+.section-title .sectin-text .main-text {
+  font-size: 21px;
+  font-weight: bold;
 }
 
 /*-----------------------------------------------
@@ -11360,7 +11389,7 @@ img {
   }
 }
 .tab-search {
-  margin-top: -14vh;
+  margin-top: -100px;
   z-index: 1;
   position: relative;
 }
@@ -11722,5 +11751,102 @@ img {
 /*-----------------------------------------------
 |   Pages Styles
 -----------------------------------------------*/
+/**Start Trips Section**/
+.trips {
+  margin-top: 90px;
+}
+.trips .trips-tab {
+  border-bottom: none;
+}
+.trips .trips-tab .nav-link {
+  font-weight: bold;
+  color: #3d3d3d;
+  padding: 20px;
+  border-bottom: 4px solid transparent;
+}
+.trips .trips-tab .nav-link.active {
+  background-color: transparent;
+  border-color: transparent transparent rgb(9, 112, 206);
+  color: rgb(9, 112, 206);
+}
+.trips .tabSlider {
+  padding-top: 30px;
+  margin-bottom: 50px;
+}
+.trips .tabSlider .slick-list {
+  padding-top: 60px !important;
+}
+.trips .tabSlider .slick-list .slick-track {
+  padding: 16px 0;
+}
+.trips .tabSlider .slick-list .slick-track .item {
+  position: relative;
+  padding: 0 8px;
+  text-decoration: none;
+  margin-top: -60px;
+  transition: all ease-in-out 0.25s;
+}
+.trips .tabSlider .slick-list .slick-track .item .slider-img {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 17px 0 rgba(0, 0, 0, 0.17);
+}
+.trips .tabSlider .slick-list .slick-track .item .slider-img .slider-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  opacity: 0.5;
+  -webkit-filter: blur(7px);
+  filter: blur(7px);
+  background-color: #1f1f1f;
+}
+.trips .tabSlider .slick-list .slick-track .item .slider-img h3, .trips .tabSlider .slick-list .slick-track .item .slider-img .h3 {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 8px;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  font-size: 21px;
+  font-weight: normal;
+}
+.trips .tabSlider .slick-list .slick-track .item p {
+  position: absolute;
+  text-align: center;
+  color: #2a2a2a;
+  font-size: 14px;
+  padding: 20px 14px 0;
+  height: 60px;
+  overflow: hidden;
+  transition: all ease-in-out 0.25s;
+}
+.trips .tabSlider .slick-list .slick-track .item:not(:hover) {
+  margin-top: 0;
+}
+.trips .tabSlider .slick-list .slick-track .item:not(:hover) p {
+  display: none;
+}
+.trips .trips-arrows {
+  list-style: none;
+}
+.trips .trips-arrows li {
+  width: 48px;
+  height: 48px;
+  color: rgb(9, 112, 206);
+  border: 1px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+.trips .btn-more {
+  padding: 10px 60px;
+}
+
+/**End Trips Section**/
 
 /*# sourceMappingURL=theme.css.map */

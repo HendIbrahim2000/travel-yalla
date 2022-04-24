@@ -36,7 +36,13 @@ html {
 
 body {
   color: #000000;
+  .body-bg {
+    background-image: linear-gradient(181deg, #c4e6f0, #fff);
+  }
 }
+
+.tab-content>.tab-pane{ display: block; height: 0px; overflow: hidden; }
+.tab-content>.active{ height: auto;}
 
 img {
   max-width: 100%;
@@ -48,4 +54,23 @@ img {
 
 .fw-semi-bold {
   font-weight: 700 !important;
+}
+
+.section-title {
+  margin-bottom: 50px;
+
+  h2 {
+    font-size: 84px;
+    font-weight: bold;
+  }
+
+  .sectin-text {
+    font-size: 18px;
+    color: #5c5c5c;
+
+    .main-text {
+      font-size: 21px;
+      font-weight: bold;
+    }
+  }
 }
