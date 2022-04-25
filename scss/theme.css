@@ -11848,5 +11848,111 @@ img {
 }
 
 /**End Trips Section**/
+/**Start Video Section**/
+.video-section {
+  padding-top: 70px;
+  padding-bottom: 140px;
+  background-image: linear-gradient(to bottom, #f2f9ff, #fff);
+}
+.video-section .section-title h2, .video-section .section-title .h2 {
+  font-size: 48px;
+  color: rgba(34, 35, 40, 0.8784313725);
+}
+.video-section .section-title p {
+  font-weight: bold;
+  font-size: 18px;
+  color: #94722b;
+}
+.video-section .video-text {
+  font-size: 21px;
+  line-height: 1.57;
+  color: #464646;
+}
+.video-section .video-text .text-green {
+  color: #518c41;
+}
+.video-section .btn {
+  background-color: rgb(9, 112, 206);
+  border-color: rgb(9, 112, 206);
+}
+.video-section .video-container {
+  width: 100%;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 17px 0 rgba(0, 0, 0, 0.17);
+}
+.video-section .video-container img {
+  width: 100%;
+}
+.video-section .video-container a.popup-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 70px;
+  width: 60px;
+  max-width: 50%;
+  z-index: 99;
+  cursor: pointer;
+}
+.video-section a img {
+  width: 77px;
+}
+.video-section .video-popup {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  box-shadow: 10px 10px 10px 10px black;
+  z-index: 99;
+}
+.video-section .video-popup .popup-bg {
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  z-index: 999;
+}
+.video-section .video-popup .popup-content {
+  position: fixed;
+  top: 30px;
+  left: 5%;
+  width: 90%;
+  height: 80%;
+  margin: auto;
+  z-index: 999999;
+}
+.video-section .video-popup .popup-content iframe {
+  width: 100%;
+  height: 100%;
+}
+.video-section .video-popup .popup-content .close-btn {
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 36px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+@media (min-width: 786px) {
+  .video-section .video-text {
+    padding-right: 150px;
+  }
+  .video-section .video-popup .popup-content {
+    top: 65px;
+  }
+}
+@media (max-width: 786px) {
+  .video-section {
+    text-align: center;
+  }
+}
+/**End Video Section**/
 
 /*# sourceMappingURL=theme.css.map */
