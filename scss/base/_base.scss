@@ -37,15 +37,32 @@ html {
 body {
   color: #000000;
   .body-bg {
-    background-image: linear-gradient(181deg, #c4e6f0, #fff);
+    background-image:url("../img/clouds.png"), linear-gradient(181deg, #c4e6f0, #fff);
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
-.tab-content>.tab-pane{ display: block; height: 0px; overflow: hidden; }
-.tab-content>.active{ height: auto;}
+// .tab-content>.tab-pane{ display: block; }
+// .tab-content>.active{ height: auto;}
 
 img {
   max-width: 100%;
+}
+
+.btn-more {
+  padding: 10px 60px;
+}
+
+section {
+  margin-bottom: 120px;
+}
+
+.travel-card {
+  border-radius: 16px;
+  box-shadow: 0 2px 17px 0 rgb(0 0 0 / 15%);
+  border: none;
+  overflow: hidden;
 }
 
 .fw-medium {

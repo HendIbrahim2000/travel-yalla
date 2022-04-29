@@ -58,6 +58,10 @@
     left: 50%;
     transform: translate(-50%, 0);
 
+    .slick-track {
+        transform: translate3d(0px, 0px, 0px) !important;
+    }
+
     .item {
         cursor: pointer;
         /* opacity: .8; */

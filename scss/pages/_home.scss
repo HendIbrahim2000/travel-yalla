@@ -24,6 +24,16 @@
         }
     }
 
+    #tripsTabContent {
+        &.tab-content > .tab-pane {
+            height: 0px;
+            overflow: hidden;
+            display: block;
+            &.active {
+                height: auto;
+            }
+        }
+    }
     .tabSlider {
         padding-top: 30px;
         margin-bottom: 50px;
@@ -43,9 +53,7 @@
         
                     .slider-img {
                         position: relative;
-                        border-radius: 16px;
-                        overflow: hidden;
-                        box-shadow: 0 2px 17px 0 rgb(0 0 0 / 17%);
+                        @extend .travel-card;
         
                         .slider-title {
                             position: absolute;
@@ -115,9 +123,7 @@
         }
     }
 
-    .btn-more {
-        padding: 10px 60px;
-    }
+    
 }
 
 /**End Trips Section**/
@@ -127,7 +133,10 @@
 .video-section {
     padding-top: 70px;
     padding-bottom: 140px;
-    background-image: linear-gradient(to bottom, #f2f9ff, #fff);
+    background-image: url("../img/award-bg.png"), linear-gradient(to bottom, #f2f9ff, #fff);
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
 
     .section-title {
 
@@ -162,9 +171,7 @@
     .video-container {
         width: 100%;
         position: relative;
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: 0 2px 17px 0 rgb(0 0 0 / 17%);
+        @extend .travel-card;
 
         img {
             width: 100%;
@@ -260,3 +267,58 @@
 
 
 /**End Video Section**/
+
+/**Start Offers Section**/
+
+.offers {
+    .item {
+        @extend .travel-card;
+        color: #000;
+        text-decoration: none;
+        margin-bottom: 30px;
+
+        .img {
+            height: 230px;
+            overflow: hidden;
+        }
+
+        .card-body {
+
+            .card-title {
+                font-size: 16px;
+                font-weight: bold;
+                color: #464646;
+            }
+
+            p {
+                font-size: 14px;
+
+                &.country {
+                    color: #6e6e6e;
+                }
+
+                &.price {
+
+                    span {
+
+                        b {
+                            font-size: 18px;
+                        }
+
+                        &.discount {
+                            text-decoration: line-through;
+                        }
+
+                        &.price {
+                            color: #45853e;
+                        }
+                    }
+                }
+            }
+
+            
+        }
+    }
+}
+
+/**End Offers Section**/
