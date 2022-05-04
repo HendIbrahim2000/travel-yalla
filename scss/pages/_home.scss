@@ -322,3 +322,44 @@
 }
 
 /**End Offers Section**/
+
+/**Start Testimonial Section**/
+
+.testimonial {
+
+    .item {
+        padding: 15px 35px;
+        margin-bottom: 70px;
+        border-radius: 16px;
+
+        .test-img {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        &:hover {
+            background: #e0f0ff;
+        }
+    }
+
+    ul {
+
+        li {
+
+            i {
+                font-size: 23px;
+                color: $main-color;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+/**End Testimonial Section**/

@@ -11054,6 +11054,10 @@ img {
   max-width: 100%;
 }
 
+ul {
+  list-style: none;
+}
+
 .btn-more {
   padding: 10px 60px;
 }
@@ -11093,6 +11097,11 @@ section {
   font-weight: bold;
 }
 
+@media (max-width: 992px) {
+  .section-title h2, .section-title .h2 {
+    font-size: 40px;
+  }
+}
 /*-----------------------------------------------
 |   Layout Styles
 -----------------------------------------------*/
@@ -11237,19 +11246,42 @@ section {
     width: initial;
   }
 }
-.footer {
+footer .footer-top {
+  background-color: #e8f4ff;
+  background-image: url("../img/topfooter-bg.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 400px auto;
+  padding: 90px 0;
+}
+footer .footer-contacts {
+  background: rgb(9, 112, 206);
+  padding-top: 40px;
+  padding-bottom: 30px;
+  color: #ffffff;
+}
+footer .footer-contacts span {
+  background: #ffffff;
+  padding: 3px 10px;
+  border-radius: 10px;
+  color: rgb(9, 112, 206);
+  margin-right: 20px;
+  font-size: 30px;
+  line-height: 42px;
+}
+footer .footer {
   background: #1f1f1f;
   padding: 90px 0;
 }
-.footer h4, .footer .h4 {
+footer .footer h4, footer .footer .h4 {
   margin-bottom: 35px;
   font-size: 18px;
 }
-.footer p, .footer a {
+footer .footer p, footer .footer a {
   line-height: 26px;
   color: #d3d3d3;
 }
-.footer .btn.btn-link {
+footer .footer .btn.btn-link {
   display: block;
   margin-bottom: 5px;
   padding: 0;
@@ -11260,39 +11292,39 @@ section {
   text-transform: capitalize;
   transition: 0.3s;
 }
-.footer .btn.btn-link::before {
+footer .footer .btn.btn-link::before {
   position: relative;
   content: "\f105";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   margin-right: 10px;
 }
-.footer .btn.btn-link:hover {
+footer .footer .btn.btn-link:hover {
   letter-spacing: 1px;
   box-shadow: none;
 }
-.footer .copyright {
+footer .footer .copyright {
   font-size: 15px;
 }
-.footer .copyright a {
+footer .footer .copyright a {
   color: var(--light);
 }
-.footer .footer-menu a {
+footer .footer .footer-menu a {
   margin-right: 15px;
   padding-right: 15px;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
-.footer .footer-menu a:last-child {
+footer .footer .footer-menu a:last-child {
   margin-right: 0;
   padding-right: 0;
   border-right: none;
 }
-.footer .footer-cert {
+footer .footer .footer-cert {
   margin-top: -30px;
 }
-.footer .footer-cert img {
-  transform: scale(1.2);
+footer .footer .footer-cert img {
   margin: auto;
+  width: 120px;
 }
 
 /*-----------------------------------------------
@@ -11998,5 +12030,31 @@ section {
 }
 
 /**End Offers Section**/
+/**Start Testimonial Section**/
+.testimonial .item {
+  padding: 15px 35px;
+  margin-bottom: 70px;
+  border-radius: 16px;
+}
+.testimonial .item .test-img {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.testimonial .item h4, .testimonial .item .h4 {
+  font-size: 14px;
+  font-weight: bold;
+}
+.testimonial .item:hover {
+  background: #e0f0ff;
+}
+.testimonial ul li i {
+  font-size: 23px;
+  color: rgb(9, 112, 206);
+  cursor: pointer;
+}
+
+/**End Testimonial Section**/
 
 /*# sourceMappingURL=theme.css.map */
