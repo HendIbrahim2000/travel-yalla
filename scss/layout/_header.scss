@@ -88,6 +88,13 @@
         backdrop-filter: blur(5px);
         background-color: rgba(46, 54, 142, 0.07);
 
+        &.no-slider {
+            position: initial;
+            -webkit-backdrop-filter: blur(0);
+            backdrop-filter: blur(0);
+            background-color: $main-color;
+        }
+
         &.sticky-top {
             position: fixed;
         }

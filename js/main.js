@@ -244,5 +244,106 @@ $('.testimonial-slider').slick({
       ]
   });
 
+$('.airlines .__slider').slick({
+  infinite: true,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  // prevArrow: $('.test-prev'),
+  // nextArrow: $('.test-next'),
+  responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+});
+
 })(jQuery);
 
+// Vanilla js 
+
+// Toggle elemente
+var toggle = function (elm) {
+
+  if (elm.style.display === 'block') {
+		elm.style.display = 'none'
+	} else {
+    elm.style.display = 'block'
+  }
+  
+}
+
+// Toggle flight modify section
+document.getElementById('js-flight-toggle').onclick = (e) => {
+  var flightDetails = document.getElementById('flight-modify')
+  
+  toggle(flightDetails)
+}
+
+// Price range in flights filter
+var startSlider = document.getElementById('slider');
+
+noUiSlider.create(startSlider, {
+    start: [20, 80],
+    behaviour: 'drag',
+    connect: true,
+    tooltips: true,
+    range: {
+        'min': [0],
+        'max': [100]
+    }
+});
+
+// Expanding Flight Card In Flight Page 
+
+// Copy Cards According To Offer Count Number
+var offerCount = document.querySelectorAll('.offer-count')
+Array.prototype.forEach.call(offerCount, function (offerCount) {
+  var offerNumber = parseInt(offerCount.innerHTML);
+  var expanded = offerCount.closest('.expandable').firstElementChild;
+  for (var i = 0; i < offerNumber; i++) {
+    var clone = expanded.cloneNode(true);
+    clone.classList.add('hide')
+    expanded.after(clone);
+  }
+})
+
+
+// Toggle Offer Cards
+var offerBtn = document.querySelectorAll('.expand')
+Array.prototype.forEach.call(offerBtn, function (offerBtn) {
+  offerBtn.addEventListener("click", function(){ 
+    var offerContent = offerBtn.closest('.expandable').querySelectorAll('.__content.hide')
+    Array.prototype.forEach.call(offerContent, function (offerContent) {
+      toggle(offerContent)
+    })
+    var arrow = offerBtn.lastElementChild;
+    if ( arrow.classList.contains('down-triangle') )
+      {
+        arrow.classList.remove('down-triangle');
+        arrow.classList.add('up-triangle');
+      } else {
+        arrow.classList.remove('up-triangle');
+        arrow.classList.add('down-triangle');
+      }
+
+   })
+})

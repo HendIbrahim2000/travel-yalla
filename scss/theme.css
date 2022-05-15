@@ -11073,6 +11073,21 @@ section {
   overflow: hidden;
 }
 
+.__selected {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  top: -10px;
+  right: -8px;
+  font-size: 11px;
+  background: rgb(9, 112, 206);
+  color: #ffffff;
+}
+
 .fw-medium {
   font-weight: 600 !important;
 }
@@ -11095,6 +11110,35 @@ section {
 .section-title .sectin-text .main-text {
   font-size: 21px;
   font-weight: bold;
+}
+
+.main-dark {
+  background: #0456a1;
+  border-color: #0456a1;
+}
+
+.second-color {
+  color: #6cbd46;
+}
+
+.down-triangle {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid;
+}
+
+.hide {
+  display: none;
+}
+
+.up-triangle {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid;
 }
 
 @media (max-width: 992px) {
@@ -11173,6 +11217,12 @@ section {
     backdrop-filter: blur(5px);
     background-color: rgba(46, 54, 142, 0.07);
   }
+  .navbar-light.no-slider {
+    position: initial;
+    -webkit-backdrop-filter: blur(0);
+    backdrop-filter: blur(0);
+    background-color: rgb(9, 112, 206);
+  }
   .navbar-light.sticky-top {
     position: fixed;
   }
@@ -11226,15 +11276,15 @@ section {
     border-radius: 0 0 15px 15px;
   }
 
-  .form-search {
+  .form-search, .tab-search .tab-content-bg {
     padding-right: 0;
   }
 
-  .form-search .btn-search {
+  .form-search .btn-search, .tab-search .tab-content-bg .btn-search {
     position: relative;
   }
 
-  .form-search .btn-search {
+  .form-search .btn-search, .tab-search .tab-content-bg .btn-search {
     position: relative;
     display: block;
     margin: auto;
@@ -11242,7 +11292,7 @@ section {
     right: 0;
   }
 
-  .form-search .guest-cont {
+  .form-search .guest-cont, .tab-search .tab-content-bg .guest-cont {
     width: initial;
   }
 }
@@ -11430,6 +11480,85 @@ footer .footer .footer-cert img {
     width: 100%;
   }
 }
+.form-search, .tab-search .tab-content-bg {
+  padding-right: 100px;
+  position: relative;
+}
+.form-search .tb-label i, .tab-search .tab-content-bg .tb-label i {
+  color: #1e4056;
+  font-size: 24px;
+}
+.form-search .dropdown-toggle, .tab-search .tab-content-bg .dropdown-toggle {
+  background: #f8f6f6;
+}
+.form-search .dropdown-toggle::after, .tab-search .tab-content-bg .dropdown-toggle::after {
+  border: none;
+}
+.form-search .dropdown-menu, .tab-search .tab-content-bg .dropdown-menu {
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 14px 0 rgba(176, 176, 176, 0.5);
+  border: none;
+}
+.form-search .dropdown-menu .card, .tab-search .tab-content-bg .dropdown-menu .card {
+  max-width: 500px;
+  border-radius: 15px;
+  background: #def1f7;
+  line-height: 1.4;
+}
+.form-search .dropdown-menu.guest-cont, .tab-search .tab-content-bg .dropdown-menu.guest-cont {
+  width: 500px;
+}
+.form-search .dropdown-menu.guest-cont .guest legend, .tab-search .tab-content-bg .dropdown-menu.guest-cont .guest legend {
+  color: #000;
+  font-size: 14px;
+  padding: 7px 13px;
+  background: #edf7ff;
+  border-radius: 15px;
+}
+.form-search .dropdown-menu.guest-cont .guest legend img, .tab-search .tab-content-bg .dropdown-menu.guest-cont .guest legend img {
+  margin-right: 13px;
+}
+.form-search .dropdown-menu.guest-cont .guest select, .tab-search .tab-content-bg .dropdown-menu.guest-cont .guest select {
+  padding: 7px 20px;
+  border-radius: 4px;
+  border-color: #d1d1d1;
+  margin-bottom: 15px;
+}
+.form-search .btn-search, .tab-search .tab-content-bg .btn-search {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  background: rgb(9, 112, 206);
+  border-radius: 50%;
+  color: #ffffff;
+}
+.form-search .input-group input, .tab-search .tab-content-bg .input-group input, .form-search .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback), .tab-search .tab-content-bg .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  flex: none;
+  margin: auto;
+  background: #f8f6f6;
+}
+.form-search .search-list .dropdown-item, .tab-search .tab-content-bg .search-list .dropdown-item {
+  border-radius: 15px;
+}
+.form-search .search-list .dropdown-item p, .tab-search .tab-content-bg .search-list .dropdown-item p {
+  border-radius: 15px;
+  color: #7d7d7d;
+}
+.form-search .search-list .dropdown-item p span, .tab-search .tab-content-bg .search-list .dropdown-item p span {
+  color: #006dd1;
+  font-weight: bold;
+  margin-right: 5px;
+}
+.form-search .search-list .dropdown-item:hover, .tab-search .tab-content-bg .search-list .dropdown-item:hover {
+  background-color: #006dd1;
+}
+.form-search .search-list .dropdown-item:hover p, .tab-search .tab-content-bg .search-list .dropdown-item:hover p, .form-search .search-list .dropdown-item:hover span, .tab-search .tab-content-bg .search-list .dropdown-item:hover span {
+  color: #ffffff;
+}
+
 .tab-search {
   margin-top: -100px;
   z-index: 1;
@@ -11507,83 +11636,6 @@ footer .footer .footer-cert img {
   border-radius: 0 16px 16px 16px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
-.tab-search .tab-content-bg .form-search {
-  padding-right: 100px;
-  position: relative;
-}
-.tab-search .tab-content-bg .form-search .tb-label i {
-  color: #1e4056;
-}
-.tab-search .tab-content-bg .form-search .dropdown-toggle {
-  background: #f8f6f6;
-}
-.tab-search .tab-content-bg .form-search .dropdown-toggle::after {
-  border: none;
-}
-.tab-search .tab-content-bg .form-search .dropdown-menu {
-  border-radius: 16px;
-  padding: 16px;
-  box-shadow: 0 2px 14px 0 rgba(176, 176, 176, 0.5);
-  border: none;
-}
-.tab-search .tab-content-bg .form-search .dropdown-menu .card {
-  max-width: 500px;
-  border-radius: 15px;
-  background: #def1f7;
-  line-height: 1.4;
-}
-.tab-search .tab-content-bg .form-search .dropdown-menu.guest-cont {
-  width: 500px;
-}
-.tab-search .tab-content-bg .form-search .dropdown-menu.guest-cont .guest legend {
-  color: #000;
-  font-size: 14px;
-  padding: 7px 13px;
-  background: #edf7ff;
-  border-radius: 15px;
-}
-.tab-search .tab-content-bg .form-search .dropdown-menu.guest-cont .guest legend img {
-  margin-right: 13px;
-}
-.tab-search .tab-content-bg .form-search .dropdown-menu.guest-cont .guest select {
-  padding: 7px 20px;
-  border-radius: 4px;
-  border-color: #d1d1d1;
-  margin-bottom: 15px;
-}
-.tab-search .tab-content-bg .form-search .btn-search {
-  position: absolute;
-  right: 20px;
-  top: 0;
-  width: 60px;
-  height: 60px;
-  background: rgb(9, 112, 206);
-  border-radius: 50%;
-  color: #ffffff;
-}
-.tab-search .tab-content-bg .form-search .input-group input, .tab-search .tab-content-bg .form-search .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
-  flex: none;
-  margin: auto;
-  background: #f8f6f6;
-}
-.tab-search .tab-content-bg .form-search .search-list .dropdown-item {
-  border-radius: 15px;
-}
-.tab-search .tab-content-bg .form-search .search-list .dropdown-item p {
-  border-radius: 15px;
-  color: #7d7d7d;
-}
-.tab-search .tab-content-bg .form-search .search-list .dropdown-item p span {
-  color: #006dd1;
-  font-weight: bold;
-  margin-right: 5px;
-}
-.tab-search .tab-content-bg .form-search .search-list .dropdown-item:hover {
-  background-color: #006dd1;
-}
-.tab-search .tab-content-bg .form-search .search-list .dropdown-item:hover p, .tab-search .tab-content-bg .form-search .search-list .dropdown-item:hover span {
-  color: #ffffff;
-}
 
 @media (max-width: 786px) {
   .tab-search .nav-tabs .tab-btn-wrapper .tab-btn, .tab-search .nav-tabs .tab-btn-wrapper {
@@ -11609,17 +11661,17 @@ footer .footer .footer-cert img {
   .tab-search .tab-content-bg {
     border-radius: 0 0 15px 15px;
   }
-  .tab-search .tab-content-bg .form-search {
+  .tab-search .tab-content-bg .form-search, .tab-search .tab-content-bg .tab-content-bg {
     padding-right: 0;
   }
-  .tab-search .tab-content-bg .form-search .btn-search {
+  .tab-search .tab-content-bg .form-search .btn-search, .tab-search .tab-content-bg .tab-content-bg .btn-search {
     position: relative;
     display: block;
     margin: auto;
     margin-top: 10px;
     right: 0;
   }
-  .tab-search .tab-content-bg .form-search .dropdown-menu.guest-cont {
+  .tab-search .tab-content-bg .form-search .dropdown-menu.guest-cont, .tab-search .tab-content-bg .tab-content-bg .dropdown-menu.guest-cont {
     width: initial;
   }
 }
@@ -11788,6 +11840,50 @@ footer .footer .footer-cert img {
   color: #1F3BB3;
   padding-bottom: 0.5rem;
   padding-top: 0.5rem;
+}
+
+.noUi-horizontal {
+  height: 9px;
+  border-radius: 5px;
+  background: #dedede;
+  border: none;
+  margin-top: 50px;
+}
+.noUi-horizontal .noUi-connect {
+  background: rgb(9, 112, 206);
+}
+.noUi-horizontal .noUi-handle {
+  width: 19px;
+  height: 19px;
+  top: -5px;
+  border: none;
+  border-radius: 50%;
+  background: #6cbd46;
+  box-shadow: none;
+}
+.noUi-horizontal .noUi-handle:before, .noUi-horizontal .noUi-handle:after {
+  display: none;
+}
+.noUi-horizontal .noUi-handle .noUi-tooltip {
+  border: none;
+}
+
+.pagination .page-item {
+  margin: 5px;
+}
+.pagination .page-item .page-link {
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px 0 rgba(198, 198, 198, 0.5);
+}
+.pagination .page-item.active .page-link {
+  background-color: #0456a1;
+  border-color: #0456a1;
 }
 
 /*-----------------------------------------------
@@ -12056,5 +12152,389 @@ footer .footer .footer-cert img {
 }
 
 /**End Testimonial Section**/
+.flight {
+  background: #f7f7f7;
+}
+.flight .flight-search {
+  padding: 35px 0;
+  background: #ffffff;
+  border-radius: 0 0 16px 16px;
+}
+.flight .flight-search .__caption .__title {
+  margin-bottom: 48px;
+}
+.flight .flight-search .__caption .__title h2, .flight .flight-search .__caption .__title .h2 {
+  font-size: 48px;
+  font-weight: bold;
+}
+.flight .flight-search .__caption h3, .flight .flight-search .__caption .h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.flight .flight-search .__caption p {
+  font-style: 14px;
+}
+.flight .flight-search a.btn {
+  background-color: rgb(9, 112, 206);
+  border-color: rgb(9, 112, 206);
+}
+.flight .flight-search a.btn:focus {
+  box-shadow: none;
+}
+.flight .flight-search-form {
+  display: none;
+  background: #f9fcff;
+  padding-right: 0;
+  margin-top: 2px;
+  border-radius: 16px;
+}
+.flight .flight-search-form .form-search, .flight .flight-search-form .tab-search .tab-content-bg, .tab-search .flight .flight-search-form .tab-content-bg {
+  padding-right: 0;
+}
+.flight .flight-search-form .form-search .dropdown-toggle, .flight .flight-search-form .tab-search .tab-content-bg .dropdown-toggle, .tab-search .flight .flight-search-form .tab-content-bg .dropdown-toggle, .flight .flight-search-form .form-search .input-group input, .flight .flight-search-form .tab-search .tab-content-bg .input-group input, .tab-search .flight .flight-search-form .tab-content-bg .input-group input, .flight .flight-search-form .form-search .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback), .flight .flight-search-form .tab-search .tab-content-bg .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback), .tab-search .flight .flight-search-form .tab-content-bg .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  background: transparent;
+  text-decoration: none;
+}
+.flight .flight-search-form .form-search .flight-form, .flight .flight-search-form .tab-search .tab-content-bg .flight-form, .tab-search .flight .flight-search-form .tab-content-bg .flight-form {
+  position: relative;
+}
+@media (min-width: 992px) {
+  .flight .flight-search-form .form-search .flight-form, .flight .flight-search-form .tab-search .tab-content-bg .flight-form, .tab-search .flight .flight-search-form .tab-content-bg .flight-form {
+    padding-right: 100px;
+  }
+  .flight .flight-search-form .form-search .flight-form .col-md:not(:last-child), .flight .flight-search-form .tab-search .tab-content-bg .flight-form .col-md:not(:last-child), .tab-search .flight .flight-search-form .tab-content-bg .flight-form .col-md:not(:last-child) {
+    border-right: 1px solid #d7d7d7;
+  }
+}
+.flight .flight-search-form .form-search .flight-form .btn-search, .flight .flight-search-form .tab-search .tab-content-bg .flight-form .btn-search, .tab-search .flight .flight-search-form .tab-content-bg .flight-form .btn-search {
+  top: auto;
+  bottom: 20px;
+}
+@media (max-width: 992px) {
+  .flight .flight-search-form .form-search .flight-form .btn-search, .flight .flight-search-form .tab-search .tab-content-bg .flight-form .btn-search, .tab-search .flight .flight-search-form .tab-content-bg .flight-form .btn-search {
+    position: relative;
+    margin-bottom: 20px;
+    right: 0;
+  }
+}
+.flight .flight-search-form .__trip .form-check-input[type=radio] {
+  border-radius: 6px;
+  width: 18px;
+  height: 18px;
+}
+.flight .flight-search-form .__trip .form-check-input[type=radio]:checked {
+  background-image: none;
+  background-color: rgb(9, 112, 206);
+  border-color: rgb(9, 112, 206);
+  -webkit-box-shadow: inset 0px 0px 0px 2px #ffffff;
+  -moz-box-shadow: inset 0px 0px 0px 2px #ffffff;
+  box-shadow: inset 0px 0px 0px 2px #ffffff;
+}
+.flight .flight-search-form .flight-type {
+  background: #e8f4ff;
+  padding: 20px 0 16px;
+  border-radius: 0 0 16px 16px;
+}
+.flight .flight-search-form .flight-type .form-check-input {
+  width: 18px;
+  height: 18px;
+}
+.flight .flight-search-form .flight-type .form-check-input:checked {
+  background-image: none;
+  background-color: rgb(9, 112, 206);
+  border-color: rgb(9, 112, 206);
+  -webkit-box-shadow: inset 0px 0px 0px 2px #ffffff;
+  -moz-box-shadow: inset 0px 0px 0px 2px #ffffff;
+  box-shadow: inset 0px 0px 0px 2px #ffffff;
+}
+.flight .airlines .__slider {
+  background: #ffffff;
+  margin: 24px 0;
+  border-radius: 16px;
+  box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.1);
+  padding: 0 50px;
+}
+.flight .airlines .__slider .item {
+  position: relative;
+  border-radius: 10px;
+  border: solid 1px #e8e8e8;
+  margin: 20px 15px;
+  padding: 10px;
+  text-decoration: none;
+}
+.flight .airlines .__slider .item img {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  margin-right: 12px;
+}
+.flight .airlines .__slider .item p {
+  margin-bottom: 0;
+  font-weight: 500;
+  color: #000000;
+}
+.flight .airlines .__slider .item p.price {
+  color: #3a3a3a;
+  font-weight: 600;
+}
+.flight .airlines .__slider .item:focus {
+  border-color: rgb(9, 112, 206);
+}
+.flight .airlines .__slider .item:focus .__selected {
+  display: flex;
+}
+.flight .airlines .__slider .slick-button, .flight .airlines .__slider .slick-next, .flight .airlines .__slider .slick-prev {
+  background: rgb(9, 112, 206);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flight .airlines .__slider .slick-button:before, .flight .airlines .__slider .slick-next:before, .flight .airlines .__slider .slick-prev:before {
+  color: #ffffff;
+  content: "";
+  width: 0;
+  height: 0;
+  opacity: 1;
+}
+.flight .airlines .__slider .slick-prev {
+  left: 22px;
+}
+.flight .airlines .__slider .slick-prev:before {
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid;
+}
+.flight .airlines .__slider .slick-next {
+  right: 22px;
+}
+.flight .airlines .__slider .slick-next:before {
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid;
+}
+.flight .airline-list .__filter {
+  padding: 20px;
+  padding-bottom: 50px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 18px 0 rgba(104, 104, 104, 0.08);
+}
+.flight .airline-list .__filter .__title i {
+  font-size: 36px;
+  margin-left: 0;
+}
+.flight .airline-list .__filter .__title h3, .flight .airline-list .__filter .__title .h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.flight .airline-list .__filter .__section {
+  padding: 40px 0;
+}
+.flight .airline-list .__filter .__section:not(:last-child) {
+  border-bottom: 1px dashed #d2d2d2;
+}
+.flight .airline-list .__filter .__section h4, .flight .airline-list .__filter .__section .h4 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 22px;
+}
+.flight .airline-list .__filter .__section h4 span, .flight .airline-list .__filter .__section .h4 span {
+  font-weight: normal;
+  color: #5a5a5a;
+}
+.flight .airline-list .__filter .__section .__radio .filter-radio {
+  padding: 10px;
+  padding-left: 45px;
+  margin-bottom: 12px;
+  border: solid 1px #eaeaea;
+  box-shadow: 0 2px 18px 0 rgba(104, 104, 104, 0.08);
+  border-radius: 21px;
+  color: #7d7d7d;
+}
+.flight .airline-list .__filter .__section .__radio .filter-radio .form-check-input[type=radio] {
+  width: 21px;
+  height: 21px;
+  background: #e3e3e3;
+  border: none;
+  margin-left: -1.9em;
+  margin-top: 0.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flight .airline-list .__filter .__section .__radio .filter-radio .form-check-input[type=radio]:checked {
+  background: rgb(9, 112, 206);
+}
+.flight .airline-list .__filter .__section .__radio .filter-radio .form-check-input[type=radio]:checked::after {
+  content: "✓";
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+.flight .airline-list .__filter .__section .__radio .filter-radio .form-check-input[type=radio]:checked + label {
+  color: rgb(9, 112, 206);
+}
+.flight .airline-list .__filter .__section .__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 16px;
+  height: 100px;
+  background: #f4f4f4;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  border-bottom: 4px solid transparent;
+  color: #000;
+  text-decoration: none;
+}
+.flight .airline-list .__filter .__section .__card img {
+  margin-bottom: 10px;
+}
+.flight .airline-list .__filter .__section .__card:focus {
+  border-color: #eaeaea;
+  border-bottom-color: rgb(9, 112, 206);
+}
+.flight .airline-list .__filter .__section .__card:focus .__selected {
+  display: flex;
+}
+.flight .airline-list .travel-card, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .slider-img, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .slider-img, .flight .airline-list .video-section .video-container, .video-section .flight .airline-list .video-container, .flight .airline-list .offers .item, .offers .flight .airline-list .item {
+  padding: 20px;
+  margin-bottom: 22px;
+  background: #ffffff;
+}
+.flight .airline-list .travel-card span, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .slider-img span, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .slider-img span, .flight .airline-list .video-section .video-container span, .video-section .flight .airline-list .video-container span, .flight .airline-list .offers .item span, .offers .flight .airline-list .item span {
+  font-size: 14px;
+}
+.flight .airline-list .travel-card span .icon-flight, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .slider-img span .icon-flight, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .slider-img span .icon-flight, .flight .airline-list .video-section .video-container span .icon-flight, .video-section .flight .airline-list .video-container span .icon-flight, .flight .airline-list .offers .item span .icon-flight, .offers .flight .airline-list .item span .icon-flight {
+  font-size: 36px;
+}
+.flight .airline-list .travel-card .down-triangle, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .slider-img .down-triangle, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .slider-img .down-triangle, .flight .airline-list .video-section .video-container .down-triangle, .video-section .flight .airline-list .video-container .down-triangle, .flight .airline-list .offers .item .down-triangle, .offers .flight .airline-list .item .down-triangle, .flight .airline-list .travel-card .up-triangle, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .slider-img .up-triangle, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .slider-img .up-triangle, .flight .airline-list .video-section .video-container .up-triangle, .video-section .flight .airline-list .video-container .up-triangle, .flight .airline-list .offers .item .up-triangle, .offers .flight .airline-list .item .up-triangle {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+.flight .airline-list .travel-card.flight-card, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img, .flight .airline-list .video-section .flight-card.video-container, .video-section .flight .airline-list .flight-card.video-container, .flight .airline-list .offers .flight-card.item, .offers .flight .airline-list .flight-card.item {
+  font-size: 14px;
+  border-left: 7px solid transparent;
+}
+.flight .airline-list .travel-card.flight-card .airline-img, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img .airline-img, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img .airline-img, .flight .airline-list .video-section .flight-card.video-container .airline-img, .video-section .flight .airline-list .flight-card.video-container .airline-img, .flight .airline-list .offers .flight-card.item .airline-img, .offers .flight .airline-list .flight-card.item .airline-img {
+  padding: 10px 4px;
+  border-radius: 18px;
+  border: 1px solid #dddddd;
+  width: fit-content;
+  margin: auto;
+}
+.flight .airline-list .travel-card.flight-card .airline-img img, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img .airline-img img, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img .airline-img img, .flight .airline-list .video-section .flight-card.video-container .airline-img img, .video-section .flight .airline-list .flight-card.video-container .airline-img img, .flight .airline-list .offers .flight-card.item .airline-img img, .offers .flight .airline-list .flight-card.item .airline-img img {
+  width: 50px;
+}
+.flight .airline-list .travel-card.flight-card p, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img p, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img p, .flight .airline-list .video-section .flight-card.video-container p, .video-section .flight .airline-list .flight-card.video-container p, .flight .airline-list .offers .flight-card.item p, .offers .flight .airline-list .flight-card.item p {
+  margin-bottom: 0;
+}
+.flight .airline-list .travel-card.flight-card .details, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img .details, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img .details, .flight .airline-list .video-section .flight-card.video-container .details, .video-section .flight .airline-list .flight-card.video-container .details, .flight .airline-list .offers .flight-card.item .details, .offers .flight .airline-list .flight-card.item .details {
+  border-right: 1px dashed #dadada;
+  padding-bottom: 10px;
+}
+.flight .airline-list .travel-card.flight-card .details .airline-name, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img .details .airline-name, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img .details .airline-name, .flight .airline-list .video-section .flight-card.video-container .details .airline-name, .video-section .flight .airline-list .flight-card.video-container .details .airline-name, .flight .airline-list .offers .flight-card.item .details .airline-name, .offers .flight .airline-list .flight-card.item .details .airline-name {
+  font-weight: bold;
+}
+.flight .airline-list .travel-card.flight-card .details .airline-name .price, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img .details .airline-name .price, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img .details .airline-name .price, .flight .airline-list .video-section .flight-card.video-container .details .airline-name .price, .video-section .flight .airline-list .flight-card.video-container .details .airline-name .price, .flight .airline-list .offers .flight-card.item .details .airline-name .price, .offers .flight .airline-list .flight-card.item .details .airline-name .price {
+  font-size: 24px;
+}
+.flight .airline-list .travel-card.flight-card .details .airlines-stops img, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img .details .airlines-stops img, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img .details .airlines-stops img, .flight .airline-list .video-section .flight-card.video-container .details .airlines-stops img, .video-section .flight .airline-list .flight-card.video-container .details .airlines-stops img, .flight .airline-list .offers .flight-card.item .details .airlines-stops img, .offers .flight .airline-list .flight-card.item .details .airlines-stops img {
+  height: 24px;
+  z-index: 1;
+}
+.flight .airline-list .travel-card.flight-card .details .airlines-stops i, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img .details .airlines-stops i, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img .details .airlines-stops i, .flight .airline-list .video-section .flight-card.video-container .details .airlines-stops i, .video-section .flight .airline-list .flight-card.video-container .details .airlines-stops i, .flight .airline-list .offers .flight-card.item .details .airlines-stops i, .offers .flight .airline-list .flight-card.item .details .airlines-stops i {
+  z-index: 1;
+}
+.flight .airline-list .travel-card.flight-card .details .airlines-stops .line, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img .details .airlines-stops .line, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img .details .airlines-stops .line, .flight .airline-list .video-section .flight-card.video-container .details .airlines-stops .line, .video-section .flight .airline-list .flight-card.video-container .details .airlines-stops .line, .flight .airline-list .offers .flight-card.item .details .airlines-stops .line, .offers .flight .airline-list .flight-card.item .details .airlines-stops .line {
+  position: absolute;
+  height: 1px;
+  width: calc(100% - 30px);
+  border-bottom: 1px dashed #ddd;
+  left: 15px;
+  top: 50%;
+}
+.flight .airline-list .travel-card.flight-card .details .airlines-stops .airline-details, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img .details .airlines-stops .airline-details, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img .details .airlines-stops .airline-details, .flight .airline-list .video-section .flight-card.video-container .details .airlines-stops .airline-details, .video-section .flight .airline-list .flight-card.video-container .details .airlines-stops .airline-details, .flight .airline-list .offers .flight-card.item .details .airlines-stops .airline-details, .offers .flight .airline-list .flight-card.item .details .airlines-stops .airline-details {
+  font-size: 12px;
+  color: #727272;
+}
+.flight .airline-list .travel-card.flight-card .details .airlines-stops .airline-details i, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img .details .airlines-stops .airline-details i, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img .details .airlines-stops .airline-details i, .flight .airline-list .video-section .flight-card.video-container .details .airlines-stops .airline-details i, .video-section .flight .airline-list .flight-card.video-container .details .airlines-stops .airline-details i, .flight .airline-list .offers .flight-card.item .details .airlines-stops .airline-details i, .offers .flight .airline-list .flight-card.item .details .airlines-stops .airline-details i {
+  font-size: 18px;
+}
+.flight .airline-list .travel-card.flight-card .details .airlines-stops .airline-details i.icon-bag, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img .details .airlines-stops .airline-details i.icon-bag, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img .details .airlines-stops .airline-details i.icon-bag, .flight .airline-list .video-section .flight-card.video-container .details .airlines-stops .airline-details i.icon-bag, .video-section .flight .airline-list .flight-card.video-container .details .airlines-stops .airline-details i.icon-bag, .flight .airline-list .offers .flight-card.item .details .airlines-stops .airline-details i.icon-bag, .offers .flight .airline-list .flight-card.item .details .airlines-stops .airline-details i.icon-bag {
+  color: rgb(9, 112, 206);
+}
+.flight .airline-list .travel-card.flight-card .total-price, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img .total-price, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img .total-price, .flight .airline-list .video-section .flight-card.video-container .total-price, .video-section .flight .airline-list .flight-card.video-container .total-price, .flight .airline-list .offers .flight-card.item .total-price, .offers .flight .airline-list .flight-card.item .total-price {
+  color: #6cbd46;
+  font-weight: bold;
+  font-size: 12px;
+}
+.flight .airline-list .travel-card.flight-card .total-price span, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img .total-price span, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img .total-price span, .flight .airline-list .video-section .flight-card.video-container .total-price span, .video-section .flight .airline-list .flight-card.video-container .total-price span, .flight .airline-list .offers .flight-card.item .total-price span, .offers .flight .airline-list .flight-card.item .total-price span {
+  font-size: 24px;
+}
+.flight .airline-list .travel-card.flight-card .persons, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img .persons, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img .persons, .flight .airline-list .video-section .flight-card.video-container .persons, .video-section .flight .airline-list .flight-card.video-container .persons, .flight .airline-list .offers .flight-card.item .persons, .offers .flight .airline-list .flight-card.item .persons {
+  margin-bottom: 30px;
+  color: #858585;
+  font-size: 14px;
+}
+.flight .airline-list .travel-card.flight-card .extras, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img .extras, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img .extras, .flight .airline-list .video-section .flight-card.video-container .extras, .video-section .flight .airline-list .flight-card.video-container .extras, .flight .airline-list .offers .flight-card.item .extras, .offers .flight .airline-list .flight-card.item .extras {
+  padding: 5px 30px;
+  background: #f4f4f4;
+  margin-top: 30px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+.flight .airline-list .travel-card.flight-card .extras i, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img .extras i, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img .extras i, .flight .airline-list .video-section .flight-card.video-container .extras i, .video-section .flight .airline-list .flight-card.video-container .extras i, .flight .airline-list .offers .flight-card.item .extras i, .offers .flight .airline-list .flight-card.item .extras i {
+  font-size: 30px;
+  margin: 0;
+  color: #6cbd46;
+}
+.flight .airline-list .travel-card.flight-card .extras .selected, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img .extras .selected, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img .extras .selected, .flight .airline-list .video-section .flight-card.video-container .extras .selected, .video-section .flight .airline-list .flight-card.video-container .extras .selected, .flight .airline-list .offers .flight-card.item .extras .selected, .offers .flight .airline-list .flight-card.item .extras .selected {
+  font-weight: bold;
+}
+.flight .airline-list .travel-card.flight-card .extras .selected i, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img .extras .selected i, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img .extras .selected i, .flight .airline-list .video-section .flight-card.video-container .extras .selected i, .video-section .flight .airline-list .flight-card.video-container .extras .selected i, .flight .airline-list .offers .flight-card.item .extras .selected i, .offers .flight .airline-list .flight-card.item .extras .selected i {
+  color: #000;
+}
+.flight .airline-list .travel-card.flight-card:hover, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img:hover, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img:hover, .flight .airline-list .video-section .flight-card.video-container:hover, .video-section .flight .airline-list .flight-card.video-container:hover, .flight .airline-list .offers .flight-card.item:hover, .offers .flight .airline-list .flight-card.item:hover {
+  border-color: #6cbd46;
+}
+.flight .airline-list .travel-card.flight-card .__content.hide, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img .__content.hide, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img .__content.hide, .flight .airline-list .video-section .flight-card.video-container .__content.hide, .video-section .flight .airline-list .flight-card.video-container .__content.hide, .flight .airline-list .offers .flight-card.item .__content.hide, .offers .flight .airline-list .flight-card.item .__content.hide {
+  padding: 40px 0 26px;
+  margin-top: 26px;
+  border-top: 1px solid #ddd;
+}
+.flight .airline-list .travel-card.flight-card .__content:hover .btn-more, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img .__content:hover .btn-more, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img .__content:hover .btn-more, .flight .airline-list .video-section .flight-card.video-container .__content:hover .btn-more, .video-section .flight .airline-list .flight-card.video-container .__content:hover .btn-more, .flight .airline-list .offers .flight-card.item .__content:hover .btn-more, .offers .flight .airline-list .flight-card.item .__content:hover .btn-more {
+  background: #6cbd46;
+  border-color: #6cbd46;
+}
+.flight .airline-list .travel-card.flight-card.expandable, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.expandable.slider-img, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.expandable.slider-img, .flight .airline-list .video-section .flight-card.expandable.video-container, .video-section .flight .airline-list .flight-card.expandable.video-container, .flight .airline-list .offers .flight-card.expandable.item, .offers .flight .airline-list .flight-card.expandable.item {
+  overflow: initial;
+  margin-bottom: 35px;
+}
+.flight .airline-list .travel-card.flight-card.expandable .expand, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.expandable.slider-img .expand, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.expandable.slider-img .expand, .flight .airline-list .video-section .flight-card.expandable.video-container .expand, .video-section .flight .airline-list .flight-card.expandable.video-container .expand, .flight .airline-list .offers .flight-card.expandable.item .expand, .offers .flight .airline-list .flight-card.expandable.item .expand {
+  padding: 12px 14px;
+  display: block;
+  width: fit-content;
+  margin: 12px auto;
+  margin-bottom: -34px;
+  background-color: #ffffff !important;
+  border-radius: 20px;
+  text-decoration: none;
+}
+.flight .airline-list .travel-card.flight-card.expandable .expand i, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.expandable.slider-img .expand i, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.expandable.slider-img .expand i, .flight .airline-list .video-section .flight-card.expandable.video-container .expand i, .video-section .flight .airline-list .flight-card.expandable.video-container .expand i, .flight .airline-list .offers .flight-card.expandable.item .expand i, .offers .flight .airline-list .flight-card.expandable.item .expand i {
+  color: #000000;
+}
+
+@media (max-width: 992px) {
+  .flight .airline-list .travel-card span, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .slider-img span, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .slider-img span, .flight .airline-list .video-section .video-container span, .video-section .flight .airline-list .video-container span, .flight .airline-list .offers .item span, .offers .flight .airline-list .item span {
+    font-size: 10px;
+  }
+}
 
 /*# sourceMappingURL=theme.css.map */

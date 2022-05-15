@@ -27,7 +27,8 @@
     <!-- <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" /> -->
     <link href="lib/select2/select2.min.css" rel="stylesheet"/>
     <link href="lib/slick/slick.min.css" rel="stylesheet" />
-
+    <link href="lib/slick/slick-theme.css" rel="stylesheet" />
+    <link href="lib/nouislider/nouislider.min.css" rel="stylesheet" />
     <!-- Customized Bootstrap Stylesheet -->
     <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
 
@@ -169,20 +170,20 @@
                           <ul role="tablist" class="nav nav-tabs">
                               <li role="presentation" class="nav-item tab-btn-wrapper">
                                   <button type="button" data-bs-target="#hotel" aria-controls="hotel" role="tab" data-bs-toggle="tab" class="tab-btn nav-link active">
-                                      <i class="demo-icon icon-hotel">&#xe800;</i>
+                                      <i class="demo-icon icon-hotel">&#xe803;</i>
                                   <span class="xs">Hotels</span>
                               </button>
                           </li>
                               <li role="presentation" class="nav-item tab-btn-wrapper"><button type="button" data-bs-target="#flight" aria-controls="flight" role="tab" data-bs-toggle="tab" class="tab-btn nav-link">
-                                  <i class="demo-icon icon-offline">&#xe801;</i>
+                                  <i class="demo-icon icon-offline">&#xe802;</i>
                                   <span class="xs">Flights</span></button></li>
                               <li role="presentation" class="nav-item tab-btn-wrapper">
                                   <button type="button" data-bs-target="#transfer" aria-controls="transfer" role="tab" data-bs-toggle="tab" class="tab-btn nav-link">
-                                      <i class="demo-icon icon-running">&#xe802;</i>
+                                      <i class="demo-icon icon-running">&#xe801;</i>
                                       <span class="xs">Hotels + Flights</span></button></li>
                               <li role="presentation" class="nav-item tab-btn-wrapper">
                                   <button type="button" data-bs-target="#car-rent" aria-controls="car-rent" role="tab" data-bs-toggle="tab" class="tab-btn nav-link">
-                                      <i class="demo-icon icon-sportive-car-front fs-6 me-3">&#xe803;</i>
+                                      <i class="demo-icon icon-sportive-car-front fs-6 me-3">&#xe800;</i>
                                       <span class="xs">Car Rental</span></button></li>
                           </ul>
                       </div>
@@ -194,7 +195,7 @@
                           <form class="form-search">
                               <div class="row ">
                                   <div class="col-md-3 text-center">
-                                      <label class="tb-label d-block mb-2"><i class="fa fa-map-marker-alt"></i> Destination</label>
+                                      <label class="tb-label d-block mb-2"><i class="demo-icon icon-pin">&#xe804;</i> Destination</label>
                                       <a class="dropdown-bordered dropdown-toggle dropdown-toggle-split text-secondary py-1 px-4 border-0 rounded-pill" href="#" 
                                       data-bs-toggle="dropdown" aria-expanded="false"> City or cpecific hotel</a>
                                       <div class="dropdown-menu dropdown-menu-center navbar-dropdown preview-list mt-4" aria-labelledby="messageDropdown">
@@ -285,7 +286,7 @@
                                       </div>
                                   </div>
                                   <div class="col-md-3 text-center">
-                                      <label class="tb-label d-block mb-2"><i class="far fa-calendar-alt"></i> Check In</label>
+                                      <label class="tb-label d-block mb-2"><i class="demo-icon icon-calendar">&#xe805;</i> Check In</label>
                                       <div id="datepicker-checkin2" class="input-group date datepicker navbar-date-picker">
                                           <span class="input-group-addon input-group-prepend border-right">
                                             <!-- <span class="icon-calendar input-group-text calendar-icon"></span> -->
@@ -294,7 +295,7 @@
                                       </div>
                                   </div>
                                   <div class="col-md-3 text-center">
-                                      <label class="tb-label d-block mb-2"><i class="far fa-calendar-alt"></i> Check Out</label>
+                                      <label class="tb-label d-block mb-2"><i class="demo-icon icon-calendar">&#xe805;</i> Check Out</label>
                                       <div id="datepicker-checkout" class="input-group date datepicker navbar-date-picker">
                                           <span class="input-group-addon input-group-prepend border-right">
                                             <!-- <span class="icon-calendar input-group-text calendar-icon"></span> -->
@@ -303,7 +304,7 @@
                                       </div>
                                   </div>
                                   <div class="col-md-3 text-center">
-                                      <label class="tb-label d-block mb-2"><i class="fas fa-user-plus"></i> Rooms & Guest</label>
+                                      <label class="tb-label d-block mb-2"><i class="demo-icon icon-guest">&#xe806;</i> Rooms & Guest</label>
                                       <a class="dropdown-bordered dropdown-toggle dropdown-toggle-split text-secondary py-1 px-4 rounded-pill bg-transparent" href="#" 
                                       data-bs-toggle="dropdown" aria-expanded="false">add guests</a>
                                       <div class="dropdown-menu dropdown-menu-center navbar-dropdown preview-list mt-4 guest-cont" aria-labelledby="messageDropdown">
@@ -397,7 +398,7 @@
                           <form class="form-search">
                               <div class="row ">
                                   <div class="col-md-3 text-center">
-                                      <label class="tb-label d-block mb-2"><i class="fa fa-map-marker-alt"></i> Destination</label>
+                                      <label class="tb-label d-block mb-2"><i class="demo-icon icon-pin">&#xe804;</i> Destination</label>
                                       <a class="dropdown-bordered dropdown-toggle dropdown-toggle-split text-secondary py-1 px-4 border-0 rounded-pill" href="#" 
                                       data-bs-toggle="dropdown" aria-expanded="false"> City or cpecific hotel</a>
                                       <div class="dropdown-menu dropdown-menu-center navbar-dropdown preview-list mt-4" aria-labelledby="messageDropdown">
@@ -488,7 +489,7 @@
                                       </div>
                                   </div>
                                   <div class="col-md-3 text-center">
-                                      <label class="tb-label d-block mb-2"><i class="far fa-calendar-alt"></i> Check In</label>
+                                      <label class="tb-label d-block mb-2"><i class="demo-icon icon-calendar">&#xe805;</i> Check In</label>
                                       <div id="datepicker-checkin3" class="input-group date datepicker navbar-date-picker">
                                           <span class="input-group-addon input-group-prepend border-right">
                                             <!-- <span class="icon-calendar input-group-text calendar-icon"></span> -->
@@ -497,7 +498,7 @@
                                       </div>
                                   </div>
                                   <div class="col-md-3 text-center">
-                                      <label class="tb-label d-block mb-2"><i class="far fa-calendar-alt"></i> Check Out</label>
+                                      <label class="tb-label d-block mb-2"><i class="demo-icon icon-calendar">&#xe805;</i> Check Out</label>
                                       <div id="datepicker-checkout2" class="input-group date datepicker navbar-date-picker">
                                           <span class="input-group-addon input-group-prepend border-right">
                                             <!-- <span class="icon-calendar input-group-text calendar-icon"></span> -->
@@ -506,7 +507,7 @@
                                       </div>
                                   </div>
                                   <div class="col-md-3 text-center">
-                                      <label class="tb-label d-block mb-2"><i class="fas fa-user-plus"></i> Rooms & Guest</label>
+                                      <label class="tb-label d-block mb-2"><i class="demo-icon icon-guest">&#xe806;</i> Rooms & Guest</label>
                                       <a class="dropdown-bordered dropdown-toggle dropdown-toggle-split text-secondary py-1 px-4 rounded-pill bg-transparent" href="#" 
                                       data-bs-toggle="dropdown" aria-expanded="false">add guests</a>
                                       <div class="dropdown-menu dropdown-menu-center navbar-dropdown preview-list mt-4 guest-cont" aria-labelledby="messageDropdown">
@@ -600,7 +601,7 @@
                           <form class="form-search">
                               <div class="row ">
                                   <div class="col-md-3 text-center">
-                                      <label class="tb-label d-block mb-2"><i class="fa fa-map-marker-alt"></i> Destination</label>
+                                      <label class="tb-label d-block mb-2"><i class="demo-icon icon-pin">&#xe804;</i> Destination</label>
                                       <a class="dropdown-bordered dropdown-toggle dropdown-toggle-split text-secondary py-1 px-4 border-0 rounded-pill" href="#" 
                                       data-bs-toggle="dropdown" aria-expanded="false"> City or cpecific hotel</a>
                                       <div class="dropdown-menu dropdown-menu-center navbar-dropdown preview-list mt-4" aria-labelledby="messageDropdown">
@@ -691,7 +692,7 @@
                                       </div>
                                   </div>
                                   <div class="col-md-3 text-center">
-                                      <label class="tb-label d-block mb-2"><i class="far fa-calendar-alt"></i> Check In</label>
+                                      <label class="tb-label d-block mb-2"><i class="demo-icon icon-calendar">&#xe805;</i> Check In</label>
                                       <div id="datepicker-checkin4" class="input-group date datepicker navbar-date-picker">
                                           <span class="input-group-addon input-group-prepend border-right">
                                             <!-- <span class="icon-calendar input-group-text calendar-icon"></span> -->
@@ -700,7 +701,7 @@
                                       </div>
                                   </div>
                                   <div class="col-md-3 text-center">
-                                      <label class="tb-label d-block mb-2"><i class="far fa-calendar-alt"></i> Check Out</label>
+                                      <label class="tb-label d-block mb-2"><i class="demo-icon icon-calendar">&#xe805;</i> Check Out</label>
                                       <div id="datepicker-checkout3" class="input-group date datepicker navbar-date-picker">
                                           <span class="input-group-addon input-group-prepend border-right">
                                             <!-- <span class="icon-calendar input-group-text calendar-icon"></span> -->
@@ -709,7 +710,7 @@
                                       </div>
                                   </div>
                                   <div class="col-md-3 text-center">
-                                      <label class="tb-label d-block mb-2"><i class="fas fa-user-plus"></i> Rooms & Guest</label>
+                                      <label class="tb-label d-block mb-2"><i class="demo-icon icon-guest">&#xe806;</i> Rooms & Guest</label>
                                       <a class="dropdown-bordered dropdown-toggle dropdown-toggle-split text-secondary py-1 px-4 rounded-pill bg-transparent" href="#" 
                                       data-bs-toggle="dropdown" aria-expanded="false">add guests</a>
                                       <div class="dropdown-menu dropdown-menu-center navbar-dropdown preview-list mt-4 guest-cont" aria-labelledby="messageDropdown">
@@ -803,7 +804,7 @@
                           <form class="form-search">
                               <div class="row ">
                                   <div class="col-md-3 text-center">
-                                      <label class="tb-label d-block mb-2"><i class="fa fa-map-marker-alt"></i> Destination</label>
+                                      <label class="tb-label d-block mb-2"><i class="demo-icon icon-pin">&#xe804;</i> Destination</label>
                                       <a class="dropdown-bordered dropdown-toggle dropdown-toggle-split text-secondary py-1 px-4 border-0 rounded-pill" href="#" 
                                       data-bs-toggle="dropdown" aria-expanded="false"> City or cpecific hotel</a>
                                       <div class="dropdown-menu dropdown-menu-center navbar-dropdown preview-list mt-4" aria-labelledby="messageDropdown">
@@ -894,7 +895,7 @@
                                       </div>
                                   </div>
                                   <div class="col-md-3 text-center">
-                                      <label class="tb-label d-block mb-2"><i class="far fa-calendar-alt"></i> Check In</label>
+                                      <label class="tb-label d-block mb-2"><i class="demo-icon icon-calendar">&#xe805;</i> Check In</label>
                                       <div id="datepicker-checkin" class="input-group date datepicker navbar-date-picker">
                                           <span class="input-group-addon input-group-prepend border-right">
                                             <!-- <span class="icon-calendar input-group-text calendar-icon"></span> -->
@@ -903,7 +904,7 @@
                                       </div>
                                   </div>
                                   <div class="col-md-3 text-center">
-                                      <label class="tb-label d-block mb-2"><i class="far fa-calendar-alt"></i> Check Out</label>
+                                      <label class="tb-label d-block mb-2"><i class="demo-icon icon-calendar">&#xe805;</i> Check Out</label>
                                       <div id="datepicker-checkout4" class="input-group date datepicker navbar-date-picker">
                                           <span class="input-group-addon input-group-prepend border-right">
                                             <!-- <span class="icon-calendar input-group-text calendar-icon"></span> -->
@@ -912,7 +913,7 @@
                                       </div>
                                   </div>
                                   <div class="col-md-3 text-center">
-                                      <label class="tb-label d-block mb-2"><i class="fas fa-user-plus"></i> Rooms & Guest</label>
+                                      <label class="tb-label d-block mb-2"><i class="demo-icon icon-guest">&#xe806;</i> Rooms & Guest</label>
                                       <a class="dropdown-bordered dropdown-toggle dropdown-toggle-split text-secondary py-1 px-4 rounded-pill bg-transparent" href="#" 
                                       data-bs-toggle="dropdown" aria-expanded="false">add guests</a>
                                       <div class="dropdown-menu dropdown-menu-center navbar-dropdown preview-list mt-4 guest-cont" aria-labelledby="messageDropdown">
@@ -1943,6 +1944,7 @@
     <!-- <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script> -->
     <script src="lib/slick/slick.min.js"></script>
     <script src="lib/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="lib/nouislider/nouislider.min.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>

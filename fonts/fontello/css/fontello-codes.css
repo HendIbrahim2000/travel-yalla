@@ -1,5 +1,13 @@
 
-.icon-hotel:before { content: '\e800'; } /* '' */
-.icon-offline:before { content: '\e801'; } /* '' */
-.icon-running:before { content: '\e802'; } /* '' */
-.icon-sportive-car-front:before { content: '\e803'; } /* '' */
+.icon-sportive-car-front:before { content: '\e800'; } /* '' */
+.icon-running:before { content: '\e801'; } /* '' */
+.icon-offline:before { content: '\e802'; } /* '' */
+.icon-hotel:before { content: '\e803'; } /* '' */
+.icon-pin:before { content: '\e804'; } /* '' */
+.icon-calendar:before { content: '\e805'; } /* '' */
+.icon-guest:before { content: '\e806'; } /* '' */
+.icon-filter:before { content: '\e807'; } /* '' */
+.icon-flight:before { content: '\e808'; } /* '' */
+.icon-plane:before { content: '\e809'; } /* '' */
+.icon-clock:before { content: '\e80a'; } /* '' */
+.icon-bag:before { content: '\e80b'; } /* '' */

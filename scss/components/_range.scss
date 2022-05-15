@@ -1,0 +1,29 @@
+.noUi-horizontal {
+    height: 9px;
+    border-radius: 5px;
+    background: #dedede;
+    border: none;
+    margin-top: 50px;
+
+    .noUi-connect {
+        background: $main-color;
+    }
+
+    .noUi-handle {
+        width: 19px;
+        height: 19px;
+        top: -5px;
+        border: none;
+        border-radius: 50%;
+        background: $second-color;
+        box-shadow: none;
+
+        &:before, &:after {
+            display: none;
+        }
+
+        .noUi-tooltip {
+            border: none;
+        }
+    }
+}

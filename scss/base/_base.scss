@@ -69,6 +69,22 @@ section {
   overflow: hidden;
 }
 
+.__selected {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  top: -10px;
+  right: -8px;
+  font-size: 11px;
+  background: $main-color;
+  color: #ffffff;
+
+}
+
 .fw-medium {
   font-weight: 600 !important;
 }
@@ -95,6 +111,38 @@ section {
     }
   }
 }
+
+.main-dark {
+  background: $dark-blue;
+  border-color: $dark-blue;
+}
+
+.second-color {
+  color: $second-color;
+}
+
+
+.down-triangle {
+  width: 0; 
+  height: 0; 
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  
+  border-top: 8px solid;
+}
+
+.hide {
+  display: none;
+}
+
+.up-triangle {
+  width: 0; 
+  height: 0; 
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid;
+}
+
 
 @media (max-width: 992px ) {
 

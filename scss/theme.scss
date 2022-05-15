@@ -37,10 +37,14 @@
 @import 'components/slider';
 @import 'components/searchbox';
 @import 'components/datepicker';
+@import 'components/range';
+@import 'components/pagination';
+
 
 /*-----------------------------------------------
 |   Pages Styles
 -----------------------------------------------*/
 @import "pages/home";
+@import "pages/flight";
 
 
