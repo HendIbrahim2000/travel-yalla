@@ -135,11 +135,13 @@ $('.popup-btn').on('click', function () {
 });
 
 $('.popup-bg').on('click', function () {
+    $('iframe').attr('src', $('iframe').attr('src'));
     $('.video-popup').slideUp('slow');
     return false;
 });
 
 $('.close-btn').on('click', function () {
+  $('iframe').attr('src', $('iframe').attr('src'));
     $('.video-popup').fadeOut('slow');
     return false;
 });
