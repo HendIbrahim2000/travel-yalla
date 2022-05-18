@@ -12099,6 +12099,7 @@ footer .footer .footer-cert img {
   color: #000;
   text-decoration: none;
   margin-bottom: 30px;
+  transition: all 0.3s ease;
 }
 .offers .item .img {
   height: 230px;
@@ -12123,6 +12124,9 @@ footer .footer .footer-cert img {
 }
 .offers .item .card-body p.price span.price {
   color: #45853e;
+}
+.offers .item:hover {
+  margin-top: -20px;
 }
 
 /**End Offers Section**/

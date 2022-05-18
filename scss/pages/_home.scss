@@ -276,6 +276,7 @@
         color: #000;
         text-decoration: none;
         margin-bottom: 30px;
+        transition: all .3s ease;
 
         .img {
             height: 230px;
@@ -317,6 +318,10 @@
             }
 
             
+        }
+
+        &:hover {
+            margin-top: -20px;
         }
     }
 }
