@@ -170,9 +170,22 @@
             }
 
             &:first-child .tab-btn {
-                border-radius: 16px 16px 0 0;
-                -webkit-border-radius: 16px 16px 0 0;
-                -moz-border-radius: 16px 16px 0 0;
+                border-radius: 15px 0 0 0;
+                -webkit-border-radius: 15px 0 0 0;
+                -moz-border-radius: 15px 0 0 0;
+
+                &.active {
+                    background: #ffffff;
+                    color: #000000;
+                    padding: 20px 40px;
+                    border-radius: 16px 16px 0 0;
+                    -webkit-border-radius: 16px 16px 0 0;
+                    -moz-border-radius: 16px 16px 0 0;
+
+                    i {
+                        color: $main-color;
+                    }
+                }
             }
 
             &:last-child {
@@ -182,6 +195,19 @@
                     border-radius: 0 15px 0 0;
                     -webkit-border-radius: 0 15px 0 0;
                     -moz-border-radius: 0 15px 0 0;
+
+                    &.active {
+                        background: #ffffff;
+                        color: #000000;
+                        padding: 20px 40px;
+                        border-radius: 16px 16px 0 0;
+                        -webkit-border-radius: 16px 16px 0 0;
+                        -moz-border-radius: 16px 16px 0 0;
+    
+                        i {
+                            color: $main-color;
+                        }
+                    }
                 }
             }
             
