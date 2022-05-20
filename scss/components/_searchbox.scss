@@ -4,8 +4,7 @@
 
 
 .form-search {
-    padding-right: 100px;
-    position: relative;
+    
 
     .tb-label i {
         color: #1e4056;
@@ -64,7 +63,7 @@
     .btn-search {
         position: absolute;
         right: 20px;
-        top: 0;
+        top: 40px;
         width: 60px;
         height: 60px;
         background: $main-color;
@@ -103,6 +102,77 @@
         }
     }
 
+    &.flight-search {
+            padding-right: 0;
+
+            .dropdown-toggle, .input-group input, .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+                background: transparent;
+                text-decoration: none;
+            }
+
+            .flight-form {
+                position: relative;
+
+                @media (min-width: 992px) {
+                    padding-right: 100px; 
+
+                    .col-md:not(:last-child) {
+                        border-right: 1px solid #d7d7d7;
+                    }
+                }
+
+                .btn-search {
+                    top: auto;
+                    bottom: 20px;
+
+                @media (max-width: 992px) {
+                    & {
+                        position: relative;
+                        margin-bottom: 20px;
+                        right: 0;
+                    }
+                        
+                    }
+                }
+            }
+        }
+        .__trip {
+            
+            .form-check-input[type=radio] {
+                border-radius: 6px;
+                width: 18px;
+                height: 18px;
+
+                &:checked {
+                    background-image:none;
+                    background-color: $main-color;
+                    border-color: $main-color;
+                    -webkit-box-shadow: inset 0px 0px 0px 2px #ffffff;
+                    -moz-box-shadow: inset 0px 0px 0px 2px #ffffff;
+                    box-shadow: inset 0px 0px 0px 2px #ffffff;
+                }
+            }
+        }
+
+        .flight-type {
+            background: $light-bg;
+            padding: 20px 0 16px;
+            border-radius: 0 0 16px 16px;
+
+            .form-check-input {
+                width: 18px;
+                height: 18px;
+
+                &:checked {
+                    background-image: none;
+                    background-color: $main-color;
+                    border-color: $main-color;
+                    -webkit-box-shadow: inset 0px 0px 0px 2px #ffffff;
+                    -moz-box-shadow: inset 0px 0px 0px 2px #ffffff;
+                    box-shadow: inset 0px 0px 0px 2px #ffffff;
+                }
+            }
+        }
     
 }
 
@@ -216,11 +286,21 @@
 
     .tab-content-bg {
         background: #ffffff;
-        padding: 40px 25px 15px;
         border-radius: 0 16px 16px 16px;
         box-shadow: 0 3px 10px rgb(0 0 0 / 10%);
 
-        @extend .form-search
+        @extend .form-search;
+
+        .tab-pane {
+            padding: 40px 25px 15px;
+            padding-right: 100px;
+            position: relative;
+            &#flight {
+                padding: 0;
+                padding-top: 40px;
+            }
+        }
+        
        
     }
 }
@@ -281,6 +361,19 @@
                     }
                 }
                 
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+
+    #flight {
+
+        .form-check-inline {
+
+            label {
+                font-size: 14px;
             }
         }
     }

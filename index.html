@@ -395,207 +395,332 @@
                           </form>
                       </div>
                       <div role="tabpanel" id="flight" class="tab-pane fade">
-                          <form class="form-search">
+                        <form class="form-search flight-search">
+                          <div class="container">
+                            <div class="__trip">
+                              <div class="form-check form-check-inline ms-md-4 mb-5">
+                                <input class="form-check-input" type="radio" name="tripType" value="" checked>
+                                <label class="form-check-label">One Way</label>
+                              </div>
+                              <div class="form-check form-check-inline ms-md-4 mb-5">
+                                <input class="form-check-input" type="radio" name="tripType" value="">
+                                <label class="form-check-label">Round trip</label>
+                              </div>
+                              <div class="form-check form-check-inline ms-md-4 mb-5">
+                                <input class="form-check-input" type="radio" name="tripType" value="">
+                                <label class="form-check-label">Multi cities</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container">
+                            <div class="flight-form">
                               <div class="row ">
-                                  <div class="col-md-3 text-center">
-                                      <label class="tb-label d-block mb-2"><i class="demo-icon icon-pin">&#xe804;</i> Destination</label>
-                                      <a class="dropdown-bordered dropdown-toggle dropdown-toggle-split text-secondary py-1 px-4 border-0 rounded-pill" href="#" 
-                                      data-bs-toggle="dropdown" aria-expanded="false"> City or cpecific hotel</a>
-                                      <div class="dropdown-menu dropdown-menu-center navbar-dropdown preview-list mt-4" aria-labelledby="messageDropdown">
-                                          <div class="card mb-3 border-0">
-                                              <div class="row g-0">
-                                                  <div class="col-md-5">
-                                                      <div class="card-body">
-                                                        <h5 class="card-title">Activites for fun 
-                                                          & Relaxation</h5>
-                                                        </div>
-                                                    </div>
-                                                <div class="col-md-7">
-                                                  <img src="img/activity.png" class="img-fluid rounded-end">
-                                                </div>
-                                                
+                                <div class="col-md text-center pb-2 mb-4">
+                                    <label class="tb-label d-block mb-4"><i class="demo-icon icon-pin">&#xe804;</i> Leaving from</label>
+                                    <a class="dropdown-bordered dropdown-toggle dropdown-toggle-split text-secondary py-1 px-4 border-0 rounded-pill" href="#" 
+                                    data-bs-toggle="dropdown" aria-expanded="false"> Cairo, Egypt , (CAI) - Cairo Inter…</a>
+                                    <div class="dropdown-menu dropdown-menu-center navbar-dropdown preview-list mt-4" aria-labelledby="messageDropdown">
+                                        <div class="card mb-3 border-0">
+                                            <div class="row g-0">
+                                                <div class="col-md-5">
+                                                    <div class="card-body">
+                                                      <h5 class="card-title">Activites for fun 
+                                                        & Relaxation</h5>
+                                                      </div>
+                                                  </div>
+                                              <div class="col-md-7">
+                                                <img src="img/activity.png" class="img-fluid rounded-end">
                                               </div>
+                                              
                                             </div>
-                                            <div class="row">
-                                              <div class="col-md-6">
-                                                  <div class="search-list">
-                                                  <legend>Saudia Arabia</legend>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="search-list">
+                                                <legend>Saudia Arabia</legend>
+                                                <a class="dropdown-item preview-item">
+                                                    <div class="preview-item-content flex-grow px-2">
+                                                      <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                    </div>
+                                                  </a>
                                                   <a class="dropdown-item preview-item">
-                                                      <div class="preview-item-content flex-grow px-2">
-                                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
-                                                      </div>
-                                                    </a>
-                                                    <a class="dropdown-item preview-item">
-                                                      <div class="preview-item-content flex-grow px-2">
-                                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
-                                                      </div>
-                                                    </a>
-                                                    <a class="dropdown-item preview-item">
-                                                      <div class="preview-item-content flex-grow px-2">
-                                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
-                                                      </div>
-                                                    </a>
-                                                    <a class="dropdown-item preview-item">
-                                                      <div class="preview-item-content flex-grow px-2">
-                                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
-                                                      </div>
-                                                    </a>
-                                                    <a class="dropdown-item preview-item">
-                                                      <div class="preview-item-content flex-grow px-2">
-                                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
-                                                      </div>
-                                                    </a>
-                                                  </div>
-                                              </div>
-                                              <div class="col-md-6">
-                                                  <div class="search-list">
-                                                  <legend>Saudia Arabia</legend>
+                                                    <div class="preview-item-content flex-grow px-2">
+                                                      <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                    </div>
+                                                  </a>
                                                   <a class="dropdown-item preview-item">
-                                                      <div class="preview-item-content flex-grow px-2">
-                                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
-                                                      </div>
-                                                    </a>
+                                                    <div class="preview-item-content flex-grow px-2">
+                                                      <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                    </div>
+                                                  </a>
+                                                  <a class="dropdown-item preview-item">
+                                                    <div class="preview-item-content flex-grow px-2">
+                                                      <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                    </div>
+                                                  </a>
+                                                  <a class="dropdown-item preview-item">
+                                                    <div class="preview-item-content flex-grow px-2">
+                                                      <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                    </div>
+                                                  </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="search-list">
+                                                <legend>Saudia Arabia</legend>
+                                                <a class="dropdown-item preview-item">
+                                                    <div class="preview-item-content flex-grow px-2">
+                                                      <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                    </div>
+                                                  </a>
+                                                  <a class="dropdown-item preview-item">
+                                                    <div class="preview-item-content flex-grow px-2">
+                                                      <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                    </div>
+                                                  </a>
+                                                  <a class="dropdown-item preview-item">
+                                                    <div class="preview-item-content flex-grow px-2">
+                                                      <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                    </div>
+                                                  </a>
+                                                </div>
+                                                <div class="search-list">
+                                                    <legend>Saudia Arabia</legend>
                                                     <a class="dropdown-item preview-item">
-                                                      <div class="preview-item-content flex-grow px-2">
-                                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
-                                                      </div>
-                                                    </a>
-                                                    <a class="dropdown-item preview-item">
-                                                      <div class="preview-item-content flex-grow px-2">
-                                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
-                                                      </div>
-                                                    </a>
-                                                  </div>
-                                                  <div class="search-list">
-                                                      <legend>Saudia Arabia</legend>
+                                                        <div class="preview-item-content flex-grow px-2">
+                                                          <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                        </div>
+                                                      </a>
                                                       <a class="dropdown-item preview-item">
-                                                          <div class="preview-item-content flex-grow px-2">
-                                                            <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
-                                                          </div>
-                                                        </a>
-                                                        <a class="dropdown-item preview-item">
-                                                          <div class="preview-item-content flex-grow px-2">
-                                                            <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
-                                                          </div>
-                                                        </a>
-                                                        <a class="dropdown-item preview-item">
-                                                          <div class="preview-item-content flex-grow px-2">
-                                                            <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
-                                                          </div>
-                                                        </a>
+                                                        <div class="preview-item-content flex-grow px-2">
+                                                          <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                        </div>
+                                                      </a>
+                                                      <a class="dropdown-item preview-item">
+                                                        <div class="preview-item-content flex-grow px-2">
+                                                          <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                        </div>
+                                                      </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md text-center pb-2 mb-4">
+                                  <label class="tb-label d-block mb-4"><i class="demo-icon icon-pin">&#xe804;</i> Going to</label>
+                                  <a class="dropdown-bordered dropdown-toggle dropdown-toggle-split text-secondary py-1 px-4 border-0 rounded-pill" href="#" 
+                                  data-bs-toggle="dropdown" aria-expanded="false"> Dublin (DUB)</a>
+                                  <div class="dropdown-menu dropdown-menu-center navbar-dropdown preview-list mt-4" aria-labelledby="messageDropdown">
+                                      <div class="card mb-3 border-0">
+                                          <div class="row g-0">
+                                              <div class="col-md-5">
+                                                  <div class="card-body">
+                                                    <h5 class="card-title">Activites for fun 
+                                                      & Relaxation</h5>
+                                                    </div>
+                                                </div>
+                                            <div class="col-md-7">
+                                              <img src="img/activity.png" class="img-fluid rounded-end">
+                                            </div>
+                                            
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="col-md-6">
+                                              <div class="search-list">
+                                              <legend>Saudia Arabia</legend>
+                                              <a class="dropdown-item preview-item">
+                                                  <div class="preview-item-content flex-grow px-2">
+                                                    <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
                                                   </div>
+                                                </a>
+                                                <a class="dropdown-item preview-item">
+                                                  <div class="preview-item-content flex-grow px-2">
+                                                    <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                  </div>
+                                                </a>
+                                                <a class="dropdown-item preview-item">
+                                                  <div class="preview-item-content flex-grow px-2">
+                                                    <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                  </div>
+                                                </a>
+                                                <a class="dropdown-item preview-item">
+                                                  <div class="preview-item-content flex-grow px-2">
+                                                    <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                  </div>
+                                                </a>
+                                                <a class="dropdown-item preview-item">
+                                                  <div class="preview-item-content flex-grow px-2">
+                                                    <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                  </div>
+                                                </a>
+                                              </div>
+                                          </div>
+                                          <div class="col-md-6">
+                                              <div class="search-list">
+                                              <legend>Saudia Arabia</legend>
+                                              <a class="dropdown-item preview-item">
+                                                  <div class="preview-item-content flex-grow px-2">
+                                                    <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                  </div>
+                                                </a>
+                                                <a class="dropdown-item preview-item">
+                                                  <div class="preview-item-content flex-grow px-2">
+                                                    <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                  </div>
+                                                </a>
+                                                <a class="dropdown-item preview-item">
+                                                  <div class="preview-item-content flex-grow px-2">
+                                                    <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                  </div>
+                                                </a>
+                                              </div>
+                                              <div class="search-list">
+                                                  <legend>Saudia Arabia</legend>
+                                                  <a class="dropdown-item preview-item">
+                                                      <div class="preview-item-content flex-grow px-2">
+                                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                      </div>
+                                                    </a>
+                                                    <a class="dropdown-item preview-item">
+                                                      <div class="preview-item-content flex-grow px-2">
+                                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                      </div>
+                                                    </a>
+                                                    <a class="dropdown-item preview-item">
+                                                      <div class="preview-item-content flex-grow px-2">
+                                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                      </div>
+                                                    </a>
                                               </div>
                                           </div>
                                       </div>
-                                  </div>
-                                  <div class="col-md-3 text-center">
-                                      <label class="tb-label d-block mb-2"><i class="demo-icon icon-calendar">&#xe805;</i> Check In</label>
-                                      <div id="datepicker-checkin3" class="input-group date datepicker navbar-date-picker">
-                                          <span class="input-group-addon input-group-prepend border-right">
-                                            <!-- <span class="icon-calendar input-group-text calendar-icon"></span> -->
-                                          </span>
-                                          <input type="text" class="form-control w-auto text-center py-1 px-4 border-0 rounded-pill">
-                                      </div>
-                                  </div>
-                                  <div class="col-md-3 text-center">
-                                      <label class="tb-label d-block mb-2"><i class="demo-icon icon-calendar">&#xe805;</i> Check Out</label>
-                                      <div id="datepicker-checkout2" class="input-group date datepicker navbar-date-picker">
-                                          <span class="input-group-addon input-group-prepend border-right">
-                                            <!-- <span class="icon-calendar input-group-text calendar-icon"></span> -->
-                                          </span>
-                                          <input type="text" placeholder="Add date" class="form-control w-auto text-center py-1 px-4 border-0 rounded-pill bg-transparent">
-                                      </div>
-                                  </div>
-                                  <div class="col-md-3 text-center">
-                                      <label class="tb-label d-block mb-2"><i class="demo-icon icon-guest">&#xe806;</i> Rooms & Guest</label>
-                                      <a class="dropdown-bordered dropdown-toggle dropdown-toggle-split text-secondary py-1 px-4 rounded-pill bg-transparent" href="#" 
-                                      data-bs-toggle="dropdown" aria-expanded="false">add guests</a>
-                                      <div class="dropdown-menu dropdown-menu-center navbar-dropdown preview-list mt-4 guest-cont" aria-labelledby="messageDropdown">
-                                          <div class="guest">
-                                          <legend class="d-flex mb-4"><img src="img/bed.svg" /> <b>Saudia Arabia</b>  <label class="ms-auto">2 Adult | 2 Child</label></legend>
-                                          <div class="row">
-                                              <div class="col-md-6">
-                                                  <label class="me-3">Adults</label>
-                                                  <select>
-                                                      <option>1</option>
-                                                      <option>2</option>
-                                                      <option>3</option>
-                                                  </select>
-                                              </div>
-                                              <div class="col-md-6">
-                                                  <label class="me-3">Children</label>
-                                                  <select>
-                                                      <option>1</option>
-                                                      <option>2</option>
-                                                      <option>3</option>
-                                                  </select>
-                                              </div>
-                                          </div>
-                                          <h6 class="mb-3">Enter Children's Ages</h6>
-                                          <div class="row">
-                                              <div class="col-md-3">
-                                                  <label class="d-block">Child 1: </label>
-                                                  <select>
-                                                      <option>1</option>
-                                                      <option>2</option>
-                                                      <option>3</option>
-                                                  </select>
-                                              </div>
-                                              <div class="col-md-3">
-                                                  <label class="d-block">Child 2: </label>
-                                                  <select>
-                                                      <option>1</option>
-                                                      <option>2</option>
-                                                      <option>3</option>
-                                                  </select>
-                                              </div>
-                                              <div class="col-md-3">
-                                                  <label class="d-block">Child 3: </label>
-                                                  <select>
-                                                      <option>1</option>
-                                                      <option>2</option>
-                                                      <option>3</option>
-                                                  </select>
-                                              </div>
-                                              <div class="col-md-3">
-                                                  <label class="d-block">Child 4: </label>
-                                                  <select>
-                                                      <option>1</option>
-                                                      <option>2</option>
-                                                      <option>3</option>
-                                                  </select>
-                                              </div>
-                                          </div>
-                                          <legend class="d-flex mb-4"><img src="img/bed.svg" /> <b>Saudia Arabia</b>  <label class="ms-auto">2 Adult | 2 Child</label></legend>
-                                          <div class="row">
-                                              <div class="col-md-6">
-                                                  <label class="me-3">Adults</label>
-                                                  <select>
-                                                      <option>1</option>
-                                                      <option>2</option>
-                                                      <option>3</option>
-                                                  </select>
-                                              </div>
-                                              <div class="col-md-6">
-                                                  <label class="me-3">Children</label>
-                                                  <select>
-                                                      <option>1</option>
-                                                      <option>2</option>
-                                                      <option>3</option>
-                                                  </select>
-                                              </div>
-                                          </div>
-                                          
-                                          <div class="d-grid gap-2 col-8 mx-auto text-center">
-                                              <a href="#" class="my-4 text-dark text-decoration-underline"><img src="img/plus.svg" /> Add another room ( 4 Maximum )</a>
-                                              <button class="btn btn-primary rounded-pill" type="button">Done</button>
-                                          </div>
-                                      </div>
-                                  </div>
                                   </div>
                               </div>
+                                <div class="col-md text-center pb-2 mb-4">
+                                    <label class="tb-label d-block mb-4"><i class="demo-icon icon-calendar">&#xe805;</i> Departing</label>
+                                    <div id="datepicker-checkin2" class="input-group date datepicker navbar-date-picker">
+                                        <span class="input-group-addon input-group-prepend border-right">
+                                          <!-- <span class="icon-calendar input-group-text calendar-icon"></span> -->
+                                        </span>
+                                        <input type="text" class="form-control w-auto text-center py-1 px-4 border-0 rounded-pill">
+                                    </div>
+                                </div>
+                                <div class="col-md text-center pb-2 mb-4">
+                                    <label class="tb-label d-block mb-4"><i class="demo-icon icon-calendar">&#xe805;</i> Returning</label>
+                                    <div id="datepicker-checkout" class="input-group date datepicker navbar-date-picker">
+                                        <span class="input-group-addon input-group-prepend border-right">
+                                          <!-- <span class="icon-calendar input-group-text calendar-icon"></span> -->
+                                        </span>
+                                        <input type="text" placeholder="Add date" class="form-control w-auto text-center py-1 px-4 border-0 rounded-pill bg-transparent">
+                                    </div>
+                                </div>
+                                <div class="col-md text-center pb-2 mb-4">
+                                    <label class="tb-label d-block mb-4"><i class="demo-icon icon-guest">&#xe806;</i> Travellers & Class</label>
+                                    <a class="dropdown-bordered dropdown-toggle dropdown-toggle-split text-secondary py-1 px-4 rounded-pill bg-transparent" href="#" 
+                                    data-bs-toggle="dropdown" aria-expanded="false">1 Adult, Economy </a>
+                                    <div class="dropdown-menu dropdown-menu-center navbar-dropdown preview-list mt-4 guest-cont" aria-labelledby="messageDropdown">
+                                        <div class="guest">
+                                        <legend class="d-flex mb-4"><img src="img/bed.svg" /> <b>Saudia Arabia</b>  <label class="ms-auto">2 Adult | 2 Child</label></legend>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label class="me-3">Adults</label>
+                                                <select>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="me-3">Children</label>
+                                                <select>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <h6 class="mb-3">Enter Children's Ages</h6>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <label class="d-block">Child 1: </label>
+                                                <select>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="d-block">Child 2: </label>
+                                                <select>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="d-block">Child 3: </label>
+                                                <select>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="d-block">Child 4: </label>
+                                                <select>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <legend class="d-flex mb-4"><img src="img/bed.svg" /> <b>Saudia Arabia</b>  <label class="ms-auto">2 Adult | 2 Child</label></legend>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label class="me-3">Adults</label>
+                                                <select>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="me-3">Children</label>
+                                                <select>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="d-grid gap-2 col-8 mx-auto text-center">
+                                            <a href="#" class="my-4 text-dark text-decoration-underline"><img src="img/plus.svg" /> Add another room ( 4 Maximum )</a>
+                                            <button class="btn btn-primary rounded-pill" type="button">Done</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
                               <button type="submit" class="btn btn-search"><i class="fas fa-search"></i></button>
-                          </form>
+                            </div>
+                            
+                          </div>
+                          <div class="flight-type">
+                            <div class="container">
+                            <div class="form-check form-check-inline ms-4">
+                              <input class="form-check-input" type="radio" name="flightType" value="" checked>
+                              <label class="form-check-label">Non stop flight</label>
+                            </div>
+                            <div class="form-check form-check-inline ms-4">
+                              <input class="form-check-input" type="radio" name="flightType" value="">
+                              <label class="form-check-label">Flexible dates ± 3 days</label>
+                            </div>
+                          </div>
+                          </div>
+                          
+                      </form>
                       </div>
                       <div role="tabpanel" id="transfer" class="tab-pane fade">
                           <form class="form-search">

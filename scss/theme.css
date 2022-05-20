@@ -11499,10 +11499,6 @@ footer .footer .footer-cert img {
     width: 100%;
   }
 }
-.form-search, .tab-search .tab-content-bg {
-  padding-right: 100px;
-  position: relative;
-}
 .form-search .tb-label i, .tab-search .tab-content-bg .tb-label i {
   color: #1e4056;
   font-size: 24px;
@@ -11547,7 +11543,7 @@ footer .footer .footer-cert img {
 .form-search .btn-search, .tab-search .tab-content-bg .btn-search {
   position: absolute;
   right: 20px;
-  top: 0;
+  top: 40px;
   width: 60px;
   height: 60px;
   background: rgb(9, 112, 206);
@@ -11576,6 +11572,65 @@ footer .footer .footer-cert img {
 }
 .form-search .search-list .dropdown-item:hover p, .tab-search .tab-content-bg .search-list .dropdown-item:hover p, .form-search .search-list .dropdown-item:hover span, .tab-search .tab-content-bg .search-list .dropdown-item:hover span {
   color: #ffffff;
+}
+.form-search.flight-search, .tab-search .flight-search.tab-content-bg {
+  padding-right: 0;
+}
+.form-search.flight-search .dropdown-toggle, .tab-search .flight-search.tab-content-bg .dropdown-toggle, .form-search.flight-search .input-group input, .tab-search .flight-search.tab-content-bg .input-group input, .form-search.flight-search .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback), .tab-search .flight-search.tab-content-bg .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  background: transparent;
+  text-decoration: none;
+}
+.form-search.flight-search .flight-form, .tab-search .flight-search.tab-content-bg .flight-form {
+  position: relative;
+}
+@media (min-width: 992px) {
+  .form-search.flight-search .flight-form, .tab-search .flight-search.tab-content-bg .flight-form {
+    padding-right: 100px;
+  }
+  .form-search.flight-search .flight-form .col-md:not(:last-child), .tab-search .flight-search.tab-content-bg .flight-form .col-md:not(:last-child) {
+    border-right: 1px solid #d7d7d7;
+  }
+}
+.form-search.flight-search .flight-form .btn-search, .tab-search .flight-search.tab-content-bg .flight-form .btn-search {
+  top: auto;
+  bottom: 20px;
+}
+@media (max-width: 992px) {
+  .form-search.flight-search .flight-form .btn-search, .tab-search .flight-search.tab-content-bg .flight-form .btn-search {
+    position: relative;
+    margin-bottom: 20px;
+    right: 0;
+  }
+}
+.form-search .__trip .form-check-input[type=radio], .tab-search .tab-content-bg .__trip .form-check-input[type=radio] {
+  border-radius: 6px;
+  width: 18px;
+  height: 18px;
+}
+.form-search .__trip .form-check-input[type=radio]:checked, .tab-search .tab-content-bg .__trip .form-check-input[type=radio]:checked {
+  background-image: none;
+  background-color: rgb(9, 112, 206);
+  border-color: rgb(9, 112, 206);
+  -webkit-box-shadow: inset 0px 0px 0px 2px #ffffff;
+  -moz-box-shadow: inset 0px 0px 0px 2px #ffffff;
+  box-shadow: inset 0px 0px 0px 2px #ffffff;
+}
+.form-search .flight-type, .tab-search .tab-content-bg .flight-type {
+  background: #e8f4ff;
+  padding: 20px 0 16px;
+  border-radius: 0 0 16px 16px;
+}
+.form-search .flight-type .form-check-input, .tab-search .tab-content-bg .flight-type .form-check-input {
+  width: 18px;
+  height: 18px;
+}
+.form-search .flight-type .form-check-input:checked, .tab-search .tab-content-bg .flight-type .form-check-input:checked {
+  background-image: none;
+  background-color: rgb(9, 112, 206);
+  border-color: rgb(9, 112, 206);
+  -webkit-box-shadow: inset 0px 0px 0px 2px #ffffff;
+  -moz-box-shadow: inset 0px 0px 0px 2px #ffffff;
+  box-shadow: inset 0px 0px 0px 2px #ffffff;
 }
 
 .tab-search {
@@ -11672,9 +11727,17 @@ footer .footer .footer-cert img {
 }
 .tab-search .tab-content-bg {
   background: #ffffff;
-  padding: 40px 25px 15px;
   border-radius: 0 16px 16px 16px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+.tab-search .tab-content-bg .tab-pane {
+  padding: 40px 25px 15px;
+  padding-right: 100px;
+  position: relative;
+}
+.tab-search .tab-content-bg .tab-pane#flight {
+  padding: 0;
+  padding-top: 40px;
 }
 
 @media (max-width: 786px) {
@@ -11713,6 +11776,11 @@ footer .footer .footer-cert img {
   }
   .tab-search .tab-content-bg .form-search .dropdown-menu.guest-cont, .tab-search .tab-content-bg .tab-content-bg .dropdown-menu.guest-cont {
     width: initial;
+  }
+}
+@media (max-width: 992px) {
+  #flight .form-check-inline label {
+    font-size: 14px;
   }
 }
 .datepicker.datepicker-dropdown, .datepicker.datepicker-inline {
