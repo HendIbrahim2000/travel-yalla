@@ -147,69 +147,22 @@ $('.close-btn').on('click', function () {
 });
 
 // input using select2
-
-if ($("#datepicker-checkin").length) {
-    $('#datepicker-checkin').datepicker({
+for(let i = 1; i< 5 ; i++) {
+  if ($("#datepicker-checkin"+i).length) {
+    $('#datepicker-checkin'+i).datepicker({
       enableOnReadonly: true,
       todayHighlight: true,
     });
-    $("#datepicker-checkin").datepicker("setDate", "0");
+    $("#datepicker-checkin"+i).datepicker("setDate", "0");
 }
 
-if ($("#datepicker-checkout").length) {
-    $('#datepicker-checkout').datepicker({
+if ($("#datepicker-checkout"+i).length) {
+    $('#datepicker-checkout'+i).datepicker({
       enableOnReadonly: true,
       todayHighlight: true,
     });
-    $("#datepicker-checkout").datepicker("setDate", "0");
+    $("#datepicker-checkout"+i).datepicker("setDate", "0");
 }
-
-if ($("#datepicker-checkin2").length) {
-    $('#datepicker-checkin2').datepicker({
-      enableOnReadonly: true,
-      todayHighlight: true,
-    });
-    $("#datepicker-checkin2").datepicker("setDate", "0");
-}
-
-if ($("#datepicker-checkout2").length) {
-    $('#datepicker-checkout2').datepicker({
-      enableOnReadonly: true,
-      todayHighlight: true,
-    });
-    $("#datepicker-checkout2").datepicker("setDate", "0");
-}
-
-if ($("#datepicker-checkin3").length) {
-    $('#datepicker-checkin3').datepicker({
-      enableOnReadonly: true,
-      todayHighlight: true,
-    });
-    $("#datepicker-checkin3").datepicker("setDate", "0");
-}
-
-if ($("#datepicker-checkout3").length) {
-    $('#datepicker-checkout3').datepicker({
-      enableOnReadonly: true,
-      todayHighlight: true,
-    });
-    $("#datepicker-checkout3").datepicker("setDate", "0");
-}
-
-if ($("#datepicker-checkin4").length) {
-    $('#datepicker-checkin4').datepicker({
-      enableOnReadonly: true,
-      todayHighlight: true,
-    });
-    $("#datepicker-checkin4").datepicker("setDate", "0");
-}
-
-if ($("#datepicker-checkout4").length) {
-    $('#datepicker-checkout4').datepicker({
-      enableOnReadonly: true,
-      todayHighlight: true,
-    });
-    $("#datepicker-checkout4").datepicker("setDate", "0");
 }
 
 // Testimonial Slider
@@ -294,25 +247,31 @@ var toggle = function (elm) {
 }
 
 // Toggle flight modify section
-document.getElementById('js-flight-toggle').onclick = (e) => {
-  var flightDetails = document.getElementById('flight-modify')
-  
-  toggle(flightDetails)
+if(document.getElementById('js-flight-toggle')) {
+  document.getElementById('js-flight-toggle').onclick = (e) => {
+    var flightDetails = document.getElementById('flight-modify')
+    
+    toggle(flightDetails)
+  }
 }
 
-// Price range in flights filter
-var startSlider = document.getElementById('slider');
 
-noUiSlider.create(startSlider, {
-    start: [20, 80],
-    behaviour: 'drag',
-    connect: true,
-    tooltips: true,
-    range: {
-        'min': [0],
-        'max': [100]
-    }
-});
+// Price range in flights filter
+if(document.getElementById('slider')) {
+  var startSlider = document.getElementById('slider');
+
+  noUiSlider.create(startSlider, {
+      start: [20, 80],
+      behaviour: 'drag',
+      connect: true,
+      tooltips: true,
+      range: {
+          'min': [0],
+          'max': [100]
+      }
+  });
+}
+
 
 // Expanding Flight Card In Flight Page 
 
