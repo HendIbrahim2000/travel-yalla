@@ -143,6 +143,13 @@ section {
   border-bottom: 8px solid;
 }
 
+.mobileview {
+  display: none;
+}
+
+.desktopview {
+  display: initial;
+}
 
 @media (max-width: 992px ) {
 
@@ -151,5 +158,13 @@ section {
     h2 {
       font-size: 40px;
     }
+  }
+
+  .mobileview {
+    display: initial;
+  }
+
+  .desktopview {
+    display: none;
   }
 }

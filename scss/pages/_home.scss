@@ -368,3 +368,12 @@
 }
 
 /**End Testimonial Section**/
+
+@media (max-width: 786px) {
+
+    .trips .trips-tab .nav-link {
+        font-weight: 500;
+        padding: 5px;
+        font-size: 12px;
+    }
+}

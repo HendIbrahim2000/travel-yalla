@@ -44,6 +44,8 @@
             max-height: 45px;
         }
     }
+
+    
 } 
 
 @media (max-width: 992px) {
@@ -61,17 +63,21 @@
 
         .navbar-collapse {
             margin-top: 15px;
-            border-top: 1px solid #DDDDDD;
+            border-top: 1px solid #b8d1d5;
         }
 
         .navbar-nav .nav-link {
             padding: 10px 0;
             margin-left: 0;
-            color: var(--dark) !important;
         }
         .navbar-brand img {
             max-height: 45px;
+            width: 100px;
         }
+    }
+
+    .logo-mobile {
+           display: flex; 
     }
     
 }
@@ -89,7 +95,7 @@
         background-color: rgba(46, 54, 142, 0.07);
 
         &.no-slider {
-            position: initial;
+            position: relative;
             -webkit-backdrop-filter: blur(0);
             backdrop-filter: blur(0);
             background-color: $main-color;
@@ -124,17 +130,25 @@
                 }
             }
         } 
+
+        
     }
     
 }
 
 @media (max-width: 786px)   {
     .navbar {
-        background: #1d6c79;
+        background: $main-color;
+
+        // &.no-slider {
+        //     background: $main-color;
+        // }
 
         &.navbar-light .navbar-toggler {
             color: #fff;
             border-color: #fff;
+            box-shadow: none;
+            padding: 0rem 0.75rem;
         }
     }
     
