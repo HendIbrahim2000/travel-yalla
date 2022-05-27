@@ -27,6 +27,10 @@ footer {
             font-size: 30px;
             line-height: 42px;
         }
+
+        .footer-mail {
+            font-size: 20px;
+        }
     }
 
     .footer {
@@ -97,5 +101,35 @@ footer {
             }
         }
     }
+}
+
+@media (max-width: 992px ) {
+
+    footer {
+
+        .footer-contacts { 
+
+            .footer-mail, h4 {
+                font-size: 14px;
+            }
+        }
+
+        .footer {
+
+            .footer-cert {
+                margin-top: 15px;
+            }
+
+            .copyright {
+
+                p {
+                    text-align: center;
+                }
+                
+            }
+        }
+    }
+
+    
 }
 
