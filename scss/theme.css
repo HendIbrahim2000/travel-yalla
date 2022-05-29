@@ -12736,6 +12736,14 @@ footer .footer .footer-cert img {
   .flight .airline-list .travel-card span, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .slider-img span, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .slider-img span, .flight .airline-list .video-section .video-container span, .video-section .flight .airline-list .video-container span, .flight .airline-list .offers .item span, .offers .flight .airline-list .item span {
     font-size: 10px;
   }
+
+  .ticket-total {
+    text-align: center;
+  }
+
+  .btn-more {
+    padding: 10px 30px;
+  }
 }
 
 /*# sourceMappingURL=theme.css.map */
