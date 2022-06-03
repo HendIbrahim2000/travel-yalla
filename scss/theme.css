@@ -11124,9 +11124,9 @@ section {
 .down-triangle {
   width: 0;
   height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-top: 8px solid;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 9px solid;
 }
 
 .hide {
@@ -12504,17 +12504,19 @@ footer .footer .footer-cert img {
   left: 22px;
 }
 .flight .airlines .__slider .slick-prev:before {
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-  border-right: 8px solid;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 9px solid;
+  margin-right: 2px;
 }
 .flight .airlines .__slider .slick-next {
   right: 22px;
 }
 .flight .airlines .__slider .slick-next:before {
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-  border-left: 8px solid;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 9px solid;
+  margin-left: 2px;
 }
 .flight .airline-list .__filter {
   padding: 20px;
@@ -12618,6 +12620,7 @@ footer .footer .footer-cert img {
 .flight .airline-list .travel-card .down-triangle, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .slider-img .down-triangle, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .slider-img .down-triangle, .flight .airline-list .video-section .video-container .down-triangle, .video-section .flight .airline-list .video-container .down-triangle, .flight .airline-list .offers .item .down-triangle, .offers .flight .airline-list .item .down-triangle, .flight .airline-list .travel-card .up-triangle, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .slider-img .up-triangle, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .slider-img .up-triangle, .flight .airline-list .video-section .video-container .up-triangle, .video-section .flight .airline-list .video-container .up-triangle, .flight .airline-list .offers .item .up-triangle, .offers .flight .airline-list .item .up-triangle {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
+  border-top: 8px solid;
 }
 .flight .airline-list .travel-card.flight-card, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img, .flight .airline-list .video-section .flight-card.video-container, .video-section .flight .airline-list .flight-card.video-container, .flight .airline-list .offers .flight-card.item, .offers .flight .airline-list .flight-card.item {
   font-size: 14px;
