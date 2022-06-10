@@ -94,10 +94,10 @@ $('.slider-nav').slick({
 
 $('.tabSlider').each(function() {
     $(this).slick({
-        infinite: true,
-        slidesToShow: 5,
+        infinite: false,
+        slidesToShow: 4.5,
         slidesToScroll: 1,
-        centerMode: true,
+        centerMode: false,
         prevArrow: $(this).parent().find('.trips-prev'),
         nextArrow: $(this).parent().find('.trips-next'),
         responsive: [
@@ -308,3 +308,20 @@ Array.prototype.forEach.call(offerBtn, function (offerBtn) {
 
    })
 })
+
+// Trips Layout Partially A Container
+// window.addEventListener("resize", tripsLayout);
+window.addEventListener("load", tripsLayout);
+function tripsLayout(e){
+  
+  var elements = document.getElementsByClassName('container')
+  var element = elements[0];
+  var rect = element.getBoundingClientRect().left;
+  console.log(rect);
+  var targetElem = document.querySelectorAll('#tripsTabContent.tab-content > .tab-pane')
+
+  targetElem.forEach(elem => {
+    elem.style.width = 'calc( 100% - '+rect+'px )'
+    elem.style.marginLeft = rect+'px'
+  })
+  }

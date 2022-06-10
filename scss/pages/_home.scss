@@ -16,6 +16,10 @@
             padding: 20px;
             border-bottom: 4px solid transparent;
 
+            &:hover {
+                border-color: transparent;
+            }
+
             &.active {
                 background-color: transparent;
                 border-color: transparent transparent $main-color;
@@ -29,6 +33,7 @@
             height: 0px;
             overflow: hidden;
             display: block;
+            // padding-left: 200px;
             &.active {
                 height: auto;
             }
@@ -40,7 +45,7 @@
 
         .slick-list {
             padding-top: 60px !important;
-
+            
             .slick-track {
                 padding: 16px 0;
 
@@ -54,7 +59,10 @@
                     .slider-img {
                         position: relative;
                         @extend .travel-card;
-        
+                        
+                        img {
+                            width: 100%;
+                        }
                         .slider-title {
                             position: absolute;
                             bottom: 0;
@@ -337,6 +345,10 @@
         margin-bottom: 70px;
         border-radius: 16px;
 
+        p {
+            text-align: justify;
+        }
+
         .test-img {
             width: 80px;
             height: 80px;
@@ -359,7 +371,7 @@
         li {
 
             i {
-                font-size: 23px;
+                font-size: 27px;
                 color: $main-color;
                 cursor: pointer;
             }
