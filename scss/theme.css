@@ -12512,6 +12512,10 @@ footer .footer .footer-cert img {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.4);
+}
+.flight .airlines .__slider .slick-button:hover, .flight .airlines .__slider .slick-next:hover, .flight .airlines .__slider .slick-prev:hover {
+  opacity: 0.9;
 }
 .flight .airlines .__slider .slick-button:before, .flight .airlines .__slider .slick-next:before, .flight .airlines .__slider .slick-prev:before {
   color: #ffffff;
