@@ -12631,20 +12631,38 @@ footer .footer .footer-cert img {
   display: flex;
 }
 .flight .airline-list .travel-card, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .slider-img, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .slider-img, .flight .airline-list .video-section .video-container, .video-section .flight .airline-list .video-container, .flight .airline-list .offers .item, .offers .flight .airline-list .item {
-  padding: 20px;
+  padding: 0 20px;
   margin-bottom: 22px;
   background: #ffffff;
+}
+.flight .airline-list .travel-card.flight-card, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img, .flight .airline-list .video-section .flight-card.video-container, .video-section .flight .airline-list .flight-card.video-container, .flight .airline-list .offers .flight-card.item, .offers .flight .airline-list .flight-card.item {
+  padding: 20px;
 }
 .flight .airline-list .travel-card span, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .slider-img span, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .slider-img span, .flight .airline-list .video-section .video-container span, .video-section .flight .airline-list .video-container span, .flight .airline-list .offers .item span, .offers .flight .airline-list .item span {
   font-size: 14px;
 }
+.flight .airline-list .travel-card span.table-head, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .slider-img span.table-head, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .slider-img span.table-head, .flight .airline-list .video-section .video-container span.table-head, .video-section .flight .airline-list .video-container span.table-head, .flight .airline-list .offers .item span.table-head, .offers .flight .airline-list .item span.table-head {
+  padding: 20px 12px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.flight .airline-list .travel-card span.table-head.active, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .slider-img span.table-head.active, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .slider-img span.table-head.active, .flight .airline-list .video-section .video-container span.table-head.active, .video-section .flight .airline-list .video-container span.table-head.active, .flight .airline-list .offers .item span.table-head.active, .offers .flight .airline-list .item span.table-head.active {
+  background: #f4f4f4;
+  color: rgb(9, 112, 206);
+}
 .flight .airline-list .travel-card span .icon-flight, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .slider-img span .icon-flight, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .slider-img span .icon-flight, .flight .airline-list .video-section .video-container span .icon-flight, .video-section .flight .airline-list .video-container span .icon-flight, .flight .airline-list .offers .item span .icon-flight, .offers .flight .airline-list .item span .icon-flight {
   font-size: 36px;
 }
-.flight .airline-list .travel-card .down-triangle, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .slider-img .down-triangle, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .slider-img .down-triangle, .flight .airline-list .video-section .video-container .down-triangle, .video-section .flight .airline-list .video-container .down-triangle, .flight .airline-list .offers .item .down-triangle, .offers .flight .airline-list .item .down-triangle, .flight .airline-list .travel-card .up-triangle, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .slider-img .up-triangle, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .slider-img .up-triangle, .flight .airline-list .video-section .video-container .up-triangle, .video-section .flight .airline-list .video-container .up-triangle, .flight .airline-list .offers .item .up-triangle, .offers .flight .airline-list .item .up-triangle {
+.flight .airline-list .travel-card .down-triangle, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .slider-img .down-triangle, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .slider-img .down-triangle, .flight .airline-list .video-section .video-container .down-triangle, .video-section .flight .airline-list .video-container .down-triangle, .flight .airline-list .offers .item .down-triangle, .offers .flight .airline-list .item .down-triangle {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 8px solid;
+}
+.flight .airline-list .travel-card .up-triangle, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .slider-img .up-triangle, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .slider-img .up-triangle, .flight .airline-list .video-section .video-container .up-triangle, .video-section .flight .airline-list .video-container .up-triangle, .flight .airline-list .offers .item .up-triangle, .offers .flight .airline-list .item .up-triangle {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 8px solid;
 }
 .flight .airline-list .travel-card.flight-card, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img, .flight .airline-list .video-section .flight-card.video-container, .video-section .flight .airline-list .flight-card.video-container, .flight .airline-list .offers .flight-card.item, .offers .flight .airline-list .flight-card.item {
   font-size: 14px;

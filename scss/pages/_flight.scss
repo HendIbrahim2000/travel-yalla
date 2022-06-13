@@ -338,22 +338,48 @@
         }
 
         .travel-card {
-            padding: 20px;
+            padding: 0 20px;
             margin-bottom: 22px;
             background: #ffffff;
+
+            &.flight-card {
+                padding: 20px;
+            }
 
             span {
                 font-size: 14px;
 
+                &.table-head {
+                    padding: 20px 12px;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    &.active {
+                    
+                        background: #f4f4f4;
+                        color: $main-color;
+                    }
+                }
+                
+
                 .icon-flight {
                     font-size: 36px;
                 }
+
+                
             }
 
-            .down-triangle, .up-triangle {
+            .down-triangle {
                 border-left: 5px solid transparent;
                 border-right: 5px solid transparent;
                 border-top: 8px solid;
+            }
+
+            .up-triangle {
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-bottom: 8px solid;
             }
 
             &.flight-card {
