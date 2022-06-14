@@ -311,17 +311,20 @@ Array.prototype.forEach.call(offerBtn, function (offerBtn) {
 
 // Trips Layout Partially A Container
 // window.addEventListener("resize", tripsLayout);
-window.addEventListener("load", tripsLayout);
-function tripsLayout(e){
+// window.addEventListener("load", tripsLayout);
+// function tripsLayout(e){
   
-  var elements = document.getElementsByClassName('container')
-  var element = elements[0];
-  var rect = element.getBoundingClientRect().left;
-  console.log(rect);
-  var targetElem = document.querySelectorAll('#tripsTabContent.tab-content > .tab-pane')
+//   var elements = document.getElementsByClassName('container')
+//   var element = elements[0];
+//   var rect = element.getBoundingClientRect().left;
+//   console.log(rect);
+//   var targetElem = document.querySelectorAll('#tripsTabContent.tab-content > .tab-pane')
 
-  targetElem.forEach(elem => {
-    elem.style.width = 'calc( 100% - '+rect+'px )'
-    elem.style.marginLeft = rect+'px'
-  })
-  }
+//   targetElem.forEach(elem => {
+//     elem.style.width = 'calc( 100% - '+rect+'px )'
+//     elem.style.marginLeft = rect+'px';
+//     $('.tabSlider').each(function() {
+//       $(this).slick('refresh');
+//     })
+//   })
+//   }

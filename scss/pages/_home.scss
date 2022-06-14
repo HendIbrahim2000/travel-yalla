@@ -45,6 +45,8 @@
 
         .slick-list {
             padding-top: 60px !important;
+            margin-left: 200px;
+
             
             .slick-track {
                 padding: 16px 0;
@@ -132,6 +134,45 @@
     }
 
     
+}
+
+@media (max-width: 1360px) {
+
+    .trips {
+
+        .tabSlider {
+
+            .slick-list {
+                margin-left: 100px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .trips {
+
+        .tabSlider {
+
+            .slick-list {
+                margin-left: 60px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .trips {
+
+        .tabSlider {
+
+            .slick-list {
+                margin-left: 10px;
+            }
+        }
+    }
 }
 
 /**End Trips Section**/

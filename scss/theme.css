@@ -12125,6 +12125,7 @@ footer .footer .footer-cert img {
 }
 .trips .tabSlider .slick-list {
   padding-top: 60px !important;
+  margin-left: 200px;
 }
 .trips .tabSlider .slick-list .slick-track {
   padding: 16px 0;
@@ -12194,6 +12195,21 @@ footer .footer .footer-cert img {
   cursor: pointer;
 }
 
+@media (max-width: 1360px) {
+  .trips .tabSlider .slick-list {
+    margin-left: 100px;
+  }
+}
+@media (max-width: 1024px) {
+  .trips .tabSlider .slick-list {
+    margin-left: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .trips .tabSlider .slick-list {
+    margin-left: 10px;
+  }
+}
 /**End Trips Section**/
 /**Start Video Section**/
 .video-section {
