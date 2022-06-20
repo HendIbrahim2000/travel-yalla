@@ -29,6 +29,7 @@
     <link href="lib/slick/slick.min.css" rel="stylesheet" />
     <link href="lib/slick/slick-theme.css" rel="stylesheet" />
     <link href="lib/nouislider/nouislider.min.css" rel="stylesheet" />
+    <link href="lib/flags/flags.css" rel="stylesheet" />
     <!-- Customized Bootstrap Stylesheet -->
     <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
 
@@ -64,10 +65,10 @@
           </div>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav py-0">
-                    <a href="#" class="nav-item nav-link">Home</a>
-                    <a href="#" class="nav-item nav-link">Hotels</a>
-                    <a href="#" class="nav-item nav-link">Flights</a>
-                    <a href="#" class="nav-item nav-link">Tourism news</a>
+                    <a href="#" class="nav-link">Home</a>
+                    <a href="#" class="nav-link">Hotels</a>
+                    <a href="#" class="nav-link">Flights</a>
+                    <a href="#" class="nav-link">Tourism news</a>
                 </div>
                 
             </div>
@@ -79,11 +80,68 @@
                 <span class="fa fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="#" class="nav-item nav-link d-flex align-items-center"><img src="img/icons/global.png" class="me-2"/>English</a>
-                    <a href="#" class="nav-item nav-link d-flex align-items-center"><img src="img/icons/coin.png" class="me-2"/>EGP</a>
-                    <a href="#" class="nav-item nav-link d-flex align-items-center"><img src="img/icons/placeholder.png" class="me-2"/>Egypt</a>
-                    <a href="#" class="nav-item nav-link d-flex align-items-center user-btn"><img src="img/icons/user.png"/></a>
+                <div class="ms-auto">
+                  <ul class="navbar-nav  py-0">
+                   <li class="nav-item"> <a href="#" class="nav-item nav-link d-flex align-items-center"><img src="img/icons/global.png" class="me-2"/>عربي</a></li>
+                   <li class="nav-item"> <a href="#" class="nav-item nav-link d-flex align-items-center"><img src="img/icons/coin.png" class="me-2"/>EGP</a>
+                    <div class="dropdown-container currancy-list">
+                      <ul>
+                        <li><a href="#"><div class="flag flag-eg"></div> EGP <span class="text-secondary"> | Egyptian Pound</span></a></li>
+                        <li><a href="#"><div class="flag flag-bh"></div> SAR <span class="text-secondary"> | Saudi Riyal</span></a></li>
+                        <li><a href="#"><div class="flag flag-ae"></div> USD <span class="text-secondary"> | Dollar</span></a></li>
+                        <li><a href="#"><div class="flag flag-sa"></div> EUR <span class="text-secondary"> | Euro</span></a></li>
+                        <li><a href="#"><div class="flag flag-us"></div> KWD <span class="text-secondary"> | Kuwaiti Dinar</span></a></li>
+                        <li><a href="#"><div class="flag flag-us"></div> AED <span class="text-secondary"> | AED</span></a></li>
+                        
+                        
+                      </ul>
+                    </div>
+                   </li>
+                   <li class="nav-item"> <a href="#" class="nav-item nav-link d-flex align-items-center"><img src="img/icons/placeholder.png" class="me-2"/>Egypt</a>
+                    <div class="dropdown-container">
+                      <p>Please Choose A Nationality For Best Prices</p>
+                      <input type="text" placeholder="Search" id="nationality-search" />
+                      <ul id="nationality-list">
+                        <li><a href="#"><div class="flag flag-eg"></div> Egypt</a></li>
+                        <li><a href="#"><div class="flag flag-bh"></div> Bahrain</a></li>
+                        <li><a href="#"><div class="flag flag-ae"></div> Emirates</a></li>
+                        <li><a href="#"><div class="flag flag-sa"></div> Saudi Arabia</a></li>
+                        <li><a href="#"><div class="flag flag-us"></div> United States</a></li>
+                        <li><a href="#"><div class="flag flag-eg"></div> Egypt</a></li>
+                        <li><a href="#"><div class="flag flag-bh"></div> Bahrain</a></li>
+                        <li><a href="#"><div class="flag flag-ae"></div> Emirates</a></li>
+                        <li><a href="#"><div class="flag flag-sa"></div> Saudi Arabia</a></li>
+                        <li><a href="#"><div class="flag flag-us"></div> United States</a></li>
+                        <li><a href="#"><div class="flag flag-eg"></div> Egypt</a></li>
+                        <li><a href="#"><div class="flag flag-bh"></div> Bahrain</a></li>
+                        <li><a href="#"><div class="flag flag-ae"></div> Emirates</a></li>
+                        <li><a href="#"><div class="flag flag-sa"></div> Saudi Arabia</a></li>
+                        <li><a href="#"><div class="flag flag-us"></div> United States</a></li>
+                        <li><a href="#"><div class="flag flag-eg"></div> Egypt</a></li>
+                        <li><a href="#"><div class="flag flag-bh"></div> Bahrain</a></li>
+                        <li><a href="#"><div class="flag flag-ae"></div> Emirates</a></li>
+                        <li><a href="#"><div class="flag flag-sa"></div> Saudi Arabia</a></li>
+                        <li><a href="#"><div class="flag flag-us"></div> United States</a></li>
+                        <li><a href="#"><div class="flag flag-eg"></div> Egypt</a></li>
+                        <li><a href="#"><div class="flag flag-bh"></div> Bahrain</a></li>
+                        <li><a href="#"><div class="flag flag-ae"></div> Emirates</a></li>
+                        <li><a href="#"><div class="flag flag-sa"></div> Saudi Arabia</a></li>
+                        <li><a href="#"><div class="flag flag-us"></div> United States</a></li>
+                        <li><a href="#"><div class="flag flag-eg"></div> Egypt</a></li>
+                        <li><a href="#"><div class="flag flag-bh"></div> Bahrain</a></li>
+                        <li><a href="#"><div class="flag flag-ae"></div> Emirates</a></li>
+                        <li><a href="#"><div class="flag flag-sa"></div> Saudi Arabia</a></li>
+                        <li><a href="#"><div class="flag flag-us"></div> United States</a></li>
+                        <li><a href="#"><div class="flag flag-eg"></div> Egypt</a></li>
+                        <li><a href="#"><div class="flag flag-bh"></div> Bahrain</a></li>
+                        <li><a href="#"><div class="flag flag-ae"></div> Emirates</a></li>
+                        <li><a href="#"><div class="flag flag-sa"></div> Saudi Arabia</a></li>
+                        <li><a href="#"><div class="flag flag-us"></div> United States</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                   <li class="nav-item"> <a href="#" class="nav-item nav-link d-flex align-items-center user-btn"><img src="img/icons/user.png"/></a></li>
+                  </ul>
                 </div>
                 
             </div>
@@ -2078,9 +2136,11 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <!-- <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script> -->
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="lib/slick/slick.min.js"></script>
     <script src="lib/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
     <script src="lib/nouislider/nouislider.min.js"></script>
+    <script src="lib/nicescroll/jquery.nicescroll.min.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>

@@ -11161,6 +11161,62 @@ section {
   display: initial;
 }
 
+.dropdown-container {
+  position: absolute;
+  top: calc(100% + 2px);
+  width: 600px;
+  height: 400px;
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  color: #333;
+  overflow: hidden;
+  overflow-y: auto;
+  right: 0;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 11px 0 rgba(125, 125, 125, 0.5);
+}
+.dropdown-container p {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.dropdown-container input {
+  width: 100%;
+  height: 40px;
+  background-color: #efefef;
+  color: #777;
+  padding: 15px 15px;
+  border-radius: 30px;
+  margin-bottom: 15px;
+  border: none;
+  outline: none;
+  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2);
+}
+.dropdown-container ul li {
+  width: 25%;
+  float: left;
+  margin: 2px 0;
+  display: flex;
+  position: relative;
+  text-align: center;
+  justify-content: space-between;
+  font-size: 14px;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+.dropdown-container ul li:hover {
+  background-color: #eef3e5;
+}
+.dropdown-container ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
 @media (max-width: 992px) {
   .section-title h2, .section-title .h2 {
     font-size: 40px;
@@ -11173,15 +11229,36 @@ section {
   .desktopview {
     display: none;
   }
+
+  .nav-item .dropdown-container {
+    position: initial;
+    border-radius: 0;
+    width: 100%;
+  }
 }
 /*-----------------------------------------------
 |   Layout Styles
 -----------------------------------------------*/
 /*** Navbar ***/
+.navbar-light .navbar-nav .nav-item {
+  position: relative;
+}
+.navbar-light .navbar-nav .nav-item .dropdown-container {
+  display: none;
+}
+.navbar-light .navbar-nav .nav-item .dropdown-container.currancy-list {
+  height: auto;
+}
+.navbar-light .navbar-nav .nav-item .dropdown-container.currancy-list li {
+  width: 50%;
+}
+.navbar-light .navbar-nav .nav-item:hover .dropdown-container {
+  display: inline-block;
+}
 .navbar-light .navbar-nav .nav-link {
-  font-family: "Nunito", sans-serif;
   position: relative;
   margin-right: 38px;
+  font-family: "Nunito", sans-serif;
   padding: 47px 0 32px;
   color: #FFFFFF;
   font-size: 16px;

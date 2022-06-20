@@ -231,6 +231,17 @@ $('.airlines .__slider').slick({
     ]
 });
 
+// Nicescroll for Regions menu
+
+$(".dropdown-container").niceScroll({
+  cursorcolor: "#777",
+  cursorwidth: "10px",
+  cursorborderradius: "10px",
+  cursormaxheight: '15px',
+  smoothscroll: true, 
+});
+
+
 })(jQuery);
 
 // Vanilla js 
@@ -328,3 +339,21 @@ Array.prototype.forEach.call(offerBtn, function (offerBtn) {
 //     })
 //   })
 //   }
+
+// Nationality auto-complete
+var input = document.querySelector('#nationality-search');
+var items = document.querySelector('#nationality-list').getElementsByTagName('li');
+
+input.addEventListener('keyup', function(ev) {
+  var text = ev.target.value;
+  var pat = new RegExp(text, 'i');
+  for (var i=0; i < items.length; i++) {
+    var item = items[i];
+    if (pat.test(item.innerText)) {
+      item.classList.remove("d-none");
+    }
+    else {console.log(item);
+      item.classList.add("d-none");
+    }
+  }
+});
