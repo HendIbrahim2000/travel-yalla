@@ -11217,6 +11217,25 @@ section {
   color: #000;
 }
 
+.no-result.m-80 {
+  margin: 80px auto;
+}
+.no-result img {
+  width: 152px;
+}
+.no-result h3, .no-result .h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 12px;
+}
+.no-result p {
+  opacity: 0.7;
+}
+.no-result .btn {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
 @media (max-width: 992px) {
   .section-title h2, .section-title .h2 {
     font-size: 40px;
@@ -12727,6 +12746,9 @@ footer .footer .footer-cert img {
   padding: 0 20px;
   margin-bottom: 22px;
   background: #ffffff;
+}
+.flight .airline-list .travel-card.m-80, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .m-80.slider-img, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .m-80.slider-img, .flight .airline-list .video-section .m-80.video-container, .video-section .flight .airline-list .m-80.video-container, .flight .airline-list .offers .m-80.item, .offers .flight .airline-list .m-80.item {
+  margin-bottom: 100px;
 }
 .flight .airline-list .travel-card.flight-card, .flight .airline-list .trips .tabSlider .slick-list .slick-track .item .flight-card.slider-img, .trips .tabSlider .slick-list .slick-track .item .flight .airline-list .flight-card.slider-img, .flight .airline-list .video-section .flight-card.video-container, .video-section .flight .airline-list .flight-card.video-container, .flight .airline-list .offers .flight-card.item, .offers .flight .airline-list .flight-card.item {
   padding: 20px;
