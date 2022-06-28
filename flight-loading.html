@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Travel Yalla</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet"> -->
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <!-- <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"> -->
+    <!-- <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" /> -->
+    <link href="lib/select2/select2.min.css" rel="stylesheet"/>
+    <link href="lib/slick/slick.min.css" rel="stylesheet" />
+    <link href="lib/slick/slick-theme.css" rel="stylesheet" />
+    <link href="lib/nouislider/nouislider.min.css" rel="stylesheet" />
+    <link href="lib/flags/flags.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- Template Stylesheet -->
+    <link type="text/css" rel="stylesheet" href="scss/theme.css">
+    <!-- <link type="text/css" rel="stylesheet" href="css/layout.css"> -->
+    <!-- <link type="text/css" rel="stylesheet" href="css/components.css"> -->
+    <!-- <link type="text/css" rel="stylesheet" href="css/responsive.css"> -->
+    <link rel="stylesheet" href="fonts/fontello/css/animation.css">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <div class="position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light no-slider px-4 px-lg-5 py-3 py-lg-0">
+          <div class="justify-content-between w-100 logo-mobile mobileview">
+            <a href="" class="navbar-brand p-0 mx-0 mt-md-2 ">
+              <!-- <h1 class="text-primary m-0"><i class="fa fa-map-marker-alt me-3"></i>Yalla</h1> -->
+              <img src="img/newlogo.png"  alt="Logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+              <span class="fa fa-bars"></span>
+          </button>
+          </div>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav py-0">
+                    <a href="#" class="nav-item nav-link">Home</a>
+                    <a href="#" class="nav-item nav-link">Hotels</a>
+                    <a href="#" class="nav-item nav-link">Flights</a>
+                    <a href="#" class="nav-item nav-link">Tourism news</a>
+                </div>
+                
+            </div>
+            <a href="" class="navbar-brand p-0 mx-0 mt-2 desktopview">
+                <!-- <h1 class="text-primary m-0"><i class="fa fa-map-marker-alt me-3"></i>Yalla</h1> -->
+                <img src="img/newlogo.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler desktopview" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <div class="ms-auto">
+                <ul class="navbar-nav  py-0">
+                 <li class="nav-item"> <a href="#" class="nav-item nav-link d-flex align-items-center"><img src="img/icons/global.png" class="me-2"/>عربي</a></li>
+                 <li class="nav-item"> <a href="#" class="nav-item nav-link d-flex align-items-center"><img src="img/icons/coin.png" class="me-2"/>EGP</a>
+                  <div class="dropdown-container currancy-list">
+                    <ul>
+                      <li><a href="#"><div class="flag flag-eg"></div> EGP <span class="text-secondary"> | Egyptian Pound</span></a></li>
+                      <li><a href="#"><div class="flag flag-bh"></div> SAR <span class="text-secondary"> | Saudi Riyal</span></a></li>
+                      <li><a href="#"><div class="flag flag-ae"></div> USD <span class="text-secondary"> | Dollar</span></a></li>
+                      <li><a href="#"><div class="flag flag-sa"></div> EUR <span class="text-secondary"> | Euro</span></a></li>
+                      <li><a href="#"><div class="flag flag-us"></div> KWD <span class="text-secondary"> | Kuwaiti Dinar</span></a></li>
+                      <li><a href="#"><div class="flag flag-us"></div> AED <span class="text-secondary"> | AED</span></a></li>
+                      
+                      
+                    </ul>
+                  </div>
+                 </li>
+                 <li class="nav-item"> <a href="#" class="nav-item nav-link d-flex align-items-center"><img src="img/icons/placeholder.png" class="me-2"/>Egypt</a>
+                  <div class="dropdown-container">
+                    <p>Please Choose A Nationality For Best Prices</p>
+                    <input type="text" placeholder="Search" id="nationality-search" />
+                    <ul id="nationality-list">
+                      <li><a href="#"><div class="flag flag-eg"></div> Egypt</a></li>
+                      <li><a href="#"><div class="flag flag-bh"></div> Bahrain</a></li>
+                      <li><a href="#"><div class="flag flag-ae"></div> Emirates</a></li>
+                      <li><a href="#"><div class="flag flag-sa"></div> Saudi Arabia</a></li>
+                      <li><a href="#"><div class="flag flag-us"></div> United States</a></li>
+                      <li><a href="#"><div class="flag flag-eg"></div> Egypt</a></li>
+                      <li><a href="#"><div class="flag flag-bh"></div> Bahrain</a></li>
+                      <li><a href="#"><div class="flag flag-ae"></div> Emirates</a></li>
+                      <li><a href="#"><div class="flag flag-sa"></div> Saudi Arabia</a></li>
+                      <li><a href="#"><div class="flag flag-us"></div> United States</a></li>
+                      <li><a href="#"><div class="flag flag-eg"></div> Egypt</a></li>
+                      <li><a href="#"><div class="flag flag-bh"></div> Bahrain</a></li>
+                      <li><a href="#"><div class="flag flag-ae"></div> Emirates</a></li>
+                      <li><a href="#"><div class="flag flag-sa"></div> Saudi Arabia</a></li>
+                      <li><a href="#"><div class="flag flag-us"></div> United States</a></li>
+                      <li><a href="#"><div class="flag flag-eg"></div> Egypt</a></li>
+                      <li><a href="#"><div class="flag flag-bh"></div> Bahrain</a></li>
+                      <li><a href="#"><div class="flag flag-ae"></div> Emirates</a></li>
+                      <li><a href="#"><div class="flag flag-sa"></div> Saudi Arabia</a></li>
+                      <li><a href="#"><div class="flag flag-us"></div> United States</a></li>
+                      <li><a href="#"><div class="flag flag-eg"></div> Egypt</a></li>
+                      <li><a href="#"><div class="flag flag-bh"></div> Bahrain</a></li>
+                      <li><a href="#"><div class="flag flag-ae"></div> Emirates</a></li>
+                      <li><a href="#"><div class="flag flag-sa"></div> Saudi Arabia</a></li>
+                      <li><a href="#"><div class="flag flag-us"></div> United States</a></li>
+                      <li><a href="#"><div class="flag flag-eg"></div> Egypt</a></li>
+                      <li><a href="#"><div class="flag flag-bh"></div> Bahrain</a></li>
+                      <li><a href="#"><div class="flag flag-ae"></div> Emirates</a></li>
+                      <li><a href="#"><div class="flag flag-sa"></div> Saudi Arabia</a></li>
+                      <li><a href="#"><div class="flag flag-us"></div> United States</a></li>
+                      <li><a href="#"><div class="flag flag-eg"></div> Egypt</a></li>
+                      <li><a href="#"><div class="flag flag-bh"></div> Bahrain</a></li>
+                      <li><a href="#"><div class="flag flag-ae"></div> Emirates</a></li>
+                      <li><a href="#"><div class="flag flag-sa"></div> Saudi Arabia</a></li>
+                      <li><a href="#"><div class="flag flag-us"></div> United States</a></li>
+                    </ul>
+                  </div>
+                </li>
+                 <li class="nav-item"> <a href="#" class="nav-item nav-link d-flex align-items-center user-btn"><img src="img/icons/user.png"/></a></li>
+                </ul>
+              </div>
+              
+          </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <div class="flight pb-3">
+      <!-- Flight Search Start -->
+    <div class="flight-search">
+      <div class="container">
+        <div class="d-lg-flex align-items-end justify-content-between">
+          <div class="__caption">
+            <div class="__title d-flex align-items-center">
+              <img src="./img/plane.png" class="me-3" />
+              <h2>Flights</h2>
+            </div>
+            <h3>Egypt, Cairo - Ireland, Dublin</h3>
+            <p>Class: Economy  |  Travellers: 1 Adult   |    Dates: Fri, 31 Dec 2021.</p>
+          </div>
+          <a href="javascript:void(0)" id="js-flight-toggle" class="btn-more btn btn-primary rounded-pill py-2 px-4">Modify Search <i class="down-triangle d-inline-flex ms-md-2"></i></a>
+        </div>
+      </div>
+      
+    </div>
+    <div class="flight-search-form pt-4" id="flight-modify">
+      
+        <form class="form-search">
+          <div class="container">
+            <div class="__trip">
+              <div class="form-check form-check-inline ms-md-4 mb-5">
+                <input class="form-check-input" type="radio" name="tripType" value="" checked>
+                <label class="form-check-label">One Way</label>
+              </div>
+              <div class="form-check form-check-inline ms-md-4 mb-5">
+                <input class="form-check-input" type="radio" name="tripType" value="">
+                <label class="form-check-label">Round trip</label>
+              </div>
+              <div class="form-check form-check-inline ms-md-4 mb-5">
+                <input class="form-check-input" type="radio" name="tripType" value="">
+                <label class="form-check-label">Multi cities</label>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="flight-form">
+              <div class="row ">
+                <div class="col-md text-center pb-2 mb-4">
+                    <label class="tb-label d-block mb-4"><i class="demo-icon icon-pin">&#xe804;</i> Leaving from</label>
+                    <a class="dropdown-bordered dropdown-toggle dropdown-toggle-split text-secondary py-1 px-4 border-0 rounded-pill" href="#" 
+                    data-bs-toggle="dropdown" aria-expanded="false"> Cairo, Egypt , (CAI) - Cairo Inter…</a>
+                    <div class="dropdown-menu dropdown-menu-center navbar-dropdown preview-list mt-4" aria-labelledby="messageDropdown">
+                        <div class="card mb-3 border-0">
+                            <div class="row g-0">
+                                <div class="col-md-5">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Activites for fun 
+                                        & Relaxation</h5>
+                                      </div>
+                                  </div>
+                              <div class="col-md-7">
+                                <img src="img/activity.png" class="img-fluid rounded-end">
+                              </div>
+                              
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                                <div class="search-list">
+                                <legend>Saudia Arabia</legend>
+                                <a class="dropdown-item preview-item">
+                                    <div class="preview-item-content flex-grow px-2">
+                                      <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                    </div>
+                                  </a>
+                                  <a class="dropdown-item preview-item">
+                                    <div class="preview-item-content flex-grow px-2">
+                                      <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                    </div>
+                                  </a>
+                                  <a class="dropdown-item preview-item">
+                                    <div class="preview-item-content flex-grow px-2">
+                                      <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                    </div>
+                                  </a>
+                                  <a class="dropdown-item preview-item">
+                                    <div class="preview-item-content flex-grow px-2">
+                                      <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                    </div>
+                                  </a>
+                                  <a class="dropdown-item preview-item">
+                                    <div class="preview-item-content flex-grow px-2">
+                                      <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                    </div>
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="search-list">
+                                <legend>Saudia Arabia</legend>
+                                <a class="dropdown-item preview-item">
+                                    <div class="preview-item-content flex-grow px-2">
+                                      <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                    </div>
+                                  </a>
+                                  <a class="dropdown-item preview-item">
+                                    <div class="preview-item-content flex-grow px-2">
+                                      <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                    </div>
+                                  </a>
+                                  <a class="dropdown-item preview-item">
+                                    <div class="preview-item-content flex-grow px-2">
+                                      <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                    </div>
+                                  </a>
+                                </div>
+                                <div class="search-list">
+                                    <legend>Saudia Arabia</legend>
+                                    <a class="dropdown-item preview-item">
+                                        <div class="preview-item-content flex-grow px-2">
+                                          <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                        </div>
+                                      </a>
+                                      <a class="dropdown-item preview-item">
+                                        <div class="preview-item-content flex-grow px-2">
+                                          <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                        </div>
+                                      </a>
+                                      <a class="dropdown-item preview-item">
+                                        <div class="preview-item-content flex-grow px-2">
+                                          <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                        </div>
+                                      </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md text-center pb-2 mb-4">
+                  <label class="tb-label d-block mb-4"><i class="demo-icon icon-pin">&#xe804;</i> Going to</label>
+                  <a class="dropdown-bordered dropdown-toggle dropdown-toggle-split text-secondary py-1 px-4 border-0 rounded-pill" href="#" 
+                  data-bs-toggle="dropdown" aria-expanded="false"> Dublin (DUB)</a>
+                  <div class="dropdown-menu dropdown-menu-center navbar-dropdown preview-list mt-4" aria-labelledby="messageDropdown">
+                      <div class="card mb-3 border-0">
+                          <div class="row g-0">
+                              <div class="col-md-5">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Activites for fun 
+                                      & Relaxation</h5>
+                                    </div>
+                                </div>
+                            <div class="col-md-7">
+                              <img src="img/activity.png" class="img-fluid rounded-end">
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                              <div class="search-list">
+                              <legend>Saudia Arabia</legend>
+                              <a class="dropdown-item preview-item">
+                                  <div class="preview-item-content flex-grow px-2">
+                                    <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                  </div>
+                                </a>
+                                <a class="dropdown-item preview-item">
+                                  <div class="preview-item-content flex-grow px-2">
+                                    <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                  </div>
+                                </a>
+                                <a class="dropdown-item preview-item">
+                                  <div class="preview-item-content flex-grow px-2">
+                                    <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                  </div>
+                                </a>
+                                <a class="dropdown-item preview-item">
+                                  <div class="preview-item-content flex-grow px-2">
+                                    <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                  </div>
+                                </a>
+                                <a class="dropdown-item preview-item">
+                                  <div class="preview-item-content flex-grow px-2">
+                                    <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                  </div>
+                                </a>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="search-list">
+                              <legend>Saudia Arabia</legend>
+                              <a class="dropdown-item preview-item">
+                                  <div class="preview-item-content flex-grow px-2">
+                                    <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                  </div>
+                                </a>
+                                <a class="dropdown-item preview-item">
+                                  <div class="preview-item-content flex-grow px-2">
+                                    <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                  </div>
+                                </a>
+                                <a class="dropdown-item preview-item">
+                                  <div class="preview-item-content flex-grow px-2">
+                                    <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="search-list">
+                                  <legend>Saudia Arabia</legend>
+                                  <a class="dropdown-item preview-item">
+                                      <div class="preview-item-content flex-grow px-2">
+                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                      </div>
+                                    </a>
+                                    <a class="dropdown-item preview-item">
+                                      <div class="preview-item-content flex-grow px-2">
+                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                      </div>
+                                    </a>
+                                    <a class="dropdown-item preview-item">
+                                      <div class="preview-item-content flex-grow px-2">
+                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                      </div>
+                                    </a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+                <div class="col-md text-center pb-2 mb-4">
+                    <label class="tb-label d-block mb-4"><i class="demo-icon icon-calendar">&#xe805;</i> Departing</label>
+                    <div id="datepicker-checkin2" class="input-group date datepicker navbar-date-picker">
+                        <span class="input-group-addon input-group-prepend border-right">
+                          <!-- <span class="icon-calendar input-group-text calendar-icon"></span> -->
+                        </span>
+                        <input type="text" class="form-control w-auto text-center py-1 px-4 border-0 rounded-pill">
+                    </div>
+                </div>
+                <div class="col-md text-center pb-2 mb-4">
+                    <label class="tb-label d-block mb-4"><i class="demo-icon icon-calendar">&#xe805;</i> Returning</label>
+                    <div id="datepicker-checkout2" class="input-group date datepicker navbar-date-picker">
+                        <span class="input-group-addon input-group-prepend border-right">
+                          <!-- <span class="icon-calendar input-group-text calendar-icon"></span> -->
+                        </span>
+                        <input type="text" placeholder="Add date" class="form-control w-auto text-center py-1 px-4 border-0 rounded-pill bg-transparent">
+                    </div>
+                </div>
+                <div class="col-md text-center pb-2 mb-4">
+                    <label class="tb-label d-block mb-4"><i class="demo-icon icon-guest">&#xe806;</i> Travellers & Class</label>
+                    <a class="dropdown-bordered dropdown-toggle dropdown-toggle-split text-secondary py-1 px-4 rounded-pill bg-transparent" href="#" 
+                    data-bs-toggle="dropdown" aria-expanded="false">1 Adult, Economy </a>
+                    <div class="dropdown-menu dropdown-menu-center navbar-dropdown preview-list mt-4 guest-cont" aria-labelledby="messageDropdown">
+                        <div class="guest">
+                        <legend class="d-flex mb-4"><img src="img/bed.svg" /> <b>Saudia Arabia</b>  <label class="ms-auto">2 Adult | 2 Child</label></legend>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="me-3">Adults</label>
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="me-3">Children</label>
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <h6 class="mb-3">Enter Children's Ages</h6>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="d-block">Child 1: </label>
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="d-block">Child 2: </label>
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="d-block">Child 3: </label>
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="d-block">Child 4: </label>
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <legend class="d-flex mb-4"><img src="img/bed.svg" /> <b>Saudia Arabia</b>  <label class="ms-auto">2 Adult | 2 Child</label></legend>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="me-3">Adults</label>
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="me-3">Children</label>
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="d-grid gap-2 col-8 mx-auto text-center">
+                            <a href="#" class="my-4 text-dark text-decoration-underline"><img src="img/plus.svg" /> Add another room ( 4 Maximum )</a>
+                            <button class="btn btn-primary rounded-pill" type="button">Done</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+              <button type="submit" class="btn btn-search"><i class="fas fa-search"></i></button>
+            </div>
+            
+          </div>
+          <div class="flight-type">
+            <div class="container">
+            <div class="form-check form-check-inline ms-4">
+              <input class="form-check-input" type="radio" name="flightType" value="" checked>
+              <label class="form-check-label">Non stop flight</label>
+            </div>
+            <div class="form-check form-check-inline ms-4">
+              <input class="form-check-input" type="radio" name="flightType" value="">
+              <label class="form-check-label">Flexible dates ± 3 days</label>
+            </div>
+          </div>
+          </div>
+          
+      </form>
+    </div>
+    <!-- Flight Search End -->
+
+
+    <!-- Airlines List Start -->
+
+    <div class="airline-list">
+      <div class="container">
+        <div class="travel-card flight-loading no-result w-75 text-center">
+          <i class="fas fa-times"></i>
+            <img src="img/airplane.gif" class="loading-plane" />
+          <p class="fs-5">Getting the best deals from over 450 airlines...</p>
+          <div class="loading-container">
+            <div class="Loading"></div>
+            <i class="demo-icon icon-plane">&#xe809;</i>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Airlines List End -->
+    </div>
+    
+
+    <!-- Footer Start -->
+    <footer>
+      <div class="footer-top">
+        <div class="container">
+          <h4 class="mb-4 fw-bold">Top Hotels Destinations</h4>
+          <div class="row">
+            <div class="col-md-3">
+              <ul class="ps-0">
+                <li><a class="btn px-0 pt-0 pm-2" href="">Hotels in Dubai</a></li>
+                <li><a class="btn px-0 pt-0 pm-2" href="">Hotels in Abu Dhabi</a></li>
+                <li><a class="btn px-0 pt-0 pm-2" href="">Hotels in Male</a></li>
+            </ul>
+            </div>
+            <div class="col-md-3">
+              <ul class="ps-0">
+                <li><a class="btn px-0 pt-0 pm-2" href="">Hotels in Dubai</a></li>
+                <li><a class="btn px-0 pt-0 pm-2" href="">Hotels in Abu Dhabi</a></li>
+                <li><a class="btn px-0 pt-0 pm-2" href="">Hotels in Male</a></li>
+            </ul>
+            </div>
+            <div class="col-md-3">
+              <ul class="ps-0">
+                <li><a class="btn px-0 pt-0 pm-2" href="">Hotels in Dubai</a></li>
+                <li><a class="btn px-0 pt-0 pm-2" href="">Hotels in Abu Dhabi</a></li>
+                <li><a class="btn px-0 pt-0 pm-2" href="">Hotels in Male</a></li>
+            </ul>
+            </div>
+            <div class="col-md-3">
+              <ul class="ps-0">
+                <li><a class="btn px-0 pt-0 pm-2" href="">Hotels in Maldives</a></li>
+                <li><a class="btn px-0 pt-0 pm-2" href="">Hotels in Sharjah</a></li>
+            </ul>
+            </div>
+          </div>
+          <h4 class="my-4 fw-bold">Top Hotels Destinations</h4>
+          <div class="row">
+            <div class="col-md-3">
+              <ul class="ps-0">
+                <li><a class="btn px-0 pt-0 pm-2" href="">Hotels in Dubai</a></li>
+                <li><a class="btn px-0 pt-0 pm-2" href="">Hotels in Abu Dhabi</a></li>
+                <li><a class="btn px-0 pt-0 pm-2" href="">Hotels in Male</a></li>
+            </ul>
+            </div>
+            <div class="col-md-3">
+              <ul class="ps-0">
+                <li><a class="btn px-0 pt-0 pm-2" href="">Hotels in Dubai</a></li>
+                <li><a class="btn px-0 pt-0 pm-2" href="">Hotels in Abu Dhabi</a></li>
+                <li><a class="btn px-0 pt-0 pm-2" href="">Hotels in Male</a></li>
+            </ul>
+            </div>
+            <div class="col-md-3">
+              <ul class="ps-0">
+                <li><a class="btn px-0 pt-0 pm-2" href="">Hotels in Dubai</a></li>
+                <li><a class="btn px-0 pt-0 pm-2" href="">Hotels in Abu Dhabi</a></li>
+                <li><a class="btn px-0 pt-0 pm-2" href="">Hotels in Male</a></li>
+            </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-contacts">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="d-flex align-items-center">
+                <span>
+                  <i class="fas fa-phone-alt"></i>
+                </span>
+                <div>
+                  <p class="mb-0">Hotline</p>
+                  <h4>16715</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="d-flex align-items-center">
+                <span>
+                  <i class="fas fa-globe-americas"></i>
+                </span>
+                <div>
+                  <p class="mb-0">International Hotline</p>
+                  <h4>0020216715</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="d-flex align-items-center">
+                <span>
+                  @
+                </span>
+                <div>
+                  <p class="mb-0">Email us at:</p>
+                  <h4 class="footer-mail">Reservation@Travelyalla.Com</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid text-light footer wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <h4 class="text-white"><img src="img/newlogo.png" /></h4>
+                    <p class="mb-4 pe-lg-5">TravelYalla, The First Egyptian Website For Travel & Tourism, And The Winner Of Egypt’s Leading Online Travel Agency 2021 By The World Travel Awards 2021. You Can Choose From TravelYalla Packages & Trips Or Book Your Favorite Hotel & Airline Tickets Online.</p>
+                    
+                    <div class="d-flex pt-2">
+                        <a class="me-2 mb-3" href="#"><img src="img/google.svg" /></a>
+                        <a class="me-2 mb-3" href="#"><img src="img/appstore.svg" /></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white">Company</h4>
+                    <ul class="ps-0 list-unstyled">
+                        <li><a class="btn px-0 pt-0 pm-2" href="">Contact Us</a></li>
+                        <li><a class="btn px-0 pt-0 pm-2" href="">About Us</a></li>
+                        <li><a class="btn px-0 pt-0 pm-2" href="">Help</a></li>
+                        <li><a class="btn px-0 pt-0 pm-2" href="">FAQs</a></li>
+                        <li><a class="btn px-0 pt-0 pm-2" href="">Privacy Policy</a></li>
+                        <li><a class="btn px-0 pt-0 pm-2" href="">Terms & Condition</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-12 footer-cert">
+                    <img src="img/padge.png" class="d-block mb-3" />
+                    <img src="img/certificate.png" class="d-block" style="width: 170px;" />
+                </div>
+            </div>
+        </div>
+          <div class="container">
+              <div class="copyright pt-3">
+                  <div class="row">
+                      <div class="col-lg-6 col-md-12 text-center text-md-start mb-3 mb-md-0">
+                          <p>© 2021. TRAVELYALLA. All rights reserved</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </footer>
+    
+    <!-- Footer End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <!-- <script src="lib/owlcarousel/owl.carousel.min.js"></script> -->
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <!-- <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script> -->
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+    <script src="lib/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="lib/nouislider/nouislider.min.js"></script>
+    <script src="lib/nicescroll/jquery.nicescroll.min.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -342,6 +342,28 @@
             margin-bottom: 22px;
             background: #ffffff;
 
+            &.no-result {
+                padding-bottom: 65px;
+                padding-right: 65px;
+                padding-left: 65px;
+                padding-top: 20px;
+            }
+
+            &.flight-loading {
+                margin: auto;
+                margin-top: 100px;
+                margin-bottom: 300px;
+                position: relative;
+
+                i.fa-times {
+                    position: absolute;
+                    top: 25px;
+                    right: 25px;
+                    color: #637381;
+                }
+                
+            }
+
             &.m-80 {
                 margin-bottom: 100px;
             }
