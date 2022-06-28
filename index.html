@@ -29,6 +29,7 @@
     <link href="lib/slick/slick.min.css" rel="stylesheet" />
     <link href="lib/slick/slick-theme.css" rel="stylesheet" />
     <link href="lib/nouislider/nouislider.min.css" rel="stylesheet" />
+    <link href="lib/flags/flags.css" rel="stylesheet" />
     <!-- Customized Bootstrap Stylesheet -->
     <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
 
@@ -53,28 +54,94 @@
     <!-- Navbar Start -->
     <div class="position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+          <div class="justify-content-between w-100 logo-mobile mobileview">
+            <a href="" class="navbar-brand p-0 mx-0 mt-md-2 ">
+              <!-- <h1 class="text-primary m-0"><i class="fa fa-map-marker-alt me-3"></i>Yalla</h1> -->
+              <img src="img/newlogo.png"  alt="Logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+              <span class="fa fa-bars"></span>
+          </button>
+          </div>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav py-0">
-                    <a href="#" class="nav-item nav-link">Home</a>
-                    <a href="#" class="nav-item nav-link">Hotels</a>
-                    <a href="#" class="nav-item nav-link">Flights</a>
-                    <a href="#" class="nav-item nav-link">Tourism news</a>
+                    <a href="#" class="nav-link">Home</a>
+                    <a href="#" class="nav-link">Hotels</a>
+                    <a href="#" class="nav-link">Flights</a>
+                    <a href="#" class="nav-link">Tourism news</a>
                 </div>
                 
             </div>
-            <a href="" class="navbar-brand p-0 mx-0 mt-2">
+            <a href="" class="navbar-brand p-0 mx-0 mt-md-2 desktopview">
                 <!-- <h1 class="text-primary m-0"><i class="fa fa-map-marker-alt me-3"></i>Yalla</h1> -->
                 <img src="img/newlogo.png" alt="Logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <button class="navbar-toggler desktopview" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="#" class="nav-item nav-link d-flex align-items-center"><img src="img/icons/global.png" class="me-2"/>English</a>
-                    <a href="#" class="nav-item nav-link d-flex align-items-center"><img src="img/icons/coin.png" class="me-2"/>EGP</a>
-                    <a href="#" class="nav-item nav-link d-flex align-items-center"><img src="img/icons/placeholder.png" class="me-2"/>Egypt</a>
-                    <a href="#" class="nav-item nav-link d-flex align-items-center user-btn"><img src="img/icons/user.png"/></a>
+                <div class="ms-auto">
+                  <ul class="navbar-nav  py-0">
+                   <li class="nav-item"> <a href="#" class="nav-item nav-link d-flex align-items-center"><img src="img/icons/global.png" class="me-2"/>عربي</a></li>
+                   <li class="nav-item"> <a href="#" class="nav-item nav-link d-flex align-items-center"><img src="img/icons/coin.png" class="me-2"/>EGP</a>
+                    <div class="dropdown-container currancy-list">
+                      <ul>
+                        <li><a href="#"><div class="flag flag-eg"></div> EGP <span class="text-secondary"> | Egyptian Pound</span></a></li>
+                        <li><a href="#"><div class="flag flag-bh"></div> SAR <span class="text-secondary"> | Saudi Riyal</span></a></li>
+                        <li><a href="#"><div class="flag flag-ae"></div> USD <span class="text-secondary"> | Dollar</span></a></li>
+                        <li><a href="#"><div class="flag flag-sa"></div> EUR <span class="text-secondary"> | Euro</span></a></li>
+                        <li><a href="#"><div class="flag flag-us"></div> KWD <span class="text-secondary"> | Kuwaiti Dinar</span></a></li>
+                        <li><a href="#"><div class="flag flag-us"></div> AED <span class="text-secondary"> | AED</span></a></li>
+                        
+                        
+                      </ul>
+                    </div>
+                   </li>
+                   <li class="nav-item"> <a href="#" class="nav-item nav-link d-flex align-items-center"><img src="img/icons/placeholder.png" class="me-2"/>Egypt</a>
+                    <div class="dropdown-container">
+                      <p>Please Choose A Nationality For Best Prices</p>
+                      <input type="text" placeholder="Search" id="nationality-search" />
+                      <ul id="nationality-list">
+                        <li><a href="#"><div class="flag flag-eg"></div> Egypt</a></li>
+                        <li><a href="#"><div class="flag flag-bh"></div> Bahrain</a></li>
+                        <li><a href="#"><div class="flag flag-ae"></div> Emirates</a></li>
+                        <li><a href="#"><div class="flag flag-sa"></div> Saudi Arabia</a></li>
+                        <li><a href="#"><div class="flag flag-us"></div> United States</a></li>
+                        <li><a href="#"><div class="flag flag-eg"></div> Egypt</a></li>
+                        <li><a href="#"><div class="flag flag-bh"></div> Bahrain</a></li>
+                        <li><a href="#"><div class="flag flag-ae"></div> Emirates</a></li>
+                        <li><a href="#"><div class="flag flag-sa"></div> Saudi Arabia</a></li>
+                        <li><a href="#"><div class="flag flag-us"></div> United States</a></li>
+                        <li><a href="#"><div class="flag flag-eg"></div> Egypt</a></li>
+                        <li><a href="#"><div class="flag flag-bh"></div> Bahrain</a></li>
+                        <li><a href="#"><div class="flag flag-ae"></div> Emirates</a></li>
+                        <li><a href="#"><div class="flag flag-sa"></div> Saudi Arabia</a></li>
+                        <li><a href="#"><div class="flag flag-us"></div> United States</a></li>
+                        <li><a href="#"><div class="flag flag-eg"></div> Egypt</a></li>
+                        <li><a href="#"><div class="flag flag-bh"></div> Bahrain</a></li>
+                        <li><a href="#"><div class="flag flag-ae"></div> Emirates</a></li>
+                        <li><a href="#"><div class="flag flag-sa"></div> Saudi Arabia</a></li>
+                        <li><a href="#"><div class="flag flag-us"></div> United States</a></li>
+                        <li><a href="#"><div class="flag flag-eg"></div> Egypt</a></li>
+                        <li><a href="#"><div class="flag flag-bh"></div> Bahrain</a></li>
+                        <li><a href="#"><div class="flag flag-ae"></div> Emirates</a></li>
+                        <li><a href="#"><div class="flag flag-sa"></div> Saudi Arabia</a></li>
+                        <li><a href="#"><div class="flag flag-us"></div> United States</a></li>
+                        <li><a href="#"><div class="flag flag-eg"></div> Egypt</a></li>
+                        <li><a href="#"><div class="flag flag-bh"></div> Bahrain</a></li>
+                        <li><a href="#"><div class="flag flag-ae"></div> Emirates</a></li>
+                        <li><a href="#"><div class="flag flag-sa"></div> Saudi Arabia</a></li>
+                        <li><a href="#"><div class="flag flag-us"></div> United States</a></li>
+                        <li><a href="#"><div class="flag flag-eg"></div> Egypt</a></li>
+                        <li><a href="#"><div class="flag flag-bh"></div> Bahrain</a></li>
+                        <li><a href="#"><div class="flag flag-ae"></div> Emirates</a></li>
+                        <li><a href="#"><div class="flag flag-sa"></div> Saudi Arabia</a></li>
+                        <li><a href="#"><div class="flag flag-us"></div> United States</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                   <li class="nav-item"> <a href="#" class="nav-item nav-link d-flex align-items-center user-btn"><img src="img/icons/user.png"/></a></li>
+                  </ul>
                 </div>
                 
             </div>
@@ -132,25 +199,25 @@
         </div>
         <div class="position-absolute slider-nav">
             <div class="item">
-                <img src="img/slider/slide1.png" />
+                <img src="img/indicator1.png" />
                 <div class="item-text-container d-flex align-items-center h-100 w-100">
                     <p>Maldives</p>
                 </div>
             </div>
             <div class="item">
-                <img src="img/slider/slide2.png" />
+                <img src="img/indicator2.png" />
                 <div class="item-text-container d-flex align-items-center h-100 w-100">
                     <p>Maldives</p>
                 </div>
             </div>
             <div class="item">
-                <img src="img/slider/slide1.png" />
+                <img src="img/indicator3.png" />
                 <div class="item-text-container d-flex align-items-center h-100 w-100">
                     <p>Maldives</p>
                 </div>
             </div>
             <div class="item">
-                <img src="img/slider/slide2.png" />
+                <img src="img/indicator4.png" />
                 <div class="item-text-container d-flex align-items-center h-100 w-100">
                     <p>Maldives</p>
                 </div>
@@ -287,7 +354,7 @@
                                   </div>
                                   <div class="col-md-3 text-center">
                                       <label class="tb-label d-block mb-2"><i class="demo-icon icon-calendar">&#xe805;</i> Check In</label>
-                                      <div id="datepicker-checkin2" class="input-group date datepicker navbar-date-picker">
+                                      <div id="datepicker-checkin1" class="input-group date datepicker navbar-date-picker">
                                           <span class="input-group-addon input-group-prepend border-right">
                                             <!-- <span class="icon-calendar input-group-text calendar-icon"></span> -->
                                           </span>
@@ -296,7 +363,7 @@
                                   </div>
                                   <div class="col-md-3 text-center">
                                       <label class="tb-label d-block mb-2"><i class="demo-icon icon-calendar">&#xe805;</i> Check Out</label>
-                                      <div id="datepicker-checkout" class="input-group date datepicker navbar-date-picker">
+                                      <div id="datepicker-checkout1" class="input-group date datepicker navbar-date-picker">
                                           <span class="input-group-addon input-group-prepend border-right">
                                             <!-- <span class="icon-calendar input-group-text calendar-icon"></span> -->
                                           </span>
@@ -395,207 +462,332 @@
                           </form>
                       </div>
                       <div role="tabpanel" id="flight" class="tab-pane fade">
-                          <form class="form-search">
+                        <form class="form-search flight-search">
+                          <div class="container">
+                            <div class="__trip">
+                              <div class="form-check form-check-inline ms-md-4 mb-md-5 mb-2">
+                                <input class="form-check-input" type="radio" name="tripType" value="" checked>
+                                <label class="form-check-label">One Way</label>
+                              </div>
+                              <div class="form-check form-check-inline ms-md-4 mb-md-5 mb-2">
+                                <input class="form-check-input" type="radio" name="tripType" value="">
+                                <label class="form-check-label">Round trip</label>
+                              </div>
+                              <div class="form-check form-check-inline ms-md-4 mb-md-5 mb-2">
+                                <input class="form-check-input" type="radio" name="tripType" value="">
+                                <label class="form-check-label">Multi cities</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container">
+                            <div class="flight-form">
                               <div class="row ">
-                                  <div class="col-md-3 text-center">
-                                      <label class="tb-label d-block mb-2"><i class="demo-icon icon-pin">&#xe804;</i> Destination</label>
-                                      <a class="dropdown-bordered dropdown-toggle dropdown-toggle-split text-secondary py-1 px-4 border-0 rounded-pill" href="#" 
-                                      data-bs-toggle="dropdown" aria-expanded="false"> City or cpecific hotel</a>
-                                      <div class="dropdown-menu dropdown-menu-center navbar-dropdown preview-list mt-4" aria-labelledby="messageDropdown">
-                                          <div class="card mb-3 border-0">
-                                              <div class="row g-0">
-                                                  <div class="col-md-5">
-                                                      <div class="card-body">
-                                                        <h5 class="card-title">Activites for fun 
-                                                          & Relaxation</h5>
-                                                        </div>
-                                                    </div>
-                                                <div class="col-md-7">
-                                                  <img src="img/activity.png" class="img-fluid rounded-end">
-                                                </div>
-                                                
+                                <div class="col-md text-center pb-2 mb-4">
+                                    <label class="tb-label d-block mb-md-4"><i class="demo-icon icon-pin">&#xe804;</i> Leaving from</label>
+                                    <a class="dropdown-bordered dropdown-toggle dropdown-toggle-split text-secondary py-1 px-4 border-0 rounded-pill" href="#" 
+                                    data-bs-toggle="dropdown" aria-expanded="false"> Cairo, Egypt , (CAI) - Cairo Inter…</a>
+                                    <div class="dropdown-menu dropdown-menu-center navbar-dropdown preview-list mt-4" aria-labelledby="messageDropdown">
+                                        <div class="card mb-3 border-0">
+                                            <div class="row g-0">
+                                                <div class="col-md-5">
+                                                    <div class="card-body">
+                                                      <h5 class="card-title">Activites for fun 
+                                                        & Relaxation</h5>
+                                                      </div>
+                                                  </div>
+                                              <div class="col-md-7">
+                                                <img src="img/activity.png" class="img-fluid rounded-end">
                                               </div>
+                                              
                                             </div>
-                                            <div class="row">
-                                              <div class="col-md-6">
-                                                  <div class="search-list">
-                                                  <legend>Saudia Arabia</legend>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="search-list">
+                                                <legend>Saudia Arabia</legend>
+                                                <a class="dropdown-item preview-item">
+                                                    <div class="preview-item-content flex-grow px-2">
+                                                      <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                    </div>
+                                                  </a>
                                                   <a class="dropdown-item preview-item">
-                                                      <div class="preview-item-content flex-grow px-2">
-                                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
-                                                      </div>
-                                                    </a>
-                                                    <a class="dropdown-item preview-item">
-                                                      <div class="preview-item-content flex-grow px-2">
-                                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
-                                                      </div>
-                                                    </a>
-                                                    <a class="dropdown-item preview-item">
-                                                      <div class="preview-item-content flex-grow px-2">
-                                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
-                                                      </div>
-                                                    </a>
-                                                    <a class="dropdown-item preview-item">
-                                                      <div class="preview-item-content flex-grow px-2">
-                                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
-                                                      </div>
-                                                    </a>
-                                                    <a class="dropdown-item preview-item">
-                                                      <div class="preview-item-content flex-grow px-2">
-                                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
-                                                      </div>
-                                                    </a>
-                                                  </div>
-                                              </div>
-                                              <div class="col-md-6">
-                                                  <div class="search-list">
-                                                  <legend>Saudia Arabia</legend>
+                                                    <div class="preview-item-content flex-grow px-2">
+                                                      <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                    </div>
+                                                  </a>
                                                   <a class="dropdown-item preview-item">
-                                                      <div class="preview-item-content flex-grow px-2">
-                                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
-                                                      </div>
-                                                    </a>
+                                                    <div class="preview-item-content flex-grow px-2">
+                                                      <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                    </div>
+                                                  </a>
+                                                  <a class="dropdown-item preview-item">
+                                                    <div class="preview-item-content flex-grow px-2">
+                                                      <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                    </div>
+                                                  </a>
+                                                  <a class="dropdown-item preview-item">
+                                                    <div class="preview-item-content flex-grow px-2">
+                                                      <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                    </div>
+                                                  </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="search-list">
+                                                <legend>Saudia Arabia</legend>
+                                                <a class="dropdown-item preview-item">
+                                                    <div class="preview-item-content flex-grow px-2">
+                                                      <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                    </div>
+                                                  </a>
+                                                  <a class="dropdown-item preview-item">
+                                                    <div class="preview-item-content flex-grow px-2">
+                                                      <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                    </div>
+                                                  </a>
+                                                  <a class="dropdown-item preview-item">
+                                                    <div class="preview-item-content flex-grow px-2">
+                                                      <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                    </div>
+                                                  </a>
+                                                </div>
+                                                <div class="search-list">
+                                                    <legend>Saudia Arabia</legend>
                                                     <a class="dropdown-item preview-item">
-                                                      <div class="preview-item-content flex-grow px-2">
-                                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
-                                                      </div>
-                                                    </a>
-                                                    <a class="dropdown-item preview-item">
-                                                      <div class="preview-item-content flex-grow px-2">
-                                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
-                                                      </div>
-                                                    </a>
-                                                  </div>
-                                                  <div class="search-list">
-                                                      <legend>Saudia Arabia</legend>
+                                                        <div class="preview-item-content flex-grow px-2">
+                                                          <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                        </div>
+                                                      </a>
                                                       <a class="dropdown-item preview-item">
-                                                          <div class="preview-item-content flex-grow px-2">
-                                                            <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
-                                                          </div>
-                                                        </a>
-                                                        <a class="dropdown-item preview-item">
-                                                          <div class="preview-item-content flex-grow px-2">
-                                                            <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
-                                                          </div>
-                                                        </a>
-                                                        <a class="dropdown-item preview-item">
-                                                          <div class="preview-item-content flex-grow px-2">
-                                                            <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
-                                                          </div>
-                                                        </a>
+                                                        <div class="preview-item-content flex-grow px-2">
+                                                          <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                        </div>
+                                                      </a>
+                                                      <a class="dropdown-item preview-item">
+                                                        <div class="preview-item-content flex-grow px-2">
+                                                          <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                        </div>
+                                                      </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md text-center pb-2 mb-4">
+                                  <label class="tb-label d-block mb-md-4"><i class="demo-icon icon-pin">&#xe804;</i> Going to</label>
+                                  <a class="dropdown-bordered dropdown-toggle dropdown-toggle-split text-secondary py-1 px-4 border-0 rounded-pill" href="#" 
+                                  data-bs-toggle="dropdown" aria-expanded="false"> Dublin (DUB)</a>
+                                  <div class="dropdown-menu dropdown-menu-center navbar-dropdown preview-list mt-4" aria-labelledby="messageDropdown">
+                                      <div class="card mb-3 border-0">
+                                          <div class="row g-0">
+                                              <div class="col-md-5">
+                                                  <div class="card-body">
+                                                    <h5 class="card-title">Activites for fun 
+                                                      & Relaxation</h5>
+                                                    </div>
+                                                </div>
+                                            <div class="col-md-7">
+                                              <img src="img/activity.png" class="img-fluid rounded-end">
+                                            </div>
+                                            
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="col-md-6">
+                                              <div class="search-list">
+                                              <legend>Saudia Arabia</legend>
+                                              <a class="dropdown-item preview-item">
+                                                  <div class="preview-item-content flex-grow px-2">
+                                                    <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
                                                   </div>
+                                                </a>
+                                                <a class="dropdown-item preview-item">
+                                                  <div class="preview-item-content flex-grow px-2">
+                                                    <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                  </div>
+                                                </a>
+                                                <a class="dropdown-item preview-item">
+                                                  <div class="preview-item-content flex-grow px-2">
+                                                    <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                  </div>
+                                                </a>
+                                                <a class="dropdown-item preview-item">
+                                                  <div class="preview-item-content flex-grow px-2">
+                                                    <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                  </div>
+                                                </a>
+                                                <a class="dropdown-item preview-item">
+                                                  <div class="preview-item-content flex-grow px-2">
+                                                    <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                  </div>
+                                                </a>
+                                              </div>
+                                          </div>
+                                          <div class="col-md-6">
+                                              <div class="search-list">
+                                              <legend>Saudia Arabia</legend>
+                                              <a class="dropdown-item preview-item">
+                                                  <div class="preview-item-content flex-grow px-2">
+                                                    <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                  </div>
+                                                </a>
+                                                <a class="dropdown-item preview-item">
+                                                  <div class="preview-item-content flex-grow px-2">
+                                                    <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                  </div>
+                                                </a>
+                                                <a class="dropdown-item preview-item">
+                                                  <div class="preview-item-content flex-grow px-2">
+                                                    <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                  </div>
+                                                </a>
+                                              </div>
+                                              <div class="search-list">
+                                                  <legend>Saudia Arabia</legend>
+                                                  <a class="dropdown-item preview-item">
+                                                      <div class="preview-item-content flex-grow px-2">
+                                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                      </div>
+                                                    </a>
+                                                    <a class="dropdown-item preview-item">
+                                                      <div class="preview-item-content flex-grow px-2">
+                                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                      </div>
+                                                    </a>
+                                                    <a class="dropdown-item preview-item">
+                                                      <div class="preview-item-content flex-grow px-2">
+                                                        <p class="fw-light small-text mb-0"><span>AHB</span> Al Baha</p>
+                                                      </div>
+                                                    </a>
                                               </div>
                                           </div>
                                       </div>
-                                  </div>
-                                  <div class="col-md-3 text-center">
-                                      <label class="tb-label d-block mb-2"><i class="demo-icon icon-calendar">&#xe805;</i> Check In</label>
-                                      <div id="datepicker-checkin3" class="input-group date datepicker navbar-date-picker">
-                                          <span class="input-group-addon input-group-prepend border-right">
-                                            <!-- <span class="icon-calendar input-group-text calendar-icon"></span> -->
-                                          </span>
-                                          <input type="text" class="form-control w-auto text-center py-1 px-4 border-0 rounded-pill">
-                                      </div>
-                                  </div>
-                                  <div class="col-md-3 text-center">
-                                      <label class="tb-label d-block mb-2"><i class="demo-icon icon-calendar">&#xe805;</i> Check Out</label>
-                                      <div id="datepicker-checkout2" class="input-group date datepicker navbar-date-picker">
-                                          <span class="input-group-addon input-group-prepend border-right">
-                                            <!-- <span class="icon-calendar input-group-text calendar-icon"></span> -->
-                                          </span>
-                                          <input type="text" placeholder="Add date" class="form-control w-auto text-center py-1 px-4 border-0 rounded-pill bg-transparent">
-                                      </div>
-                                  </div>
-                                  <div class="col-md-3 text-center">
-                                      <label class="tb-label d-block mb-2"><i class="demo-icon icon-guest">&#xe806;</i> Rooms & Guest</label>
-                                      <a class="dropdown-bordered dropdown-toggle dropdown-toggle-split text-secondary py-1 px-4 rounded-pill bg-transparent" href="#" 
-                                      data-bs-toggle="dropdown" aria-expanded="false">add guests</a>
-                                      <div class="dropdown-menu dropdown-menu-center navbar-dropdown preview-list mt-4 guest-cont" aria-labelledby="messageDropdown">
-                                          <div class="guest">
-                                          <legend class="d-flex mb-4"><img src="img/bed.svg" /> <b>Saudia Arabia</b>  <label class="ms-auto">2 Adult | 2 Child</label></legend>
-                                          <div class="row">
-                                              <div class="col-md-6">
-                                                  <label class="me-3">Adults</label>
-                                                  <select>
-                                                      <option>1</option>
-                                                      <option>2</option>
-                                                      <option>3</option>
-                                                  </select>
-                                              </div>
-                                              <div class="col-md-6">
-                                                  <label class="me-3">Children</label>
-                                                  <select>
-                                                      <option>1</option>
-                                                      <option>2</option>
-                                                      <option>3</option>
-                                                  </select>
-                                              </div>
-                                          </div>
-                                          <h6 class="mb-3">Enter Children's Ages</h6>
-                                          <div class="row">
-                                              <div class="col-md-3">
-                                                  <label class="d-block">Child 1: </label>
-                                                  <select>
-                                                      <option>1</option>
-                                                      <option>2</option>
-                                                      <option>3</option>
-                                                  </select>
-                                              </div>
-                                              <div class="col-md-3">
-                                                  <label class="d-block">Child 2: </label>
-                                                  <select>
-                                                      <option>1</option>
-                                                      <option>2</option>
-                                                      <option>3</option>
-                                                  </select>
-                                              </div>
-                                              <div class="col-md-3">
-                                                  <label class="d-block">Child 3: </label>
-                                                  <select>
-                                                      <option>1</option>
-                                                      <option>2</option>
-                                                      <option>3</option>
-                                                  </select>
-                                              </div>
-                                              <div class="col-md-3">
-                                                  <label class="d-block">Child 4: </label>
-                                                  <select>
-                                                      <option>1</option>
-                                                      <option>2</option>
-                                                      <option>3</option>
-                                                  </select>
-                                              </div>
-                                          </div>
-                                          <legend class="d-flex mb-4"><img src="img/bed.svg" /> <b>Saudia Arabia</b>  <label class="ms-auto">2 Adult | 2 Child</label></legend>
-                                          <div class="row">
-                                              <div class="col-md-6">
-                                                  <label class="me-3">Adults</label>
-                                                  <select>
-                                                      <option>1</option>
-                                                      <option>2</option>
-                                                      <option>3</option>
-                                                  </select>
-                                              </div>
-                                              <div class="col-md-6">
-                                                  <label class="me-3">Children</label>
-                                                  <select>
-                                                      <option>1</option>
-                                                      <option>2</option>
-                                                      <option>3</option>
-                                                  </select>
-                                              </div>
-                                          </div>
-                                          
-                                          <div class="d-grid gap-2 col-8 mx-auto text-center">
-                                              <a href="#" class="my-4 text-dark text-decoration-underline"><img src="img/plus.svg" /> Add another room ( 4 Maximum )</a>
-                                              <button class="btn btn-primary rounded-pill" type="button">Done</button>
-                                          </div>
-                                      </div>
-                                  </div>
                                   </div>
                               </div>
+                                <div class="col-md text-center pb-2 mb-4">
+                                    <label class="tb-label d-block mb-md-4"><i class="demo-icon icon-calendar">&#xe805;</i> Departing</label>
+                                    <div id="datepicker-checkin2" class="input-group date datepicker navbar-date-picker">
+                                        <span class="input-group-addon input-group-prepend border-right">
+                                          <!-- <span class="icon-calendar input-group-text calendar-icon"></span> -->
+                                        </span>
+                                        <input type="text" class="form-control w-auto text-center py-1 px-4 border-0 rounded-pill">
+                                    </div>
+                                </div>
+                                <div class="col-md text-center pb-2 mb-4">
+                                    <label class="tb-label d-block mb-md-4"><i class="demo-icon icon-calendar">&#xe805;</i> Returning</label>
+                                    <div id="datepicker-checkout2" class="input-group date datepicker navbar-date-picker">
+                                        <span class="input-group-addon input-group-prepend border-right">
+                                          <!-- <span class="icon-calendar input-group-text calendar-icon"></span> -->
+                                        </span>
+                                        <input type="text" placeholder="Add date" class="form-control w-auto text-center py-1 px-4 border-0 rounded-pill bg-transparent">
+                                    </div>
+                                </div>
+                                <div class="col-md text-center pb-2 mb-4">
+                                    <label class="tb-label d-block mb-md-4"><i class="demo-icon icon-guest">&#xe806;</i> Travellers & Class</label>
+                                    <a class="dropdown-bordered dropdown-toggle dropdown-toggle-split text-secondary py-1 px-4 rounded-pill bg-transparent" href="#" 
+                                    data-bs-toggle="dropdown" aria-expanded="false">1 Adult, Economy </a>
+                                    <div class="dropdown-menu dropdown-menu-center navbar-dropdown preview-list mt-4 guest-cont" aria-labelledby="messageDropdown">
+                                        <div class="guest">
+                                        <legend class="d-flex mb-4"><img src="img/bed.svg" /> <b>Saudia Arabia</b>  <label class="ms-auto">2 Adult | 2 Child</label></legend>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label class="me-3">Adults</label>
+                                                <select>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="me-3">Children</label>
+                                                <select>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <h6 class="mb-3">Enter Children's Ages</h6>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <label class="d-block">Child 1: </label>
+                                                <select>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="d-block">Child 2: </label>
+                                                <select>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="d-block">Child 3: </label>
+                                                <select>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="d-block">Child 4: </label>
+                                                <select>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <legend class="d-flex mb-4"><img src="img/bed.svg" /> <b>Saudia Arabia</b>  <label class="ms-auto">2 Adult | 2 Child</label></legend>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label class="me-3">Adults</label>
+                                                <select>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="me-3">Children</label>
+                                                <select>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="d-grid gap-2 col-8 mx-auto text-center">
+                                            <a href="#" class="my-4 text-dark text-decoration-underline"><img src="img/plus.svg" /> Add another room ( 4 Maximum )</a>
+                                            <button class="btn btn-primary rounded-pill" type="button">Done</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
                               <button type="submit" class="btn btn-search"><i class="fas fa-search"></i></button>
-                          </form>
+                            </div>
+                            
+                          </div>
+                          <div class="flight-type">
+                            <div class="container">
+                            <div class="form-check form-check-inline ms-4">
+                              <input class="form-check-input" type="radio" name="flightType" value="" checked>
+                              <label class="form-check-label">Non stop flight</label>
+                            </div>
+                            <div class="form-check form-check-inline ms-4">
+                              <input class="form-check-input" type="radio" name="flightType" value="">
+                              <label class="form-check-label">Flexible dates ± 3 days</label>
+                            </div>
+                          </div>
+                          </div>
+                          
+                      </form>
                       </div>
                       <div role="tabpanel" id="transfer" class="tab-pane fade">
                           <form class="form-search">
@@ -693,7 +885,7 @@
                                   </div>
                                   <div class="col-md-3 text-center">
                                       <label class="tb-label d-block mb-2"><i class="demo-icon icon-calendar">&#xe805;</i> Check In</label>
-                                      <div id="datepicker-checkin4" class="input-group date datepicker navbar-date-picker">
+                                      <div id="datepicker-checkin3" class="input-group date datepicker navbar-date-picker">
                                           <span class="input-group-addon input-group-prepend border-right">
                                             <!-- <span class="icon-calendar input-group-text calendar-icon"></span> -->
                                           </span>
@@ -896,7 +1088,7 @@
                                   </div>
                                   <div class="col-md-3 text-center">
                                       <label class="tb-label d-block mb-2"><i class="demo-icon icon-calendar">&#xe805;</i> Check In</label>
-                                      <div id="datepicker-checkin" class="input-group date datepicker navbar-date-picker">
+                                      <div id="datepicker-checkin4" class="input-group date datepicker navbar-date-picker">
                                           <span class="input-group-addon input-group-prepend border-right">
                                             <!-- <span class="icon-calendar input-group-text calendar-icon"></span> -->
                                           </span>
@@ -1008,521 +1200,523 @@
           </div>
       </section>
       <!-- Search Box End -->
-
+      </div>
       <!-- Trips Start -->
       <section class="trips">
-        <div class="section-title d-lg-flex align-items-end justify-content-between">
-          <div class="d-lg-flex align-items-end">
-            <h2 class="me-4 mb-0">TRIPS</h2>
-            <div class="sectin-text">
-              <p class="main-text mb-0">TravelYalla Egyptian Packages</p>
-              <p>Explore Our Coming Trips</p>
+        <div class="container">
+          <div class="section-title d-lg-flex align-items-end justify-content-between">
+            <div class="d-lg-flex align-items-center">
+              <h2 class="mb-0">TRIPS</h2>
+              <div class="sectin-text">
+                <p class="main-text">TravelYalla Egyptian Packages</p>
+                <p>Explore Our Coming Trips</p>
+              </div>
             </div>
           </div>
         </div>
-        <div>
           <!--Tabs-->
-          <ul class="nav nav-tabs trips-tab" id="tripsTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="romantic-tab" data-bs-toggle="tab" data-bs-target="#romantic" type="button" role="tab" aria-controls="romantic" aria-selected="true">Romantic</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="beach-tab" data-bs-toggle="tab" data-bs-target="#beach" type="button" role="tab" aria-controls="beach" aria-selected="false">Beach</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="family-tab" data-bs-toggle="tab" data-bs-target="#family" type="button" role="tab" aria-controls="family" aria-selected="false">Family-friendly</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="nature-tab" data-bs-toggle="tab" data-bs-target="#nature" type="button" role="tab" aria-controls="nature" aria-selected="true">Nature</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="cultural-tab" data-bs-toggle="tab" data-bs-target="#cultural" type="button" role="tab" aria-controls="cultural" aria-selected="false">Cultural</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="summer-tab" data-bs-toggle="tab" data-bs-target="#summer" type="button" role="tab" aria-controls="summer" aria-selected="true">Summer</button>
-            </li>
-          </ul>
-          <!--Tabs-->
-
-          <!--Tabs Content-->
-          <div class="tab-content" id="tripsTabContent">
-            <div class="tab-pane fade show active" id="romantic" role="tabpanel" aria-labelledby="romantic-tab">
-             
-              <!--Trips Slider-->
-              <div class="tabSlider">
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips1.jpg" />
-                    <div class="slider-title"></div>
-                      <h3>Turkey</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips2.jpg" />
-                    <div class="slider-title"></div>
-                      <h3>Maldives</h3>
-                    
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips3.webp" />
-                    <div class="slider-title"></div>
-                      <h3>Luxor</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips1.jpg" />
-                    <div class="slider-title"></div>
-                      <h3>Turkey</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips2.jpg" />
-                    <div class="slider-title"></div>
-                      <h3>Luxor</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips3.webp" />
-                    <div class="slider-title"></div>
-                      <h3>Luxor</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-              </div>
-              <div class="d-flex justify-content-end">
-                <ul class="trips-arrows d-flex me-5 mb-0">
-                  <li class="trips-prev me-3"><i class="fas fa-angle-left"></i></li>
-                  <li class="trips-next"><i class="fas fa-angle-right"></i></li>
-              </ul>
-              <a href="#" class="btn-more btn btn-outline-primary rounded-pill">See all</a>
-              </div>
-              <!--Trips Slider-->
-
-            </div>
-            <div class="tab-pane fade" id="beach" role="tabpanel" aria-labelledby="beach-tab">
-              <div class="tabSlider">
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips1.jpg" />
-                    <div class="slider-title"></div>
-                      <h3>Turkey</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips2.jpg" />
-                    <div class="slider-title"></div>
-                      <h3>Maldives</h3>
-                    
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips3.webp" />
-                    <div class="slider-title"></div>
-                      <h3>Luxor</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips1.jpg" />
-                    <div class="slider-title"></div>
-                      <h3>Turkey</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips2.jpg" />
-                    <div class="slider-title"></div>
-                      <h3>Luxor</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips3.webp" />
-                    <div class="slider-title"></div>
-                      <h3>Luxor</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-              </div>
-              <div class="d-flex justify-content-end">
-                <ul class="trips-arrows d-flex me-5 mb-0">
-                  <li class="trips-prev me-3"><i class="fas fa-angle-left"></i></li>
-                  <li class="trips-next"><i class="fas fa-angle-right"></i></li>
-              </ul>
-              <a href="#" class="btn-more btn btn-outline-primary rounded-pill">See all</a>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="family" role="tabpanel" aria-labelledby="family-tab">
-              <div class="tabSlider">
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips1.jpg" />
-                    <div class="slider-title"></div>
-                      <h3>Turkey</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips2.jpg" />
-                    <div class="slider-title"></div>
-                      <h3>Maldives</h3>
-                    
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips3.webp" />
-                    <div class="slider-title"></div>
-                      <h3>Luxor</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips1.jpg" />
-                    <div class="slider-title"></div>
-                      <h3>Turkey</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips2.jpg" />
-                    <div class="slider-title"></div>
-                      <h3>Luxor</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips3.webp" />
-                    <div class="slider-title"></div>
-                      <h3>Luxor</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-              </div>
-              <div class="d-flex justify-content-end">
-                <ul class="trips-arrows d-flex me-5 mb-0">
-                  <li class="trips-prev me-3"><i class="fas fa-angle-left"></i></li>
-                  <li class="trips-next"><i class="fas fa-angle-right"></i></li>
-              </ul>
-              <a href="#" class="btn-more btn btn-outline-primary rounded-pill">See all</a>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="nature" role="tabpanel" aria-labelledby="nature-tab">
-              <div class="tabSlider">
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips1.jpg" />
-                    <div class="slider-title"></div>
-                      <h3>Turkey</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips2.jpg" />
-                    <div class="slider-title"></div>
-                      <h3>Maldives</h3>
-                    
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips3.webp" />
-                    <div class="slider-title"></div>
-                      <h3>Luxor</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips1.jpg" />
-                    <div class="slider-title"></div>
-                      <h3>Turkey</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips2.jpg" />
-                    <div class="slider-title"></div>
-                      <h3>Luxor</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips3.webp" />
-                    <div class="slider-title"></div>
-                      <h3>Luxor</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-              </div>
-              <div class="d-flex justify-content-end">
-                <ul class="trips-arrows d-flex me-5 mb-0">
-                  <li class="trips-prev me-3"><i class="fas fa-angle-left"></i></li>
-                  <li class="trips-next"><i class="fas fa-angle-right"></i></li>
-              </ul>
-              <a href="#" class="btn-more btn btn-outline-primary rounded-pill">See all</a>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="cultural" role="tabpanel" aria-labelledby="cultural-tab">
-              <div class="tabSlider">
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips1.jpg" />
-                    <div class="slider-title"></div>
-                      <h3>Turkey</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips2.jpg" />
-                    <div class="slider-title"></div>
-                      <h3>Maldives</h3>
-                    
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips3.webp" />
-                    <div class="slider-title"></div>
-                      <h3>Luxor</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips1.jpg" />
-                    <div class="slider-title"></div>
-                      <h3>Turkey</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips2.jpg" />
-                    <div class="slider-title"></div>
-                      <h3>Luxor</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips3.webp" />
-                    <div class="slider-title"></div>
-                      <h3>Luxor</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-              </div>
-              <div class="d-flex justify-content-end">
-                <ul class="trips-arrows d-flex me-5 mb-0">
-                  <li class="trips-prev me-3"><i class="fas fa-angle-left"></i></li>
-                  <li class="trips-next"><i class="fas fa-angle-right"></i></li>
-              </ul>
-              <a href="#" class="btn-more btn btn-outline-primary rounded-pill">See all</a>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="summer" role="tabpanel" aria-labelledby="summer-tab">
-              <div class="tabSlider">
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips1.jpg" />
-                    <div class="slider-title"></div>
-                      <h3>Turkey</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips2.jpg" />
-                    <div class="slider-title"></div>
-                      <h3>Maldives</h3>
-                    
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips3.webp" />
-                    <div class="slider-title"></div>
-                      <h3>Luxor</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips1.jpg" />
-                    <div class="slider-title"></div>
-                      <h3>Turkey</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips2.jpg" />
-                    <div class="slider-title"></div>
-                      <h3>Luxor</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-                <a href="#" class="item">
-                  <div class="slider-img">
-                    <img src="img/trips3.webp" />
-                    <div class="slider-title"></div>
-                      <h3>Luxor</h3>
-                    
-                  </div>
-                  <div class="slider-caption">
-                    <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
-                  </div>
-                </a>
-              </div>
-              <div class="d-flex justify-content-end">
-                <ul class="trips-arrows d-flex me-5 mb-0">
-                  <li class="trips-prev me-3"><i class="fas fa-angle-left"></i></li>
-                  <li class="trips-next"><i class="fas fa-angle-right"></i></li>
-              </ul>
-              <a href="#" class="btn-more btn btn-outline-primary rounded-pill">See all</a>
-              </div>
-            </div>
-            
+          <div class="container">
+            <ul class="nav nav-tabs trips-tab" id="tripsTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="romantic-tab" data-bs-toggle="tab" data-bs-target="#romantic" type="button" role="tab" aria-controls="romantic" aria-selected="true">Romantic</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="beach-tab" data-bs-toggle="tab" data-bs-target="#beach" type="button" role="tab" aria-controls="beach" aria-selected="false">Beach</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="family-tab" data-bs-toggle="tab" data-bs-target="#family" type="button" role="tab" aria-controls="family" aria-selected="false">Family-friendly</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="nature-tab" data-bs-toggle="tab" data-bs-target="#nature" type="button" role="tab" aria-controls="nature" aria-selected="true">Nature</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="cultural-tab" data-bs-toggle="tab" data-bs-target="#cultural" type="button" role="tab" aria-controls="cultural" aria-selected="false">Cultural</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="summer-tab" data-bs-toggle="tab" data-bs-target="#summer" type="button" role="tab" aria-controls="summer" aria-selected="true">Summer</button>
+              </li>
+            </ul>
           </div>
+          <!--Tabs-->
+
+          <!--Tabs Content-->
+            <div class="tab-content" id="tripsTabContent">
+              <div class="tab-pane fade show active" id="romantic" role="tabpanel" aria-labelledby="romantic-tab">
+              
+                <!--Trips Slider-->
+                <div class="tabSlider">
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips1.jpg" />
+                      <div class="slider-title"></div>
+                        <h3>Turkey</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips2.jpg" />
+                      <div class="slider-title"></div>
+                        <h3>Maldives</h3>
+                      
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips3.webp" />
+                      <div class="slider-title"></div>
+                        <h3>Luxor</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips1.jpg" />
+                      <div class="slider-title"></div>
+                        <h3>Turkey</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips2.jpg" />
+                      <div class="slider-title"></div>
+                        <h3>Luxor</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips3.webp" />
+                      <div class="slider-title"></div>
+                        <h3>Luxor</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <ul class="trips-arrows d-flex me-5 mb-0">
+                    <li class="trips-prev me-3"><i class="fas fa-angle-left"></i></li>
+                    <li class="trips-next"><i class="fas fa-angle-right"></i></li>
+                </ul>
+                <a href="#" class="btn-more btn btn-outline-primary rounded-pill">See all</a>
+                </div>
+                <!--Trips Slider-->
+
+              </div>
+              <div class="tab-pane fade" id="beach" role="tabpanel" aria-labelledby="beach-tab">
+                <div class="tabSlider">
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips1.jpg" />
+                      <div class="slider-title"></div>
+                        <h3>Turkey</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips2.jpg" />
+                      <div class="slider-title"></div>
+                        <h3>Maldives</h3>
+                      
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips3.webp" />
+                      <div class="slider-title"></div>
+                        <h3>Luxor</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips1.jpg" />
+                      <div class="slider-title"></div>
+                        <h3>Turkey</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips2.jpg" />
+                      <div class="slider-title"></div>
+                        <h3>Luxor</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips3.webp" />
+                      <div class="slider-title"></div>
+                        <h3>Luxor</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <ul class="trips-arrows d-flex me-5 mb-0">
+                    <li class="trips-prev me-3"><i class="fas fa-angle-left"></i></li>
+                    <li class="trips-next"><i class="fas fa-angle-right"></i></li>
+                </ul>
+                <a href="#" class="btn-more btn btn-outline-primary rounded-pill">See all</a>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="family" role="tabpanel" aria-labelledby="family-tab">
+                <div class="tabSlider">
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips1.jpg" />
+                      <div class="slider-title"></div>
+                        <h3>Turkey</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips2.jpg" />
+                      <div class="slider-title"></div>
+                        <h3>Maldives</h3>
+                      
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips3.webp" />
+                      <div class="slider-title"></div>
+                        <h3>Luxor</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips1.jpg" />
+                      <div class="slider-title"></div>
+                        <h3>Turkey</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips2.jpg" />
+                      <div class="slider-title"></div>
+                        <h3>Luxor</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips3.webp" />
+                      <div class="slider-title"></div>
+                        <h3>Luxor</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <ul class="trips-arrows d-flex me-5 mb-0">
+                    <li class="trips-prev me-3"><i class="fas fa-angle-left"></i></li>
+                    <li class="trips-next"><i class="fas fa-angle-right"></i></li>
+                </ul>
+                <a href="#" class="btn-more btn btn-outline-primary rounded-pill">See all</a>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="nature" role="tabpanel" aria-labelledby="nature-tab">
+                <div class="tabSlider">
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips1.jpg" />
+                      <div class="slider-title"></div>
+                        <h3>Turkey</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips2.jpg" />
+                      <div class="slider-title"></div>
+                        <h3>Maldives</h3>
+                      
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips3.webp" />
+                      <div class="slider-title"></div>
+                        <h3>Luxor</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips1.jpg" />
+                      <div class="slider-title"></div>
+                        <h3>Turkey</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips2.jpg" />
+                      <div class="slider-title"></div>
+                        <h3>Luxor</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips3.webp" />
+                      <div class="slider-title"></div>
+                        <h3>Luxor</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <ul class="trips-arrows d-flex me-5 mb-0">
+                    <li class="trips-prev me-3"><i class="fas fa-angle-left"></i></li>
+                    <li class="trips-next"><i class="fas fa-angle-right"></i></li>
+                </ul>
+                <a href="#" class="btn-more btn btn-outline-primary rounded-pill">See all</a>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="cultural" role="tabpanel" aria-labelledby="cultural-tab">
+                <div class="tabSlider">
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips1.jpg" />
+                      <div class="slider-title"></div>
+                        <h3>Turkey</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips2.jpg" />
+                      <div class="slider-title"></div>
+                        <h3>Maldives</h3>
+                      
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips3.webp" />
+                      <div class="slider-title"></div>
+                        <h3>Luxor</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips1.jpg" />
+                      <div class="slider-title"></div>
+                        <h3>Turkey</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips2.jpg" />
+                      <div class="slider-title"></div>
+                        <h3>Luxor</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips3.webp" />
+                      <div class="slider-title"></div>
+                        <h3>Luxor</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <ul class="trips-arrows d-flex me-5 mb-0">
+                    <li class="trips-prev me-3"><i class="fas fa-angle-left"></i></li>
+                    <li class="trips-next"><i class="fas fa-angle-right"></i></li>
+                </ul>
+                <a href="#" class="btn-more btn btn-outline-primary rounded-pill">See all</a>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="summer" role="tabpanel" aria-labelledby="summer-tab">
+                <div class="tabSlider">
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips1.jpg" />
+                      <div class="slider-title"></div>
+                        <h3>Turkey</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips2.jpg" />
+                      <div class="slider-title"></div>
+                        <h3>Maldives</h3>
+                      
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips3.webp" />
+                      <div class="slider-title"></div>
+                        <h3>Luxor</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips1.jpg" />
+                      <div class="slider-title"></div>
+                        <h3>Turkey</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips2.jpg" />
+                      <div class="slider-title"></div>
+                        <h3>Luxor</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="slider-img">
+                      <img src="img/trips3.webp" />
+                      <div class="slider-title"></div>
+                        <h3>Luxor</h3>
+                      
+                    </div>
+                    <div class="slider-caption">
+                      <p>Plan The Perfect Luxor City Vacation With TravelYalla</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="d-flex justify-content-end">
+                  <ul class="trips-arrows d-flex me-5 mb-0">
+                    <li class="trips-prev me-3"><i class="fas fa-angle-left"></i></li>
+                    <li class="trips-next"><i class="fas fa-angle-right"></i></li>
+                </ul>
+                <a href="#" class="btn-more btn btn-outline-primary rounded-pill">See all</a>
+                </div>
+              </div>
+              
+            </div>
           <!--Tabs Content-->
 
-        </div>
       </section>
 
       <!-- Trips End -->
@@ -1535,7 +1729,7 @@
         
         <div class="row">
           <div class="col-md-8">
-            <div class="section-title d-lg-flex align-items-end">
+            <div class="section-title d-lg-flex align-items-center">
               <img src="img/awards-logo.png" alt="" />
               <div class="ms-3">
                 <h2 class="me-4 mb-0">World Travel Awards</h2>
@@ -1576,17 +1770,17 @@
     <section class="offers">
       <div class="container">
         <div class="section-title d-lg-flex align-items-end justify-content-between">
-          <div class="d-lg-flex align-items-end">
-            <h2 class="me-4 mb-0">OFFERS</h2>
+          <div class="d-lg-flex align-items-center">
+            <h2 class=" mb-0">OFFERS</h2>
             <div class="sectin-text">
-              <p class="main-text mb-0">TravelYalla Egyptian offers</p>
+              <p class="main-text">TravelYalla Egyptian offers</p>
               <p>Explore Our offers for you</p>
             </div>
           </div>
           <a href="#" class="btn-more btn btn-outline-primary rounded-pill">See all</a>
         </div>
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-6 col-lg-3">
             <a href="#" class="card item">
               <div class="img">
                 <img src="./img/offers1.png" class="card-img-top" alt="">
@@ -1602,7 +1796,7 @@
               </div>
             </a>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-6 col-lg-3">
             <a href="#" class="card item">
               <div class="img">
                 <img src="./img/offers2.png" class="card-img-top" alt="">
@@ -1618,7 +1812,7 @@
               </div>
             </a>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-6 col-lg-3">
             <a href="#" class="card item">
               <div class="img">
                 <img src="./img/offers3.png" class="card-img-top" alt="">
@@ -1634,7 +1828,7 @@
               </div>
             </a>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-6 col-lg-3">
             <a href="#" class="card item">
               <div class="img">
                 <img src="./img/offers4.png" class="card-img-top" alt="">
@@ -1650,7 +1844,7 @@
               </div>
             </a>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-6 col-lg-3">
             <a href="#" class="card item">
               <div class="img">
                 <img src="./img/offers5.png" class="card-img-top" alt="">
@@ -1666,7 +1860,7 @@
               </div>
             </a>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-6 col-lg-3">
             <a href="#" class="card item">
               <div class="img">
                 <img src="./img/offers6.png" class="card-img-top" alt="">
@@ -1682,7 +1876,7 @@
               </div>
             </a>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-6 col-lg-3">
             <a href="#" class="card item">
               <div class="img">
                 <img src="./img/offers1.png" class="card-img-top" alt="">
@@ -1698,7 +1892,7 @@
               </div>
             </a>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-6 col-lg-3">
             <a href="#" class="card item">
               <div class="img">
                 <img src="./img/offers2.png" class="card-img-top" alt="">
@@ -1725,10 +1919,10 @@
     <section class="testimonial">
       <div class="container">
         <div class="section-title d-lg-flex align-items-end justify-content-between">
-          <div class="d-lg-flex align-items-end">
-            <h2 class="me-4 mb-0">Testimonials</h2>
+          <div class="d-lg-flex align-items-center">
+            <h2 class="mb-0">Testimonials</h2>
             <div class="sectin-text">
-              <p class="main-text mb-0"></p>
+              <p class="main-text"></p>
               <p>What our Clients Say</p>
             </div>
           </div>
@@ -1742,7 +1936,7 @@
               <h4>MIA CROFT</h4>
             </div>
               <p class="test-text">
-                In the tumultuous business of cutting-in and attending to a whale, there is much running backwards and forwards amon.
+                Just home from the wonderful trip you recommended to Australia with Linda SIm and David Tarrant. Not only was the trip mind blowing in it’s selection of gardens.
               </p>
           </div>
           <div class="item">
@@ -1753,7 +1947,7 @@
               <h4>MIA CROFT</h4>
             </div>
               <p class="test-text">
-                In the tumultuous business of cutting-in and attending to a whale, there is much running backwards and forwards amon.
+                Just home from the wonderful trip you recommended to Australia with Linda SIm and David Tarrant. Not only was the trip mind blowing in it’s selection of gardens.
               </p>
           </div>
           <div class="item">
@@ -1764,7 +1958,7 @@
               <h4>MIA CROFT</h4>
             </div>
               <p class="test-text">
-                In the tumultuous business of cutting-in and attending to a whale, there is much running backwards and forwards amon.
+                Just home from the wonderful trip you recommended to Australia with Linda SIm and David Tarrant. Not only was the trip mind blowing in it’s selection of gardens.
               </p>
           </div>
           <div class="item">
@@ -1775,11 +1969,11 @@
               <h4>MIA CROFT</h4>
             </div>
               <p class="test-text">
-                In the tumultuous business of cutting-in and attending to a whale, there is much running backwards and forwards amon.
+                Just home from the wonderful trip you recommended to Australia with Linda SIm and David Tarrant. Not only was the trip mind blowing in it’s selection of gardens.
               </p>
           </div>
         </div>
-        <ul class="d-flex justify-content-center">
+        <ul class="d-flex justify-content-center ps-0">
           <li class="test-prev me-3"><i class="fas fa-angle-left"></i></li>
           <li class="test-next"><i class="fas fa-angle-right"></i></li>
         </ul>
@@ -1881,7 +2075,7 @@
                 </span>
                 <div>
                   <p class="mb-0">Email us at:</p>
-                  <h4 class="fs-5">Reservation@Travelyalla.Com</h4>
+                  <h4 class="footer-mail">Reservation@Travelyalla.Com</h4>
                 </div>
               </div>
             </div>
@@ -1912,7 +2106,7 @@
                     </ul>
                 </div>
                 
-                <div class="col-lg-3 col-md-6 footer-cert">
+                <div class="col-lg-3 col-md-12 footer-cert">
                     <img src="img/padge.png" class="d-block mb-3" />
                     <img src="img/certificate.png" class="d-block" style="width: 170px;" />
                 </div>
@@ -1921,7 +2115,7 @@
           <div class="container">
               <div class="copyright pt-3">
                   <div class="row">
-                      <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                      <div class="col-lg-6 col-md-12 text-center text-md-start mb-3 mb-md-0">
                           <p>© 2021. TRAVELYALLA. All rights reserved</p>
                       </div>
                   </div>
@@ -1942,9 +2136,11 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <!-- <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script> -->
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="lib/slick/slick.min.js"></script>
     <script src="lib/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
     <script src="lib/nouislider/nouislider.min.js"></script>
+    <script src="lib/nicescroll/jquery.nicescroll.min.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>

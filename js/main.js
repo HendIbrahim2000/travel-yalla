@@ -94,10 +94,10 @@ $('.slider-nav').slick({
 
 $('.tabSlider').each(function() {
     $(this).slick({
-        infinite: true,
-        slidesToShow: 5,
+        infinite: false,
+        slidesToShow: 4.5,
         slidesToScroll: 1,
-        centerMode: true,
+        centerMode: false,
         prevArrow: $(this).parent().find('.trips-prev'),
         nextArrow: $(this).parent().find('.trips-next'),
         responsive: [
@@ -147,69 +147,22 @@ $('.close-btn').on('click', function () {
 });
 
 // input using select2
-
-if ($("#datepicker-checkin").length) {
-    $('#datepicker-checkin').datepicker({
+for(let i = 1; i< 5 ; i++) {
+  if ($("#datepicker-checkin"+i).length) {
+    $('#datepicker-checkin'+i).datepicker({
       enableOnReadonly: true,
       todayHighlight: true,
     });
-    $("#datepicker-checkin").datepicker("setDate", "0");
+    $("#datepicker-checkin"+i).datepicker("setDate", "0");
 }
 
-if ($("#datepicker-checkout").length) {
-    $('#datepicker-checkout').datepicker({
+if ($("#datepicker-checkout"+i).length) {
+    $('#datepicker-checkout'+i).datepicker({
       enableOnReadonly: true,
       todayHighlight: true,
     });
-    $("#datepicker-checkout").datepicker("setDate", "0");
+    $("#datepicker-checkout"+i).datepicker("setDate", "0");
 }
-
-if ($("#datepicker-checkin2").length) {
-    $('#datepicker-checkin2').datepicker({
-      enableOnReadonly: true,
-      todayHighlight: true,
-    });
-    $("#datepicker-checkin2").datepicker("setDate", "0");
-}
-
-if ($("#datepicker-checkout2").length) {
-    $('#datepicker-checkout2').datepicker({
-      enableOnReadonly: true,
-      todayHighlight: true,
-    });
-    $("#datepicker-checkout2").datepicker("setDate", "0");
-}
-
-if ($("#datepicker-checkin3").length) {
-    $('#datepicker-checkin3').datepicker({
-      enableOnReadonly: true,
-      todayHighlight: true,
-    });
-    $("#datepicker-checkin3").datepicker("setDate", "0");
-}
-
-if ($("#datepicker-checkout3").length) {
-    $('#datepicker-checkout3').datepicker({
-      enableOnReadonly: true,
-      todayHighlight: true,
-    });
-    $("#datepicker-checkout3").datepicker("setDate", "0");
-}
-
-if ($("#datepicker-checkin4").length) {
-    $('#datepicker-checkin4').datepicker({
-      enableOnReadonly: true,
-      todayHighlight: true,
-    });
-    $("#datepicker-checkin4").datepicker("setDate", "0");
-}
-
-if ($("#datepicker-checkout4").length) {
-    $('#datepicker-checkout4').datepicker({
-      enableOnReadonly: true,
-      todayHighlight: true,
-    });
-    $("#datepicker-checkout4").datepicker("setDate", "0");
 }
 
 // Testimonial Slider
@@ -278,6 +231,17 @@ $('.airlines .__slider').slick({
     ]
 });
 
+// Nicescroll for Regions menu
+
+$(".dropdown-container").niceScroll({
+  cursorcolor: "#777",
+  cursorwidth: "10px",
+  cursorborderradius: "10px",
+  cursormaxheight: '15px',
+  smoothscroll: true, 
+});
+
+
 })(jQuery);
 
 // Vanilla js 
@@ -294,25 +258,31 @@ var toggle = function (elm) {
 }
 
 // Toggle flight modify section
-document.getElementById('js-flight-toggle').onclick = (e) => {
-  var flightDetails = document.getElementById('flight-modify')
-  
-  toggle(flightDetails)
+if(document.getElementById('js-flight-toggle')) {
+  document.getElementById('js-flight-toggle').onclick = (e) => {
+    var flightDetails = document.getElementById('flight-modify')
+    
+    toggle(flightDetails)
+  }
 }
 
-// Price range in flights filter
-var startSlider = document.getElementById('slider');
 
-noUiSlider.create(startSlider, {
-    start: [20, 80],
-    behaviour: 'drag',
-    connect: true,
-    tooltips: true,
-    range: {
-        'min': [0],
-        'max': [100]
-    }
-});
+// Price range in flights filter
+if(document.getElementById('slider')) {
+  var startSlider = document.getElementById('slider');
+
+  noUiSlider.create(startSlider, {
+      start: [20, 80],
+      behaviour: 'drag',
+      connect: true,
+      tooltips: true,
+      range: {
+          'min': [0],
+          'max': [100]
+      }
+  });
+}
+
 
 // Expanding Flight Card In Flight Page 
 
@@ -349,3 +319,41 @@ Array.prototype.forEach.call(offerBtn, function (offerBtn) {
 
    })
 })
+
+// Trips Layout Partially A Container
+// window.addEventListener("resize", tripsLayout);
+// window.addEventListener("load", tripsLayout);
+// function tripsLayout(e){
+  
+//   var elements = document.getElementsByClassName('container')
+//   var element = elements[0];
+//   var rect = element.getBoundingClientRect().left;
+//   console.log(rect);
+//   var targetElem = document.querySelectorAll('#tripsTabContent.tab-content > .tab-pane')
+
+//   targetElem.forEach(elem => {
+//     elem.style.width = 'calc( 100% - '+rect+'px )'
+//     elem.style.marginLeft = rect+'px';
+//     $('.tabSlider').each(function() {
+//       $(this).slick('refresh');
+//     })
+//   })
+//   }
+
+// Nationality auto-complete
+var input = document.querySelector('#nationality-search');
+var items = document.querySelector('#nationality-list').getElementsByTagName('li');
+
+input.addEventListener('keyup', function(ev) {
+  var text = ev.target.value;
+  var pat = new RegExp(text, 'i');
+  for (var i=0; i < items.length; i++) {
+    var item = items[i];
+    if (pat.test(item.innerText)) {
+      item.classList.remove("d-none");
+    }
+    else {console.log(item);
+      item.classList.add("d-none");
+    }
+  }
+});

@@ -194,3 +194,22 @@
         }
       }
 }
+
+@media (max-width: 992px) {
+    .datepicker.datepicker-dropdown, 
+    .datepicker.datepicker-inline {
+        max-width: none;
+        width: auto;
+
+        .datepicker-days table.table-condensed tbody td.day {
+
+
+
+            &.today:before, &.active:before {
+                width: 34px;
+                height: 34px;
+                top: 1px;
+            }
+        }
+    }
+}
